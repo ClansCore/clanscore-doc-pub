@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/ssh-setup/">
       
       
+        <link rel="prev" href="../env-variables/">
       
-        <link rel="next" href="quickstart/">
+      
+        <link rel="next" href="../../development/local/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Clanscore Dokumentation</title>
+        <title>🔐 SSH-Setup für Passwort-Authentifizierung - Clanscore Dokumentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clanscore-dokumentation" class="md-skip">
+        <a href="#ssh-setup-fur-passwort-authentifizierung" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Clanscore Dokumentation" class="md-header__button md-logo" aria-label="Clanscore Dokumentation" data-md-component="logo">
+    <a href="../.." title="Clanscore Dokumentation" class="md-header__button md-logo" aria-label="Clanscore Dokumentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Startseite
+              🔐 SSH-Setup für Passwort-Authentifizierung
             
           </span>
         </div>
@@ -221,11 +223,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="quickstart/" class="md-tabs__link">
+      <a href="../../quickstart/" class="md-tabs__link">
         
   
   
@@ -265,7 +265,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="deployment/overview/" class="md-tabs__link">
+        <a href="../../deployment/overview/" class="md-tabs__link">
           
   
   
@@ -281,11 +281,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="configuration/secrets/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../secrets/" class="md-tabs__link">
           
   
   
@@ -305,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="development/local/" class="md-tabs__link">
+        <a href="../../development/local/" class="md-tabs__link">
           
   
   
@@ -325,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="bot/overview/" class="md-tabs__link">
+        <a href="../../bot/overview/" class="md-tabs__link">
           
   
   
@@ -345,7 +347,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="backup/guide/" class="md-tabs__link">
+        <a href="../../backup/guide/" class="md-tabs__link">
           
   
   
@@ -363,7 +365,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="documentation-overview/" class="md-tabs__link">
+      <a href="../../documentation-overview/" class="md-tabs__link">
         
   
   
@@ -398,7 +400,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Clanscore Dokumentation" class="md-nav__button md-logo" aria-label="Clanscore Dokumentation" data-md-component="logo">
+    <a href="../.." title="Clanscore Dokumentation" class="md-nav__button md-logo" aria-label="Clanscore Dokumentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -425,37 +427,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Startseite
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -471,181 +446,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#projekt-ubersicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 Projekt-Übersicht
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schnellstart" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Schnellstart
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Schnellstart">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fur-entwickler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Für Entwickler
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fur-systemadministratoren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Für Systemadministratoren
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dokumentations-bereiche" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 Dokumentations-Bereiche
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 Dokumentations-Bereiche">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Deployment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#konfiguration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚙️ Konfiguration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entwicklung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        💻 Entwicklung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discord-bot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🤖 Discord Bot
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#backup-restore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        💾 Backup &amp; Restore
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technologie-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Technologie-Stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weitere-ressourcen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📖 Weitere Ressourcen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hilfe-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🆘 Hilfe &amp; Support
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -657,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quickstart/" class="md-nav__link">
+      <a href="../../quickstart/" class="md-nav__link">
         
   
   
@@ -738,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment/overview/" class="md-nav__link">
+      <a href="../../deployment/overview/" class="md-nav__link">
         
   
   
@@ -766,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment/guide/" class="md-nav__link">
+      <a href="../../deployment/guide/" class="md-nav__link">
         
   
   
@@ -794,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment/quickstart-server/" class="md-nav__link">
+      <a href="../../deployment/quickstart-server/" class="md-nav__link">
         
   
   
@@ -822,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment/scripts/" class="md-nav__link">
+      <a href="../../deployment/scripts/" class="md-nav__link">
         
   
   
@@ -850,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DEPLOYMENT-SETUP/" class="md-nav__link">
+      <a href="../../DEPLOYMENT-SETUP/" class="md-nav__link">
         
   
   
@@ -878,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DEPLOYMENT/" class="md-nav__link">
+      <a href="../../DEPLOYMENT/" class="md-nav__link">
         
   
   
@@ -910,28 +710,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -949,7 +752,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -967,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/secrets/" class="md-nav__link">
+      <a href="../secrets/" class="md-nav__link">
         
   
   
@@ -995,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/secrets-cheatsheet/" class="md-nav__link">
+      <a href="../secrets-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1023,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/env-variables/" class="md-nav__link">
+      <a href="../env-variables/" class="md-nav__link">
         
   
   
@@ -1048,10 +851,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="configuration/ssh-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔐 SSH-Setup für Passwort-Authentifizierung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1067,6 +897,231 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aktuelle-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktuelle Situation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-secrets-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Secrets konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow verwenden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-ssh-key-einrichten-empfohlen-sicherer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: SSH-Key einrichten (Empfohlen, sicherer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option 2: SSH-Key einrichten (Empfohlen, sicherer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#warum-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warum SSH-Key?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schritt-1-ssh-key-erstellen-lokal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 1: SSH-Key erstellen (lokal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schritt-2-offentlichen-key-auf-server-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 2: Öffentlichen Key auf Server installieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schritt-3-ssh-key-verbindung-testen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 3: SSH-Key-Verbindung testen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schritt-4-github-secrets-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 4: GitHub Secrets konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schritt-5-workflow-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 5: Workflow verwenden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfehlung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfehlung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-publickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Permission denied (publickey)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Connection refused"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nächste Schritte
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1140,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="development/local/" class="md-nav__link">
+      <a href="../../development/local/" class="md-nav__link">
         
   
   
@@ -1168,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="development/local-docker/" class="md-nav__link">
+      <a href="../../development/local-docker/" class="md-nav__link">
         
   
   
@@ -1196,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="development/troubleshooting/" class="md-nav__link">
+      <a href="../../development/troubleshooting/" class="md-nav__link">
         
   
   
@@ -1285,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bot/overview/" class="md-nav__link">
+      <a href="../../bot/overview/" class="md-nav__link">
         
   
   
@@ -1313,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bot/manual/" class="md-nav__link">
+      <a href="../../bot/manual/" class="md-nav__link">
         
   
   
@@ -1402,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="backup/guide/" class="md-nav__link">
+      <a href="../../backup/guide/" class="md-nav__link">
         
   
   
@@ -1437,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation-overview/" class="md-nav__link">
+      <a href="../../documentation-overview/" class="md-nav__link">
         
   
   
@@ -1484,10 +1539,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#projekt-ubersicht" class="md-nav__link">
+  <a href="#aktuelle-situation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📦 Projekt-Übersicht
+        Aktuelle Situation
       
     </span>
   </a>
@@ -1495,22 +1550,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#schnellstart" class="md-nav__link">
+  <a href="#option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Schnellstart
+        Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 Schnellstart">
+    <nav class="md-nav" aria-label="Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fur-entwickler" class="md-nav__link">
+  <a href="#github-secrets-konfigurieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Für Entwickler
+        GitHub Secrets konfigurieren
       
     </span>
   </a>
@@ -1518,10 +1573,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fur-systemadministratoren" class="md-nav__link">
+  <a href="#workflow-verwenden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Für Systemadministratoren
+        Workflow verwenden
       
     </span>
   </a>
@@ -1534,22 +1589,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dokumentations-bereiche" class="md-nav__link">
+  <a href="#option-2-ssh-key-einrichten-empfohlen-sicherer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Dokumentations-Bereiche
+        Option 2: SSH-Key einrichten (Empfohlen, sicherer)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 Dokumentations-Bereiche">
+    <nav class="md-nav" aria-label="Option 2: SSH-Key einrichten (Empfohlen, sicherer)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deployment" class="md-nav__link">
+  <a href="#warum-ssh-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Deployment
+        Warum SSH-Key?
       
     </span>
   </a>
@@ -1557,10 +1612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#konfiguration" class="md-nav__link">
+  <a href="#schritt-1-ssh-key-erstellen-lokal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Konfiguration
+        Schritt 1: SSH-Key erstellen (lokal)
       
     </span>
   </a>
@@ -1568,10 +1623,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#entwicklung" class="md-nav__link">
+  <a href="#schritt-2-offentlichen-key-auf-server-installieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 Entwicklung
+        Schritt 2: Öffentlichen Key auf Server installieren
       
     </span>
   </a>
@@ -1579,10 +1634,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#discord-bot" class="md-nav__link">
+  <a href="#schritt-3-ssh-key-verbindung-testen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🤖 Discord Bot
+        Schritt 3: SSH-Key-Verbindung testen
       
     </span>
   </a>
@@ -1590,10 +1645,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#backup-restore" class="md-nav__link">
+  <a href="#schritt-4-github-secrets-konfigurieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💾 Backup &amp; Restore
+        Schritt 4: GitHub Secrets konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schritt-5-workflow-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 5: Workflow verwenden
       
     </span>
   </a>
@@ -1606,10 +1672,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#technologie-stack" class="md-nav__link">
+  <a href="#vergleich" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ Technologie-Stack
+        Vergleich
       
     </span>
   </a>
@@ -1617,10 +1683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#weitere-ressourcen" class="md-nav__link">
+  <a href="#empfehlung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📖 Weitere Ressourcen
+        Empfehlung
       
     </span>
   </a>
@@ -1628,10 +1694,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hilfe-support" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🆘 Hilfe &amp; Support
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-publickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Permission denied (publickey)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Connection refused"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nächste Schritte
       
     </span>
   </a>
@@ -1658,81 +1763,130 @@
   
 
 
-<h1 id="clanscore-dokumentation">🎯 Clanscore Dokumentation<a class="headerlink" href="#clanscore-dokumentation" title="Permanent link">&para;</a></h1>
-<p>Willkommen zur vollständigen Dokumentation für das <strong>Clanscore</strong> Projekt!</p>
-<h2 id="projekt-ubersicht">📦 Projekt-Übersicht<a class="headerlink" href="#projekt-ubersicht" title="Permanent link">&para;</a></h2>
-<p>Clanscore ist ein umfassendes System für Vereine mit drei Hauptkomponenten:</p>
-<ul>
-<li><strong>🚀 clanscore-api</strong>: Node.js/Express REST API</li>
-<li><strong>📊 dashboard</strong>: Angular Frontend</li>
-<li><strong>🤖 discord-bot</strong>: Discord Bot für Vereinsmanagement</li>
-</ul>
-<p>Alle Services werden mit Docker Compose orchestriert und können sowohl lokal als auch auf einem Server deployed werden.</p>
-<h2 id="schnellstart">🚀 Schnellstart<a class="headerlink" href="#schnellstart" title="Permanent link">&para;</a></h2>
-<p>Neue Benutzer sollten mit dem <a href="quickstart/">Schnellstart-Guide</a> beginnen.</p>
-<h3 id="fur-entwickler">Für Entwickler<a class="headerlink" href="#fur-entwickler" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="development/local/">Lokale Entwicklung</a> - Setup ohne Docker</li>
-<li><a href="development/local-docker/">Lokales Docker Setup</a> - Docker-basierte Entwicklung</li>
-</ul>
-<h3 id="fur-systemadministratoren">Für Systemadministratoren<a class="headerlink" href="#fur-systemadministratoren" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="deployment/guide/">Deployment Guide</a> - Vollständige Server-Deployment-Anleitung</li>
-<li><a href="configuration/secrets/">Konfiguration</a> - GitHub Secrets und Environment-Variablen</li>
-</ul>
-<h2 id="dokumentations-bereiche">📚 Dokumentations-Bereiche<a class="headerlink" href="#dokumentations-bereiche" title="Permanent link">&para;</a></h2>
-<h3 id="deployment">🚀 Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="deployment/overview/">Übersicht</a> - Schnellstart und Übersicht</li>
-<li><a href="deployment/guide/">Vollständiger Guide</a> - Detaillierte Schritt-für-Schritt-Anleitung</li>
-<li><a href="deployment/quickstart-server/">Server-spezifisch</a> - Für srbsci-11.ost.ch</li>
-<li><a href="deployment/scripts/">Deployment-Skripte</a> - Automatisierte Deployment-Tools</li>
-</ul>
-<h3 id="konfiguration">⚙️ Konfiguration<a class="headerlink" href="#konfiguration" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="configuration/secrets/">GitHub Secrets</a> - Vollständige Anleitung</li>
-<li><a href="configuration/secrets-cheatsheet/">Secrets Cheatsheet</a> - Schnellreferenz</li>
-<li><a href="configuration/env-variables/">Environment-Variablen</a> - Alle Variablen erklärt</li>
-<li><a href="configuration/ssh-setup/">SSH Setup</a> - SSH-Authentifizierung einrichten</li>
-</ul>
-<h3 id="entwicklung">💻 Entwicklung<a class="headerlink" href="#entwicklung" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="development/local/">Lokale Entwicklung</a> - Setup ohne Docker</li>
-<li><a href="development/local-docker/">Lokales Docker</a> - Docker-basierte Entwicklung</li>
-<li><a href="development/troubleshooting/">Troubleshooting</a> - Häufige Probleme lösen</li>
-</ul>
-<h3 id="discord-bot">🤖 Discord Bot<a class="headerlink" href="#discord-bot" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="bot/overview/">Übersicht</a> - Bot-Features und Funktionalität</li>
-<li><a href="bot/manual/">Benutzerhandbuch</a> - Vollständiges Handbuch für Benutzer</li>
-</ul>
-<h3 id="backup-restore">💾 Backup &amp; Restore<a class="headerlink" href="#backup-restore" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="backup/guide/">Backup Guide</a> - Datenbank-Backups erstellen und wiederherstellen</li>
-</ul>
-<h2 id="technologie-stack">🛠️ Technologie-Stack<a class="headerlink" href="#technologie-stack" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Backend</strong>: Node.js, Express, TypeScript</li>
-<li><strong>Frontend</strong>: Angular</li>
-<li><strong>Database</strong>: MongoDB</li>
-<li><strong>Container</strong>: Docker, Docker Compose</li>
-<li><strong>CI/CD</strong>: GitHub Actions</li>
-<li><strong>Bot</strong>: Discord.js</li>
-</ul>
-<h2 id="weitere-ressourcen">📖 Weitere Ressourcen<a class="headerlink" href="#weitere-ressourcen" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="documentation-overview/">Dokumentations-Übersicht</a> - Welche Datei für welchen Zweck</li>
-<li><a href="https://github.com/ClansCore/clanscore">GitHub Repository</a> - Source Code</li>
-</ul>
-<h2 id="hilfe-support">🆘 Hilfe &amp; Support<a class="headerlink" href="#hilfe-support" title="Permanent link">&para;</a></h2>
-<p>Bei Problemen:</p>
+<h1 id="ssh-setup-fur-passwort-authentifizierung">🔐 SSH-Setup für Passwort-Authentifizierung<a class="headerlink" href="#ssh-setup-fur-passwort-authentifizierung" title="Permanent link">&para;</a></h1>
+<h2 id="aktuelle-situation">Aktuelle Situation<a class="headerlink" href="#aktuelle-situation" title="Permanent link">&para;</a></h2>
+<p>Sie melden sich mit Passwort an:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>ins@srbsci-11.ost.ch
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Dann Passwort eingeben</span>
+</code></pre></div></p>
+<h2 id="option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher">Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)<a class="headerlink" href="#option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher" title="Permanent link">&para;</a></h2>
+<h3 id="github-secrets-konfigurieren">GitHub Secrets konfigurieren<a class="headerlink" href="#github-secrets-konfigurieren" title="Permanent link">&para;</a></h3>
+<p>Für Passwort-Authentifizierung benötigen Sie:</p>
 <ol>
-<li>Prüfen Sie die <a href="development/troubleshooting/">Troubleshooting-Sektion</a></li>
-<li>Lesen Sie die entsprechende Dokumentation</li>
-<li>Erstellen Sie ein Issue im <a href="https://github.com/ClansCore/clanscore/issues">GitHub Repository</a></li>
+<li><strong><code>SERVER_HOST</code></strong> = <code>srbsci-11.ost.ch</code></li>
+<li><strong><code>SERVER_USER</code></strong> = <code>ins</code></li>
+<li><strong><code>SERVER_SSH_PASSWORD</code></strong> = Ihr SSH-Passwort</li>
+<li><strong><code>SERVER_SSH_PORT</code></strong> = <code>22</code> (optional, falls Standard)</li>
 </ol>
-<hr />
-<p><strong>Letzte Aktualisierung</strong>: Diese Dokumentation wird kontinuierlich aktualisiert. Für die neuesten Informationen besuchen Sie das <a href="https://github.com/ClansCore/clanscore">GitHub Repository</a>.</p>
+<h3 id="workflow-verwenden">Workflow verwenden<a class="headerlink" href="#workflow-verwenden" title="Permanent link">&para;</a></h3>
+<p>Verwenden Sie <code>.github/workflows/deploy-password.yml</code> statt <code>deploy.yml</code>, oder aktualisieren Sie <code>deploy.yml</code> (siehe unten).</p>
+<h2 id="option-2-ssh-key-einrichten-empfohlen-sicherer">Option 2: SSH-Key einrichten (Empfohlen, sicherer)<a class="headerlink" href="#option-2-ssh-key-einrichten-empfohlen-sicherer" title="Permanent link">&para;</a></h2>
+<h3 id="warum-ssh-key">Warum SSH-Key?<a class="headerlink" href="#warum-ssh-key" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Sicherer (kein Passwort in GitHub Secrets)</li>
+<li>✅ Automatisches Login ohne Passwort-Eingabe</li>
+<li>✅ Standard für CI/CD</li>
+</ul>
+<h3 id="schritt-1-ssh-key-erstellen-lokal">Schritt 1: SSH-Key erstellen (lokal)<a class="headerlink" href="#schritt-1-ssh-key-erstellen-lokal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Auf Ihrem lokalen Rechner</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;github-actions-deploy&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/github_actions_deploy
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Kein Passwort eingeben (Enter drücken)</span>
+</code></pre></div>
+<h3 id="schritt-2-offentlichen-key-auf-server-installieren">Schritt 2: Öffentlichen Key auf Server installieren<a class="headerlink" href="#schritt-2-offentlichen-key-auf-server-installieren" title="Permanent link">&para;</a></h3>
+<p><strong>Methode A: Automatisch (empfohlen)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Auf Ihrem lokalen Rechner</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/github_actions_deploy.pub<span class="w"> </span>ins@srbsci-11.ost.ch
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Passwort eingeben, wenn gefragt</span>
+</code></pre></div></p>
+<p><strong>Methode B: Manuell</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 1. Öffentlichen Key anzeigen (lokal)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cat<span class="w"> </span>~/.ssh/github_actions_deploy.pub
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># 2. Auf Server einloggen</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ssh<span class="w"> </span>ins@srbsci-11.ost.ch
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 3. Auf Server: Key hinzufügen</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>nano<span class="w"> </span>~/.ssh/authorized_keys
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Key einfügen (aus Schritt 1)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div></p>
+<h3 id="schritt-3-ssh-key-verbindung-testen">Schritt 3: SSH-Key-Verbindung testen<a class="headerlink" href="#schritt-3-ssh-key-verbindung-testen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Sollte ohne Passwort funktionieren</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/github_actions_deploy<span class="w"> </span>ins@srbsci-11.ost.ch
+</code></pre></div>
+<h3 id="schritt-4-github-secrets-konfigurieren">Schritt 4: GitHub Secrets konfigurieren<a class="headerlink" href="#schritt-4-github-secrets-konfigurieren" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong><code>SERVER_HOST</code></strong> = <code>srbsci-11.ost.ch</code></li>
+<li><strong><code>SERVER_USER</code></strong> = <code>ins</code></li>
+<li><strong><code>SERVER_SSH_KEY</code></strong> = Privater Key (komplett):
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat<span class="w"> </span>~/.ssh/github_actions_deploy
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Kompletten Inhalt kopieren (inkl. BEGIN/END Zeilen)</span>
+</code></pre></div></li>
+<li><strong><code>SERVER_SSH_PORT</code></strong> = <code>22</code> (optional)</li>
+</ol>
+<h3 id="schritt-5-workflow-verwenden">Schritt 5: Workflow verwenden<a class="headerlink" href="#schritt-5-workflow-verwenden" title="Permanent link">&para;</a></h3>
+<p>Verwenden Sie <code>.github/workflows/deploy.yml</code> (Key-basiert).</p>
+<h2 id="vergleich">Vergleich<a class="headerlink" href="#vergleich" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Sicherheit</th>
+<th>Einfachheit</th>
+<th>Empfohlen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passwort</td>
+<td>⚠️ Niedrig</td>
+<td>✅ Sehr einfach</td>
+<td>❌ Nein</td>
+</tr>
+<tr>
+<td>SSH-Key</td>
+<td>✅ Hoch</td>
+<td>✅ Einfach</td>
+<td>✅ Ja</td>
+</tr>
+</tbody>
+</table>
+<h2 id="empfehlung">Empfehlung<a class="headerlink" href="#empfehlung" title="Permanent link">&para;</a></h2>
+<p><strong>Für Production:</strong> SSH-Key verwenden (Option 2)
+- Sicherer
+- Standard für CI/CD
+- Kein Passwort in GitHub Secrets</p>
+<p><strong>Für schnelles Testen:</strong> Passwort verwenden (Option 1)
+- Schnell eingerichtet
+- Weniger sicher</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="permission-denied-publickey">"Permission denied (publickey)"<a class="headerlink" href="#permission-denied-publickey" title="Permanent link">&para;</a></h3>
+<p><strong>Bei Passwort-Auth:</strong>
+- Prüfen Sie <code>SERVER_SSH_PASSWORD</code>
+- Prüfen Sie, ob Passwort-Auth auf Server erlaubt ist:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Auf Server</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Sollte enthalten: PasswordAuthentication yes</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></p>
+<p><strong>Bei Key-Auth:</strong>
+- Prüfen Sie, ob öffentlicher Key auf Server installiert ist
+- Prüfen Sie Berechtigungen: <code>chmod 600 ~/.ssh/authorized_keys</code></p>
+<h3 id="connection-refused">"Connection refused"<a class="headerlink" href="#connection-refused" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie <code>SERVER_HOST</code> und <code>SERVER_SSH_PORT</code></li>
+<li>Prüfen Sie Firewall-Einstellungen</li>
+<li>Testen Sie: <code>ssh ins@srbsci-11.ost.ch</code></li>
+</ul>
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nach dem Setup:
+1. ✅ GitHub Secrets konfigurieren
+2. ✅ Workflow testen (Actions → Deploy to Server → Run workflow)
+3. ✅ Logs prüfen</p>
+<p>Siehe <a href="../secrets/">GitHub Secrets Guide</a> für alle benötigten Secrets.</p>
 
 
 
@@ -1755,7 +1909,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:51:55 UTC">December 2, 2025</span>
   </span>
 
     
@@ -1822,10 +1976,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
