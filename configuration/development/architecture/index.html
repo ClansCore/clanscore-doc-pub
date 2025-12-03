@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/ssh-setup/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/development/architecture/">
       
       
-        <link rel="prev" href="../env-variables/">
+        <link rel="prev" href="../../ssh-setup/">
       
       
-        <link rel="next" href="../development/architecture/">
+        <link rel="next" href="../api-endpoints/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>SSH Setup - Clanscore Doku</title>
+        <title>Architektur - Clanscore Doku</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ssh-setup-fur-passwort-authentifizierung" class="md-skip">
+        <a href="#architektur" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Clanscore Doku" class="md-header__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
+    <a href="../../.." title="Clanscore Doku" class="md-header__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SSH Setup
+              Architektur
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quickstart/" class="md-tabs__link">
+      <a href="../../../quickstart/" class="md-tabs__link">
         
   
   
@@ -267,7 +267,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../setup/" class="md-tabs__link">
+        <a href="../../setup/" class="md-tabs__link">
           
   
   
@@ -287,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../deployment/overview/" class="md-tabs__link">
+        <a href="../../../deployment/overview/" class="md-tabs__link">
           
   
   
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../development/local/" class="md-tabs__link">
+        <a href="../../../development/local/" class="md-tabs__link">
           
   
   
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../dashboard/overview/" class="md-tabs__link">
+        <a href="../../../dashboard/overview/" class="md-tabs__link">
           
   
   
@@ -347,7 +347,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../bot/overview/" class="md-tabs__link">
+        <a href="../../../bot/overview/" class="md-tabs__link">
           
   
   
@@ -367,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../backup/guide/" class="md-tabs__link">
+        <a href="../../../backup/guide/" class="md-tabs__link">
           
   
   
@@ -401,7 +401,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Clanscore Doku" class="md-nav__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
+    <a href="../../.." title="Clanscore Doku" class="md-nav__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -458,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
+      <a href="../../../quickstart/" class="md-nav__link">
         
   
   
@@ -542,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secrets/" class="md-nav__link">
+      <a href="../../secrets/" class="md-nav__link">
         
   
   
@@ -598,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secrets-cheatsheet/" class="md-nav__link">
+      <a href="../../secrets-cheatsheet/" class="md-nav__link">
         
   
   
@@ -626,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../env-variables/" class="md-nav__link">
+      <a href="../../env-variables/" class="md-nav__link">
         
   
   
@@ -651,6 +651,91 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssh-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entwicklung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
     
   
   
@@ -670,7 +755,7 @@
   <span class="md-ellipsis">
     
   
-    SSH Setup
+    Architektur
   
 
     
@@ -688,7 +773,7 @@
   <span class="md-ellipsis">
     
   
-    SSH Setup
+    Architektur
   
 
     
@@ -714,10 +799,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aktuelle-situation" class="md-nav__link">
+  <a href="#system-ubersicht" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aktuelle Situation
+        System-Übersicht
       
     </span>
   </a>
@@ -725,22 +810,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher" class="md-nav__link">
+  <a href="#komponenten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)
+        Komponenten
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)">
+    <nav class="md-nav" aria-label="Komponenten">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#github-secrets-konfigurieren" class="md-nav__link">
+  <a href="#1-clanscore-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Secrets konfigurieren
+        1. clanscore-api
       
     </span>
   </a>
@@ -748,10 +833,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#workflow-verwenden" class="md-nav__link">
+  <a href="#2-dashboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow verwenden
+        2. dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. discord-bot
       
     </span>
   </a>
@@ -764,22 +860,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-ssh-key-einrichten-empfohlen-sicherer" class="md-nav__link">
+  <a href="#datenfluss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2: SSH-Key einrichten (Empfohlen, sicherer)
+        Datenfluss
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option 2: SSH-Key einrichten (Empfohlen, sicherer)">
+    <nav class="md-nav" aria-label="Datenfluss">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#warum-ssh-key" class="md-nav__link">
+  <a href="#benutzer-registrierung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Warum SSH-Key?
+        Benutzer-Registrierung
       
     </span>
   </a>
@@ -787,10 +883,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#schritt-1-ssh-key-erstellen-lokal" class="md-nav__link">
+  <a href="#aufgaben-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schritt 1: SSH-Key erstellen (lokal)
+        Aufgaben-Management
       
     </span>
   </a>
@@ -798,43 +894,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#schritt-2-offentlichen-key-auf-server-installieren" class="md-nav__link">
+  <a href="#event-synchronisation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schritt 2: Öffentlichen Key auf Server installieren
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schritt-3-ssh-key-verbindung-testen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schritt 3: SSH-Key-Verbindung testen
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schritt-4-github-secrets-konfigurieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schritt 4: GitHub Secrets konfigurieren
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schritt-5-workflow-verwenden" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schritt 5: Workflow verwenden
+        Event-Synchronisation
       
     </span>
   </a>
@@ -847,44 +910,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vergleich" class="md-nav__link">
+  <a href="#datenbank-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vergleich
+        Datenbank-Schema
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#empfehlung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Empfehlung
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
+    <nav class="md-nav" aria-label="Datenbank-Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permission-denied-publickey" class="md-nav__link">
+  <a href="#haupt-entitaten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Permission denied (publickey)"
+        Haupt-Entitäten
       
     </span>
   </a>
@@ -892,10 +933,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connection-refused" class="md-nav__link">
+  <a href="#beziehungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Connection refused"
+        Beziehungen
       
     </span>
   </a>
@@ -908,10 +949,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nachste-schritte" class="md-nav__link">
+  <a href="#kommunikation-zwischen-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nächste Schritte
+        Kommunikation zwischen Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kommunikation zwischen Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API ↔ Discord Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard ↔ API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netzwerk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzwerk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
       
     </span>
   </a>
@@ -933,93 +1102,8 @@
   
   
   
-    
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Entwicklung
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Entwicklung
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../development/architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../development/api-endpoints/" class="md-nav__link">
+      <a href="../api-endpoints/" class="md-nav__link">
         
   
   
@@ -1047,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/webhooks/" class="md-nav__link">
+      <a href="../webhooks/" class="md-nav__link">
         
   
   
@@ -1140,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/backups-restore/" class="md-nav__link">
+      <a href="../../database/backups-restore/" class="md-nav__link">
         
   
   
@@ -1176,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calendar/" class="md-nav__link">
+      <a href="../../calendar/" class="md-nav__link">
         
   
   
@@ -1265,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/overview/" class="md-nav__link">
+      <a href="../../../deployment/overview/" class="md-nav__link">
         
   
   
@@ -1293,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/setup/" class="md-nav__link">
+      <a href="../../../deployment/setup/" class="md-nav__link">
         
   
   
@@ -1321,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/guide/" class="md-nav__link">
+      <a href="../../../deployment/guide/" class="md-nav__link">
         
   
   
@@ -1349,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/details/" class="md-nav__link">
+      <a href="../../../deployment/details/" class="md-nav__link">
         
   
   
@@ -1377,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/quickstart-server/" class="md-nav__link">
+      <a href="../../../deployment/quickstart-server/" class="md-nav__link">
         
   
   
@@ -1405,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/scripts/" class="md-nav__link">
+      <a href="../../../deployment/scripts/" class="md-nav__link">
         
   
   
@@ -1494,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/local/" class="md-nav__link">
+      <a href="../../../development/local/" class="md-nav__link">
         
   
   
@@ -1522,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/local-docker/" class="md-nav__link">
+      <a href="../../../development/local-docker/" class="md-nav__link">
         
   
   
@@ -1550,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/troubleshooting/" class="md-nav__link">
+      <a href="../../../development/troubleshooting/" class="md-nav__link">
         
   
   
@@ -1639,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dashboard/overview/" class="md-nav__link">
+      <a href="../../../dashboard/overview/" class="md-nav__link">
         
   
   
@@ -1667,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dashboard/manual/" class="md-nav__link">
+      <a href="../../../dashboard/manual/" class="md-nav__link">
         
   
   
@@ -1756,7 +1840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bot/overview/" class="md-nav__link">
+      <a href="../../../bot/overview/" class="md-nav__link">
         
   
   
@@ -1784,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bot/manual/" class="md-nav__link">
+      <a href="../../../bot/manual/" class="md-nav__link">
         
   
   
@@ -1873,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup/guide/" class="md-nav__link">
+      <a href="../../../backup/guide/" class="md-nav__link">
         
   
   
@@ -1928,10 +2012,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aktuelle-situation" class="md-nav__link">
+  <a href="#system-ubersicht" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aktuelle Situation
+        System-Übersicht
       
     </span>
   </a>
@@ -1939,22 +2023,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher" class="md-nav__link">
+  <a href="#komponenten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)
+        Komponenten
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)">
+    <nav class="md-nav" aria-label="Komponenten">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#github-secrets-konfigurieren" class="md-nav__link">
+  <a href="#1-clanscore-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Secrets konfigurieren
+        1. clanscore-api
       
     </span>
   </a>
@@ -1962,10 +2046,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#workflow-verwenden" class="md-nav__link">
+  <a href="#2-dashboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow verwenden
+        2. dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. discord-bot
       
     </span>
   </a>
@@ -1978,22 +2073,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-ssh-key-einrichten-empfohlen-sicherer" class="md-nav__link">
+  <a href="#datenfluss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2: SSH-Key einrichten (Empfohlen, sicherer)
+        Datenfluss
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option 2: SSH-Key einrichten (Empfohlen, sicherer)">
+    <nav class="md-nav" aria-label="Datenfluss">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#warum-ssh-key" class="md-nav__link">
+  <a href="#benutzer-registrierung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Warum SSH-Key?
+        Benutzer-Registrierung
       
     </span>
   </a>
@@ -2001,10 +2096,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#schritt-1-ssh-key-erstellen-lokal" class="md-nav__link">
+  <a href="#aufgaben-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schritt 1: SSH-Key erstellen (lokal)
+        Aufgaben-Management
       
     </span>
   </a>
@@ -2012,43 +2107,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#schritt-2-offentlichen-key-auf-server-installieren" class="md-nav__link">
+  <a href="#event-synchronisation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schritt 2: Öffentlichen Key auf Server installieren
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schritt-3-ssh-key-verbindung-testen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schritt 3: SSH-Key-Verbindung testen
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schritt-4-github-secrets-konfigurieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schritt 4: GitHub Secrets konfigurieren
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schritt-5-workflow-verwenden" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schritt 5: Workflow verwenden
+        Event-Synchronisation
       
     </span>
   </a>
@@ -2061,44 +2123,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vergleich" class="md-nav__link">
+  <a href="#datenbank-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vergleich
+        Datenbank-Schema
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#empfehlung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Empfehlung
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
+    <nav class="md-nav" aria-label="Datenbank-Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permission-denied-publickey" class="md-nav__link">
+  <a href="#haupt-entitaten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Permission denied (publickey)"
+        Haupt-Entitäten
       
     </span>
   </a>
@@ -2106,10 +2146,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connection-refused" class="md-nav__link">
+  <a href="#beziehungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Connection refused"
+        Beziehungen
       
     </span>
   </a>
@@ -2122,10 +2162,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nachste-schritte" class="md-nav__link">
+  <a href="#kommunikation-zwischen-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nächste Schritte
+        Kommunikation zwischen Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kommunikation zwischen Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API ↔ Discord Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard ↔ API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netzwerk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzwerk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
       
     </span>
   </a>
@@ -2152,130 +2320,208 @@
   
 
 
-<h1 id="ssh-setup-fur-passwort-authentifizierung">🔐 SSH-Setup für Passwort-Authentifizierung<a class="headerlink" href="#ssh-setup-fur-passwort-authentifizierung" title="Permanent link">&para;</a></h1>
-<h2 id="aktuelle-situation">Aktuelle Situation<a class="headerlink" href="#aktuelle-situation" title="Permanent link">&para;</a></h2>
-<p>Sie melden sich mit Passwort an:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>ins@srbsci-11.ost.ch
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Dann Passwort eingeben</span>
-</code></pre></div></p>
-<h2 id="option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher">Option 1: Passwort-basiertes Deployment (Einfach, aber weniger sicher)<a class="headerlink" href="#option-1-passwort-basiertes-deployment-einfach-aber-weniger-sicher" title="Permanent link">&para;</a></h2>
-<h3 id="github-secrets-konfigurieren">GitHub Secrets konfigurieren<a class="headerlink" href="#github-secrets-konfigurieren" title="Permanent link">&para;</a></h3>
-<p>Für Passwort-Authentifizierung benötigen Sie:</p>
-<ol>
-<li><strong><code>SERVER_HOST</code></strong> = <code>srbsci-11.ost.ch</code></li>
-<li><strong><code>SERVER_USER</code></strong> = <code>ins</code></li>
-<li><strong><code>SERVER_SSH_PASSWORD</code></strong> = Ihr SSH-Passwort</li>
-<li><strong><code>SERVER_SSH_PORT</code></strong> = <code>22</code> (optional, falls Standard)</li>
-</ol>
-<h3 id="workflow-verwenden">Workflow verwenden<a class="headerlink" href="#workflow-verwenden" title="Permanent link">&para;</a></h3>
-<p>Verwenden Sie <code>.github/workflows/deploy-password.yml</code> statt <code>deploy.yml</code>, oder aktualisieren Sie <code>deploy.yml</code> (siehe unten).</p>
-<h2 id="option-2-ssh-key-einrichten-empfohlen-sicherer">Option 2: SSH-Key einrichten (Empfohlen, sicherer)<a class="headerlink" href="#option-2-ssh-key-einrichten-empfohlen-sicherer" title="Permanent link">&para;</a></h2>
-<h3 id="warum-ssh-key">Warum SSH-Key?<a class="headerlink" href="#warum-ssh-key" title="Permanent link">&para;</a></h3>
-<ul>
-<li>✅ Sicherer (kein Passwort in GitHub Secrets)</li>
-<li>✅ Automatisches Login ohne Passwort-Eingabe</li>
-<li>✅ Standard für CI/CD</li>
-</ul>
-<h3 id="schritt-1-ssh-key-erstellen-lokal">Schritt 1: SSH-Key erstellen (lokal)<a class="headerlink" href="#schritt-1-ssh-key-erstellen-lokal" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Auf Ihrem lokalen Rechner</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;github-actions-deploy&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/github_actions_deploy
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Kein Passwort eingeben (Enter drücken)</span>
+<h1 id="architektur">🏗️ Architektur<a class="headerlink" href="#architektur" title="Permanent link">&para;</a></h1>
+<p>Übersicht über die Architektur des Clanscore-Systems.</p>
+<h2 id="system-ubersicht">System-Übersicht<a class="headerlink" href="#system-ubersicht" title="Permanent link">&para;</a></h2>
+<p>Clanscore folgt einer <strong>Clean Architecture</strong> mit klarer Trennung der Schichten:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│         Presentation Layer              │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  (Routes, Controllers, Middleware)      │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└─────────────────────────────────────────┘
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                    ↓
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>┌─────────────────────────────────────────┐
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│        Application Layer                │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  (Use Cases, Business Logic)            │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>└─────────────────────────────────────────┘
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                    ↓
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>┌─────────────────────────────────────────┐
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│          Domain Layer                   │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  (Entities, Value Objects)             │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>└─────────────────────────────────────────┘
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                    ↓
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>┌─────────────────────────────────────────┐
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│      Infrastructure Layer               │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│  (Database, External Services)         │
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>└─────────────────────────────────────────┘
 </code></pre></div>
-<h3 id="schritt-2-offentlichen-key-auf-server-installieren">Schritt 2: Öffentlichen Key auf Server installieren<a class="headerlink" href="#schritt-2-offentlichen-key-auf-server-installieren" title="Permanent link">&para;</a></h3>
-<p><strong>Methode A: Automatisch (empfohlen)</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Auf Ihrem lokalen Rechner</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/github_actions_deploy.pub<span class="w"> </span>ins@srbsci-11.ost.ch
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Passwort eingeben, wenn gefragt</span>
+<h2 id="komponenten">Komponenten<a class="headerlink" href="#komponenten" title="Permanent link">&para;</a></h2>
+<h3 id="1-clanscore-api">1. clanscore-api<a class="headerlink" href="#1-clanscore-api" title="Permanent link">&para;</a></h3>
+<p><strong>Technologie:</strong> Node.js, Express, TypeScript</p>
+<p><strong>Struktur:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apps/clanscore-api/src/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── presentation/          # API Layer
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── routes/           # Route-Definitionen
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── controllers/      # Request-Handler
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   └── middleware/       # Middleware (Validation, Errors)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── application/          # Business Logic
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── user/            # User Use Cases
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   ├── gamification/    # Points, Rewards, Leaderboards
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   ├── event/           # Event Management
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   └── notifications/   # Notification Adapters
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>├── domain/              # Domain Models
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   ├── user/           # User Entities
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│   ├── gamification/   # Points, Rewards
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   └── event/          # Event Entities
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>└── infrastructure/      # External Services
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    ├── database/       # MongoDB Integration
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    ├── external/       # Discord, Google Calendar
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    └── notifications/  # Notification Services
 </code></pre></div></p>
-<p><strong>Methode B: Manuell</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 1. Öffentlichen Key anzeigen (lokal)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cat<span class="w"> </span>~/.ssh/github_actions_deploy.pub
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># 2. Auf Server einloggen</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ssh<span class="w"> </span>ins@srbsci-11.ost.ch
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 3. Auf Server: Key hinzufügen</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>nano<span class="w"> </span>~/.ssh/authorized_keys
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Key einfügen (aus Schritt 1)</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+<p><strong>Hauptfunktionen:</strong>
+- REST API für Dashboard und Discord Bot
+- Benutzerverwaltung
+- Gamification (Punkte, Belohnungen, Ranglisten)
+- Event-Management
+- Kalender-Synchronisation
+- Webhook-Integration</p>
+<h3 id="2-dashboard">2. dashboard<a class="headerlink" href="#2-dashboard" title="Permanent link">&para;</a></h3>
+<p><strong>Technologie:</strong> Angular, TypeScript</p>
+<p><strong>Struktur:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apps/dashboard/src/
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── app/
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── components/      # UI Components
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   ├── services/        # API Services
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├── models/          # Data Models
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   └── guards/         # Route Guards
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>└── environments/       # Environment Configs
 </code></pre></div></p>
-<h3 id="schritt-3-ssh-key-verbindung-testen">Schritt 3: SSH-Key-Verbindung testen<a class="headerlink" href="#schritt-3-ssh-key-verbindung-testen" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Sollte ohne Passwort funktionieren</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/github_actions_deploy<span class="w"> </span>ins@srbsci-11.ost.ch
+<p><strong>Hauptfunktionen:</strong>
+- Benutzerverwaltung
+- Aufgaben-Management
+- Event-Verwaltung
+- Ranglisten-Verwaltung
+- Belohnungen-Verwaltung
+- Rollen-Management</p>
+<h3 id="3-discord-bot">3. discord-bot<a class="headerlink" href="#3-discord-bot" title="Permanent link">&para;</a></h3>
+<p><strong>Technologie:</strong> Node.js, Discord.js, TypeScript</p>
+<p><strong>Struktur:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apps/discord-bot/src/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── commands/           # Discord Slash Commands
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├── api/               # API Client
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>├── intergration/      # Discord Integrations
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>├── web/              # Webhook Server
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>└── utils-discord/    # Discord Utilities
+</code></pre></div></p>
+<p><strong>Hauptfunktionen:</strong>
+- Slash Commands für Mitglieder
+- Event-Synchronisation
+- Aufgaben-Management
+- Webhook-Endpoints für API
+- Automatisierte Benachrichtigungen</p>
+<h2 id="datenfluss">Datenfluss<a class="headerlink" href="#datenfluss" title="Permanent link">&para;</a></h2>
+<h3 id="benutzer-registrierung">Benutzer-Registrierung<a class="headerlink" href="#benutzer-registrierung" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Discord User
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    ↓ (/join command)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Discord Bot
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    ↓ (API Call)
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>clanscore-api
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    ↓ (Save to DB)
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>MongoDB
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    ↓ (Webhook)
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Discord Bot
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    ↓ (Notify Vorstand)
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>Discord Channel
 </code></pre></div>
-<h3 id="schritt-4-github-secrets-konfigurieren">Schritt 4: GitHub Secrets konfigurieren<a class="headerlink" href="#schritt-4-github-secrets-konfigurieren" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong><code>SERVER_HOST</code></strong> = <code>srbsci-11.ost.ch</code></li>
-<li><strong><code>SERVER_USER</code></strong> = <code>ins</code></li>
-<li><strong><code>SERVER_SSH_KEY</code></strong> = Privater Key (komplett):
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat<span class="w"> </span>~/.ssh/github_actions_deploy
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Kompletten Inhalt kopieren (inkl. BEGIN/END Zeilen)</span>
-</code></pre></div></li>
-<li><strong><code>SERVER_SSH_PORT</code></strong> = <code>22</code> (optional)</li>
-</ol>
-<h3 id="schritt-5-workflow-verwenden">Schritt 5: Workflow verwenden<a class="headerlink" href="#schritt-5-workflow-verwenden" title="Permanent link">&para;</a></h3>
-<p>Verwenden Sie <code>.github/workflows/deploy.yml</code> (Key-basiert).</p>
-<h2 id="vergleich">Vergleich<a class="headerlink" href="#vergleich" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Methode</th>
-<th>Sicherheit</th>
-<th>Einfachheit</th>
-<th>Empfohlen</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Passwort</td>
-<td>⚠️ Niedrig</td>
-<td>✅ Sehr einfach</td>
-<td>❌ Nein</td>
-</tr>
-<tr>
-<td>SSH-Key</td>
-<td>✅ Hoch</td>
-<td>✅ Einfach</td>
-<td>✅ Ja</td>
-</tr>
-</tbody>
-</table>
-<h2 id="empfehlung">Empfehlung<a class="headerlink" href="#empfehlung" title="Permanent link">&para;</a></h2>
-<p><strong>Für Production:</strong> SSH-Key verwenden (Option 2)
-- Sicherer
-- Standard für CI/CD
-- Kein Passwort in GitHub Secrets</p>
-<p><strong>Für schnelles Testen:</strong> Passwort verwenden (Option 1)
-- Schnell eingerichtet
-- Weniger sicher</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="permission-denied-publickey">"Permission denied (publickey)"<a class="headerlink" href="#permission-denied-publickey" title="Permanent link">&para;</a></h3>
-<p><strong>Bei Passwort-Auth:</strong>
-- Prüfen Sie <code>SERVER_SSH_PASSWORD</code>
-- Prüfen Sie, ob Passwort-Auth auf Server erlaubt ist:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Auf Server</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Sollte enthalten: PasswordAuthentication yes</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
-</code></pre></div></p>
-<p><strong>Bei Key-Auth:</strong>
-- Prüfen Sie, ob öffentlicher Key auf Server installiert ist
-- Prüfen Sie Berechtigungen: <code>chmod 600 ~/.ssh/authorized_keys</code></p>
-<h3 id="connection-refused">"Connection refused"<a class="headerlink" href="#connection-refused" title="Permanent link">&para;</a></h3>
+<h3 id="aufgaben-management">Aufgaben-Management<a class="headerlink" href="#aufgaben-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Vorstand (Dashboard)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    ↓ (Create Task)
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>clanscore-api
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    ↓ (Save to DB)
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>MongoDB
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    ↓ (Webhook)
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Discord Bot
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    ↓ (Post in Channel)
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Discord #aufgaben
+</code></pre></div>
+<h3 id="event-synchronisation">Event-Synchronisation<a class="headerlink" href="#event-synchronisation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Google Calendar
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    ↓ (Sync Command)
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Discord Bot
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    ↓ (API Call)
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>clanscore-api
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    ↓ (Save to DB)
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>MongoDB
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    ↓ (Webhook)
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Discord Bot
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ↓ (Update Channel)
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>Discord #events
+</code></pre></div>
+<h2 id="datenbank-schema">Datenbank-Schema<a class="headerlink" href="#datenbank-schema" title="Permanent link">&para;</a></h2>
+<h3 id="haupt-entitaten">Haupt-Entitäten<a class="headerlink" href="#haupt-entitaten" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Prüfen Sie <code>SERVER_HOST</code> und <code>SERVER_SSH_PORT</code></li>
-<li>Prüfen Sie Firewall-Einstellungen</li>
-<li>Testen Sie: <code>ssh ins@srbsci-11.ost.ch</code></li>
+<li><strong>Person</strong>: Benutzer/Mitglieder</li>
+<li><strong>Role</strong>: Discord-Rollen</li>
+<li><strong>Task</strong>: Aufgaben</li>
+<li><strong>Event</strong>: Events/Kalender</li>
+<li><strong>Reward</strong>: Belohnungen</li>
+<li><strong>Leaderboard</strong>: Ranglisten</li>
+<li><strong>Transaction</strong>: Punkte-Transaktionen</li>
+<li><strong>Donation</strong>: Spenden</li>
 </ul>
-<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
-<p>Nach dem Setup:
-1. ✅ GitHub Secrets konfigurieren
-2. ✅ Workflow testen (Actions → Deploy to Server → Run workflow)
-3. ✅ Logs prüfen</p>
-<p>Siehe <a href="../secrets/">GitHub Secrets Guide</a> für alle benötigten Secrets.</p>
+<h3 id="beziehungen">Beziehungen<a class="headerlink" href="#beziehungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Person ↔ Role (Many-to-Many)</li>
+<li>Person ↔ Task (Many-to-Many via Participants)</li>
+<li>Person ↔ Transaction (One-to-Many)</li>
+<li>Event ↔ Calendar (One-to-One)</li>
+</ul>
+<h2 id="kommunikation-zwischen-services">Kommunikation zwischen Services<a class="headerlink" href="#kommunikation-zwischen-services" title="Permanent link">&para;</a></h2>
+<h3 id="api-discord-bot">API ↔ Discord Bot<a class="headerlink" href="#api-discord-bot" title="Permanent link">&para;</a></h3>
+<p><strong>Webhooks:</strong>
+- API sendet Webhooks an Discord Bot
+- Endpoint: <code>http://discord-bot:3001/api/notifications/*</code>
+- Authentifizierung: <code>x-webhook-token</code> Header</p>
+<p><strong>Webhook-Endpunkte:</strong>
+- <code>/user-status</code> - Benutzer-Status-Änderungen
+- <code>/role-changed</code> - Rollen-Änderungen
+- <code>/role-updated</code> - Rollen-Updates</p>
+<h3 id="dashboard-api">Dashboard ↔ API<a class="headerlink" href="#dashboard-api" title="Permanent link">&para;</a></h3>
+<p><strong>REST API:</strong>
+- Base URL: <code>http://localhost:3000/api</code> (lokal)
+- Authentifizierung: JWT Tokens
+- CORS: Konfiguriert für Dashboard-Origin</p>
+<h2 id="shared-package">Shared Package<a class="headerlink" href="#shared-package" title="Permanent link">&para;</a></h2>
+<p>Ein gemeinsames Package (<code>shared/</code>) enthält:</p>
+<ul>
+<li><strong>DTOs</strong>: Data Transfer Objects für API-Kommunikation</li>
+<li><strong>Validation</strong>: Gemeinsame Validierungs-Logik</li>
+<li><strong>Error Types</strong>: Standardisierte Fehlertypen</li>
+<li><strong>Channel Names</strong>: Discord Channel-Konstanten</li>
+</ul>
+<h2 id="sicherheit">Sicherheit<a class="headerlink" href="#sicherheit" title="Permanent link">&para;</a></h2>
+<h3 id="authentifizierung">Authentifizierung<a class="headerlink" href="#authentifizierung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>JWT Tokens</strong> für Dashboard-API-Zugriff</li>
+<li><strong>Webhook Secrets</strong> für API ↔ Bot Kommunikation</li>
+<li><strong>OAuth 2.0</strong> für Google Calendar</li>
+</ul>
+<h3 id="autorisierung">Autorisierung<a class="headerlink" href="#autorisierung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Rollen-basiert</strong> (Mitglied, Vorstand, Admin)</li>
+<li><strong>Middleware</strong> für Route-Protection</li>
+<li><strong>Discord Permissions</strong> für Bot-Commands</li>
+</ul>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
+<p>Alle Services werden in Docker Containern orchestriert:</p>
+<ul>
+<li><code>mongodb</code>: Datenbank</li>
+<li><code>clanscore-api</code>: REST API</li>
+<li><code>discord-bot</code>: Discord Bot</li>
+<li><code>dashboard</code>: Frontend (Nginx)</li>
+</ul>
+<h3 id="netzwerk">Netzwerk<a class="headerlink" href="#netzwerk" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Alle Services im gleichen Docker-Netzwerk</li>
+<li>Interne Kommunikation über Service-Namen</li>
+<li>Externe Ports nur für notwendige Services</li>
+</ul>
+<h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../api-endpoints/">API-Endpunkte</a> - Vollständige API-Dokumentation</li>
+<li><a href="../webhooks/">Webhooks</a> - Webhook-Integration</li>
+<li><a href="../../database/backups-restore/">Datenbank</a> - Datenbank-Backups</li>
+</ul>
 
 
 
@@ -2298,7 +2544,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:51:55 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     
@@ -2308,7 +2554,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     
@@ -2365,10 +2611,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

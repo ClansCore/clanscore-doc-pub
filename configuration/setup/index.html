@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/secrets-cheatsheet/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/setup/">
       
       
-        <link rel="prev" href="../secrets/">
+        <link rel="prev" href="../../quickstart/">
       
       
-        <link rel="next" href="../env-variables/">
+        <link rel="next" href="../secrets/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Secrets Cheatsheet - Clanscore Doku</title>
+        <title>Einrichtung - Clanscore Doku</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-secrets-schnellreferenz" class="md-skip">
+        <a href="#konfiguration-einrichtung" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Secrets Cheatsheet
+              Einrichtung
             
           </span>
         </div>
@@ -267,7 +267,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../setup/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -539,10 +539,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -558,6 +585,309 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voraussetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voraussetzungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voraussetzungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fur-lokale-entwicklung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Für lokale Entwicklung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fur-production-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Für Production-Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schnellstart-einrichtung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnellstart-Einrichtung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schnellstart-Einrichtung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-repository-klonen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Repository klonen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-environment-variablen-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Environment-Variablen konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dependencies-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dependencies installieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-services-starten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Services starten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erforderliche-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erforderliche Konfigurationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erforderliche Konfigurationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord Bot Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-calendar-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Calendar Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-schritte-nach-der-einrichtung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erste Schritte nach der Einrichtung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erste Schritte nach der Einrichtung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-discord-server-vorbereiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Discord Server vorbereiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bot-synchronisieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Bot synchronisieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kalender-verknupfen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Kalender verknüpfen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nächste Schritte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Missing environment variables"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-verbindungsfehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB-Verbindungsfehler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot-verbindet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord Bot verbindet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -595,37 +925,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Secrets Cheatsheet
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../secrets-cheatsheet/" class="md-nav__link">
         
   
   
@@ -641,87 +944,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#alle-secrets-auf-einen-blick" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alle Secrets auf einen Blick
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Alle Secrets auf einen Blick">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#erforderlich-muss-vorhanden-sein" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Erforderlich (Muss vorhanden sein)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-haben-standardwerte" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚙️ Optional (Haben Standardwerte)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#copy-paste-liste-fur-srbsci-11ostch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Copy-Paste Liste für srbsci-11.ost.ch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anzahl-der-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anzahl der Secrets
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1784,22 +2006,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alle-secrets-auf-einen-blick" class="md-nav__link">
+  <a href="#ubersicht" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alle Secrets auf einen Blick
+        Übersicht
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Alle Secrets auf einen Blick">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voraussetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voraussetzungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voraussetzungen">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#erforderlich-muss-vorhanden-sein" class="md-nav__link">
+  <a href="#fur-lokale-entwicklung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ Erforderlich (Muss vorhanden sein)
+        Für lokale Entwicklung
       
     </span>
   </a>
@@ -1807,10 +2040,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-haben-standardwerte" class="md-nav__link">
+  <a href="#fur-production-deployment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Optional (Haben Standardwerte)
+        Für Production-Deployment
       
     </span>
   </a>
@@ -1823,10 +2056,171 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-paste-liste-fur-srbsci-11ostch" class="md-nav__link">
+  <a href="#schnellstart-einrichtung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy-Paste Liste für srbsci-11.ost.ch
+        Schnellstart-Einrichtung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schnellstart-Einrichtung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-repository-klonen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Repository klonen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-environment-variablen-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Environment-Variablen konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dependencies-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dependencies installieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-services-starten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Services starten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erforderliche-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erforderliche Konfigurationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erforderliche Konfigurationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord Bot Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-calendar-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Calendar Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-schritte-nach-der-einrichtung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erste Schritte nach der Einrichtung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erste Schritte nach der Einrichtung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-discord-server-vorbereiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Discord Server vorbereiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bot-synchronisieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Bot synchronisieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kalender-verknupfen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Kalender verknüpfen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nächste Schritte
       
     </span>
   </a>
@@ -1834,10 +2228,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anzahl-der-secrets" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Anzahl der Secrets
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Missing environment variables"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-verbindungsfehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB-Verbindungsfehler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot-verbindet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord Bot verbindet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
       
     </span>
   </a>
@@ -1864,64 +2308,175 @@
   
 
 
-<h1 id="github-secrets-schnellreferenz">📋 GitHub Secrets - Schnellreferenz<a class="headerlink" href="#github-secrets-schnellreferenz" title="Permanent link">&para;</a></h1>
-<h2 id="alle-secrets-auf-einen-blick">Alle Secrets auf einen Blick<a class="headerlink" href="#alle-secrets-auf-einen-blick" title="Permanent link">&para;</a></h2>
-<h3 id="erforderlich-muss-vorhanden-sein">✅ Erforderlich (Muss vorhanden sein)<a class="headerlink" href="#erforderlich-muss-vorhanden-sein" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SERVER_HOST
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>SERVER_USER
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>SERVER_SSH_KEY
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>MONGO_INITDB_ROOT_USERNAME
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>MONGO_INITDB_ROOT_PASSWORD
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>DISCORD_TOKEN
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>DISCORD_CLIENT_ID
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>DISCORD_GUILD_ID
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>WEBHOOK_SHARED_SECRET
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>DISCORD_BOT_WEBHOOK_URL
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>GOOGLE_CALENDAR_CLIENT_ID
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>GOOGLE_CALENDAR_CLIENT_SECRET
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>GOOGLE_CALENDAR_REDIRECT_URI
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>CLANSCORE_API_URL
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>CLANSCORE_API_KEY
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>JWT_SECRET
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>DASHBOARD_API_URL
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>CORS_ORIGIN
-</code></pre></div>
-<h3 id="optional-haben-standardwerte">⚙️ Optional (Haben Standardwerte)<a class="headerlink" href="#optional-haben-standardwerte" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SERVER_SSH_PORT (Standard: 22)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>MONGO_DB (Standard: clanscore)
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>DISCORD_SERVER_PORT (Standard: 3001)
-</code></pre></div>
-<h2 id="copy-paste-liste-fur-srbsci-11ostch">Copy-Paste Liste für srbsci-11.ost.ch<a class="headerlink" href="#copy-paste-liste-fur-srbsci-11ostch" title="Permanent link">&para;</a></h2>
-<p>Fügen Sie diese Secrets in GitHub hinzu (Settings → Secrets → Actions):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SERVER_HOST=srbsci-11.ost.ch
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SERVER_USER=ins
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SERVER_SSH_KEY=&lt;Privater SSH-Key&gt;  # ODER
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>SERVER_SSH_PASSWORD=&lt;Ihr SSH-Passwort&gt;  # Alternative zu KEY
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>MONGO_INITDB_ROOT_USERNAME=admin
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>MONGO_INITDB_ROOT_PASSWORD=&lt;Ihr Passwort&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>MONGO_DB=clanscore
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>DISCORD_TOKEN=&lt;Ihr Discord Token&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>DISCORD_CLIENT_ID=&lt;Ihr Client ID&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>DISCORD_GUILD_ID=&lt;Ihr Guild ID&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>DISCORD_SERVER_PORT=3001
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>WEBHOOK_SHARED_SECRET=&lt;Ihr Secret&gt;
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>DISCORD_BOT_WEBHOOK_URL=http://152.96.10.11:3001
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>GOOGLE_CALENDAR_CLIENT_ID=&lt;Ihr Client ID&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>GOOGLE_CALENDAR_CLIENT_SECRET=&lt;Ihr Secret&gt;
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>GOOGLE_CALENDAR_REDIRECT_URI=http://152.96.10.11/calendarToken
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>CLANSCORE_API_URL=http://152.96.10.11:3000/api
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>CLANSCORE_API_KEY=&lt;Ihr API Key&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>JWT_SECRET=&lt;Ihr JWT Secret&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>DASHBOARD_API_URL=http://152.96.10.11:3000/api
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>CORS_ORIGIN=http://152.96.10.11
-</code></pre></div>
-<h2 id="anzahl-der-secrets">Anzahl der Secrets<a class="headerlink" href="#anzahl-der-secrets" title="Permanent link">&para;</a></h2>
+<h1 id="konfiguration-einrichtung">⚙️ Konfiguration - Einrichtung<a class="headerlink" href="#konfiguration-einrichtung" title="Permanent link">&para;</a></h1>
+<p>Diese Anleitung führt Sie durch die vollständige Einrichtung des Clanscore-Systems.</p>
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>Clanscore besteht aus drei Hauptkomponenten, die zusammenarbeiten:</p>
 <ul>
-<li><strong>Erforderlich</strong>: 17 Secrets</li>
-<li><strong>Optional</strong>: 3 Secrets</li>
-<li><strong>Gesamt</strong>: 20 Secrets</li>
+<li><strong>clanscore-api</strong>: REST API für Backend-Logik</li>
+<li><strong>dashboard</strong>: Angular Frontend für Administratoren</li>
+<li><strong>discord-bot</strong>: Discord Bot für Vereinsmitglieder</li>
 </ul>
-<p>Siehe <a href="../secrets/">GitHub Secrets Guide</a> für detaillierte Beschreibungen.</p>
+<h2 id="voraussetzungen">Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Permanent link">&para;</a></h2>
+<h3 id="fur-lokale-entwicklung">Für lokale Entwicklung<a class="headerlink" href="#fur-lokale-entwicklung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Node.js 20+ installiert</li>
+<li>MongoDB lokal installiert (oder Docker)</li>
+<li>Git Repository geklont</li>
+<li>Discord Bot Token und Client ID</li>
+</ul>
+<h3 id="fur-production-deployment">Für Production-Deployment<a class="headerlink" href="#fur-production-deployment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Docker &amp; Docker Compose installiert</li>
+<li>Server mit mindestens 2GB RAM</li>
+<li>GitHub Repository mit aktivierten Actions</li>
+<li>GitHub Secrets konfiguriert</li>
+</ul>
+<h2 id="schnellstart-einrichtung">Schnellstart-Einrichtung<a class="headerlink" href="#schnellstart-einrichtung" title="Permanent link">&para;</a></h2>
+<h3 id="1-repository-klonen">1. Repository klonen<a class="headerlink" href="#1-repository-klonen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ClansCore/clanscore.git
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>clanscore
+</code></pre></div>
+<h3 id="2-environment-variablen-konfigurieren">2. Environment-Variablen konfigurieren<a class="headerlink" href="#2-environment-variablen-konfigurieren" title="Permanent link">&para;</a></h3>
+<p><strong>Für lokale Entwicklung:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>nano<span class="w"> </span>.env<span class="w">  </span><span class="c1"># Alle Werte anpassen</span>
+</code></pre></div>
+<p><strong>Für Production:</strong></p>
+<p>Verwenden Sie GitHub Secrets (siehe <a href="../secrets/">GitHub Secrets Guide</a>)</p>
+<h3 id="3-dependencies-installieren">3. Dependencies installieren<a class="headerlink" href="#3-dependencies-installieren" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>install
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm<span class="w"> </span>run<span class="w"> </span>build:shared
+</code></pre></div>
+<h3 id="4-services-starten">4. Services starten<a class="headerlink" href="#4-services-starten" title="Permanent link">&para;</a></h3>
+<p><strong>Lokal (ohne Docker):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Terminal 1: API</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>apps/clanscore-api
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># Terminal 2: Discord Bot</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">cd</span><span class="w"> </span>apps/discord-bot
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># Terminal 3: Dashboard</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">cd</span><span class="w"> </span>apps/dashboard
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>npm<span class="w"> </span>start
+</code></pre></div></p>
+<p><strong>Mit Docker:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</code></pre></div></p>
+<h2 id="erforderliche-konfigurationen">Erforderliche Konfigurationen<a class="headerlink" href="#erforderliche-konfigurationen" title="Permanent link">&para;</a></h2>
+<h3 id="discord-bot-setup">Discord Bot Setup<a class="headerlink" href="#discord-bot-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Discord Application erstellen:</strong></li>
+<li>Gehen Sie zu: https://discord.com/developers/applications</li>
+<li>Erstellen Sie eine neue Application</li>
+<li>
+<p>Notieren Sie sich <code>DISCORD_TOKEN</code> und <code>DISCORD_CLIENT_ID</code></p>
+</li>
+<li>
+<p><strong>Bot einladen:</strong></p>
+</li>
+<li>OAuth2 → URL Generator</li>
+<li>Scopes: <code>bot</code>, <code>applications.commands</code></li>
+<li>Permissions: <code>Administrator</code>, <code>Manage Roles</code>, etc.</li>
+<li>
+<p>Kopieren Sie den Link und laden Sie den Bot ein</p>
+</li>
+<li>
+<p><strong>Server ID kopieren:</strong></p>
+</li>
+<li>Rechtsklick auf Discord-Server → "Server ID kopieren"</li>
+<li>Dies ist Ihre <code>DISCORD_GUILD_ID</code></li>
+</ol>
+<h3 id="mongodb-setup">MongoDB Setup<a class="headerlink" href="#mongodb-setup" title="Permanent link">&para;</a></h3>
+<p><strong>Lokal:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># MongoDB starten (falls lokal installiert)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>mongod
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Oder mit Docker</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">27017</span>:27017<span class="w"> </span>--name<span class="w"> </span>mongodb<span class="w"> </span>mongo:6
+</code></pre></div></p>
+<p><strong>Production:</strong>
+- MongoDB wird automatisch mit Docker Compose gestartet
+- Konfigurieren Sie <code>MONGO_INITDB_ROOT_USERNAME</code> und <code>MONGO_INITDB_ROOT_PASSWORD</code></p>
+<h3 id="google-calendar-setup">Google Calendar Setup<a class="headerlink" href="#google-calendar-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Google Cloud Console:</strong></li>
+<li>Gehen Sie zu: https://console.cloud.google.com</li>
+<li>Erstellen Sie ein Projekt</li>
+<li>
+<p>Aktivieren Sie "Google Calendar API"</p>
+</li>
+<li>
+<p><strong>OAuth 2.0 Credentials:</strong></p>
+</li>
+<li>APIs &amp; Services → Credentials</li>
+<li>Erstellen Sie OAuth 2.0 Client ID</li>
+<li>Typ: "Webanwendung"</li>
+<li>
+<p>Redirect URI: <code>http://localhost:3000/calendarToken</code> (lokal) oder Ihre Domain</p>
+</li>
+<li>
+<p><strong>Environment-Variablen:</strong></p>
+</li>
+<li><code>GOOGLE_CALENDAR_CLIENT_ID</code></li>
+<li><code>GOOGLE_CALENDAR_CLIENT_SECRET</code></li>
+<li><code>GOOGLE_CALENDAR_REDIRECT_URI</code></li>
+</ol>
+<h2 id="erste-schritte-nach-der-einrichtung">Erste Schritte nach der Einrichtung<a class="headerlink" href="#erste-schritte-nach-der-einrichtung" title="Permanent link">&para;</a></h2>
+<h3 id="1-discord-server-vorbereiten">1. Discord Server vorbereiten<a class="headerlink" href="#1-discord-server-vorbereiten" title="Permanent link">&para;</a></h3>
+<p>Erstellen Sie die erforderlichen Channels (siehe <a href="../../bot/manual/">Discord Bot Manual</a>):</p>
+<ul>
+<li><code>#regeln</code></li>
+<li><code>#events</code></li>
+<li><code>#rangliste</code></li>
+<li><code>#aufgaben</code></li>
+<li><code>#bot-befehle</code></li>
+<li><code>#bot-bewerbungen</code> (Vorstand)</li>
+<li><code>#bot-belohnungen</code> (Vorstand)</li>
+<li><code>#bot-aufgaben</code> (Vorstand)</li>
+</ul>
+<h3 id="2-bot-synchronisieren">2. Bot synchronisieren<a class="headerlink" href="#2-bot-synchronisieren" title="Permanent link">&para;</a></h3>
+<p>Führen Sie im Discord-Server aus:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/syncroles
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>/syncusers
+</code></pre></div>
+<h3 id="3-kalender-verknupfen">3. Kalender verknüpfen<a class="headerlink" href="#3-kalender-verknupfen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/linkcalendar
+</code></pre></div>
+<p>Folgen Sie dem Link und autorisieren Sie den Zugriff.</p>
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../development/architecture/">Entwicklung</a> - Architektur verstehen</li>
+<li><a href="../development/api-endpoints/">API-Endpunkte</a> - API-Dokumentation</li>
+<li><a href="../../deployment/guide/">Deployment</a> - Production-Deployment</li>
+<li><a href="../../dashboard/manual/">Dashboard</a> - Dashboard-Funktionen</li>
+<li><a href="../../bot/manual/">Discord Bot</a> - Bot-Funktionen</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="missing-environment-variables">"Missing environment variables"<a class="headerlink" href="#missing-environment-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie, ob alle erforderlichen Variablen in <code>.env</code> gesetzt sind</li>
+<li>Siehe <a href="../env-variables/">Environment-Variablen</a> für vollständige Liste</li>
+</ul>
+<h3 id="mongodb-verbindungsfehler">MongoDB-Verbindungsfehler<a class="headerlink" href="#mongodb-verbindungsfehler" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie, ob MongoDB läuft: <code>docker ps</code> oder <code>mongosh</code></li>
+<li>Prüfen Sie <code>MONGO_HOST</code> und <code>MONGO_PORT</code></li>
+</ul>
+<h3 id="discord-bot-verbindet-nicht">Discord Bot verbindet nicht<a class="headerlink" href="#discord-bot-verbindet-nicht" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie den <code>DISCORD_TOKEN</code></li>
+<li>Prüfen Sie die Bot-Intents in Discord Developer Console</li>
+<li>Prüfen Sie die Logs: <code>docker-compose logs discord-bot</code></li>
+</ul>
+<h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../secrets/">GitHub Secrets</a> - Secrets für Production</li>
+<li><a href="../env-variables/">Environment-Variablen</a> - Alle Variablen erklärt</li>
+<li><a href="../../development/local/">Lokale Entwicklung</a> - Entwicklung ohne Docker</li>
+</ul>
 
 
 
@@ -1944,7 +2499,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:51:55 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     
@@ -1954,7 +2509,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     

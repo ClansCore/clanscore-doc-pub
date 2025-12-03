@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/secrets-cheatsheet/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/dashboard/manual/">
       
       
-        <link rel="prev" href="../secrets/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../env-variables/">
+        <link rel="next" href="../../bot/overview/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Secrets Cheatsheet - Clanscore Doku</title>
+        <title>Benutzerhandbuch - Clanscore Doku</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-secrets-schnellreferenz" class="md-skip">
+        <a href="#dashboard-benutzerhandbuch" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Secrets Cheatsheet
+              Benutzerhandbuch
             
           </span>
         </div>
@@ -261,13 +261,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../setup/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../configuration/setup/" class="md-tabs__link">
           
   
   
@@ -323,11 +321,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../dashboard/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -482,31 +482,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -524,7 +521,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -542,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../configuration/setup/" class="md-nav__link">
         
   
   
@@ -570,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secrets/" class="md-nav__link">
+      <a href="../../configuration/secrets/" class="md-nav__link">
         
   
   
@@ -595,37 +592,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Secrets Cheatsheet
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-cheatsheet/" class="md-nav__link">
         
   
   
@@ -641,87 +611,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#alle-secrets-auf-einen-blick" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alle Secrets auf einen Blick
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Alle Secrets auf einen Blick">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#erforderlich-muss-vorhanden-sein" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Erforderlich (Muss vorhanden sein)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-haben-standardwerte" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚙️ Optional (Haben Standardwerte)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#copy-paste-liste-fur-srbsci-11ostch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Copy-Paste Liste für srbsci-11.ost.ch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anzahl-der-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anzahl der Secrets
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -734,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../env-variables/" class="md-nav__link">
+      <a href="../../configuration/env-variables/" class="md-nav__link">
         
   
   
@@ -762,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh-setup/" class="md-nav__link">
+      <a href="../../configuration/ssh-setup/" class="md-nav__link">
         
   
   
@@ -796,13 +685,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -811,7 +697,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   
@@ -847,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/architecture/" class="md-nav__link">
+      <a href="../../configuration/development/architecture/" class="md-nav__link">
         
   
   
@@ -875,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/api-endpoints/" class="md-nav__link">
+      <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
         
   
   
@@ -903,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/webhooks/" class="md-nav__link">
+      <a href="../../configuration/development/webhooks/" class="md-nav__link">
         
   
   
@@ -945,13 +831,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -960,7 +843,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
             
   
   
@@ -996,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/backups-restore/" class="md-nav__link">
+      <a href="../../configuration/database/backups-restore/" class="md-nav__link">
         
   
   
@@ -1032,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calendar/" class="md-nav__link">
+      <a href="../../configuration/calendar/" class="md-nav__link">
         
   
   
@@ -1438,28 +1321,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1477,7 +1363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1495,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dashboard/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -1520,10 +1406,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../dashboard/manual/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benutzerhandbuch
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1539,6 +1452,370 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zugriff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zugriff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anmeldung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anmeldung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erste-anmeldung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erste Anmeldung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einloggen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einloggen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hauptfunktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptfunktionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hauptfunktionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benutzerverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzerverwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufgaben-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgaben-Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-verwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event-Verwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranglisten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranglisten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#belohnungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Belohnungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollen-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollen-Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptmenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptmenü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benutzer-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzer-Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berechtigungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berechtigungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Berechtigungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funktionen-nach-rolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionen nach Rolle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tastenkurzel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tastenkürzel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benutzerverwaltung_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzerverwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufgaben-management_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgaben-Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-verwaltung_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event-Verwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nicht-angemeldet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Nicht angemeldet"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehler-beim-laden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Fehler beim Laden"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-werden-nicht-gespeichert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Änderungen werden nicht gespeichert"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1784,22 +2061,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alle-secrets-auf-einen-blick" class="md-nav__link">
+  <a href="#ubersicht" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alle Secrets auf einen Blick
+        Übersicht
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Alle Secrets auf einen Blick">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zugriff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zugriff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anmeldung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anmeldung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#erforderlich-muss-vorhanden-sein" class="md-nav__link">
+  <a href="#erste-anmeldung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ Erforderlich (Muss vorhanden sein)
+        Erste Anmeldung
       
     </span>
   </a>
@@ -1807,10 +2106,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-haben-standardwerte" class="md-nav__link">
+  <a href="#einloggen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Optional (Haben Standardwerte)
+        Einloggen
       
     </span>
   </a>
@@ -1823,10 +2122,171 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-paste-liste-fur-srbsci-11ostch" class="md-nav__link">
+  <a href="#hauptfunktionen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy-Paste Liste für srbsci-11.ost.ch
+        Hauptfunktionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hauptfunktionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benutzerverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzerverwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufgaben-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgaben-Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-verwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event-Verwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranglisten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranglisten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#belohnungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Belohnungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollen-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollen-Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptmenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptmenü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benutzer-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzer-Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#berechtigungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berechtigungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Berechtigungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funktionen-nach-rolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionen nach Rolle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tastenkurzel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tastenkürzel
       
     </span>
   </a>
@@ -1834,10 +2294,110 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anzahl-der-secrets" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Anzahl der Secrets
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benutzerverwaltung_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzerverwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufgaben-management_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgaben-Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-verwaltung_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event-Verwaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nicht-angemeldet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Nicht angemeldet"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehler-beim-laden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Fehler beim Laden"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-werden-nicht-gespeichert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Änderungen werden nicht gespeichert"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
       
     </span>
   </a>
@@ -1864,64 +2424,241 @@
   
 
 
-<h1 id="github-secrets-schnellreferenz">📋 GitHub Secrets - Schnellreferenz<a class="headerlink" href="#github-secrets-schnellreferenz" title="Permanent link">&para;</a></h1>
-<h2 id="alle-secrets-auf-einen-blick">Alle Secrets auf einen Blick<a class="headerlink" href="#alle-secrets-auf-einen-blick" title="Permanent link">&para;</a></h2>
-<h3 id="erforderlich-muss-vorhanden-sein">✅ Erforderlich (Muss vorhanden sein)<a class="headerlink" href="#erforderlich-muss-vorhanden-sein" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SERVER_HOST
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>SERVER_USER
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>SERVER_SSH_KEY
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>MONGO_INITDB_ROOT_USERNAME
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>MONGO_INITDB_ROOT_PASSWORD
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>DISCORD_TOKEN
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>DISCORD_CLIENT_ID
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>DISCORD_GUILD_ID
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>WEBHOOK_SHARED_SECRET
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>DISCORD_BOT_WEBHOOK_URL
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>GOOGLE_CALENDAR_CLIENT_ID
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>GOOGLE_CALENDAR_CLIENT_SECRET
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>GOOGLE_CALENDAR_REDIRECT_URI
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>CLANSCORE_API_URL
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>CLANSCORE_API_KEY
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>JWT_SECRET
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>DASHBOARD_API_URL
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>CORS_ORIGIN
-</code></pre></div>
-<h3 id="optional-haben-standardwerte">⚙️ Optional (Haben Standardwerte)<a class="headerlink" href="#optional-haben-standardwerte" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SERVER_SSH_PORT (Standard: 22)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>MONGO_DB (Standard: clanscore)
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>DISCORD_SERVER_PORT (Standard: 3001)
-</code></pre></div>
-<h2 id="copy-paste-liste-fur-srbsci-11ostch">Copy-Paste Liste für srbsci-11.ost.ch<a class="headerlink" href="#copy-paste-liste-fur-srbsci-11ostch" title="Permanent link">&para;</a></h2>
-<p>Fügen Sie diese Secrets in GitHub hinzu (Settings → Secrets → Actions):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SERVER_HOST=srbsci-11.ost.ch
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SERVER_USER=ins
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SERVER_SSH_KEY=&lt;Privater SSH-Key&gt;  # ODER
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>SERVER_SSH_PASSWORD=&lt;Ihr SSH-Passwort&gt;  # Alternative zu KEY
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>MONGO_INITDB_ROOT_USERNAME=admin
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>MONGO_INITDB_ROOT_PASSWORD=&lt;Ihr Passwort&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>MONGO_DB=clanscore
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>DISCORD_TOKEN=&lt;Ihr Discord Token&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>DISCORD_CLIENT_ID=&lt;Ihr Client ID&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>DISCORD_GUILD_ID=&lt;Ihr Guild ID&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>DISCORD_SERVER_PORT=3001
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>WEBHOOK_SHARED_SECRET=&lt;Ihr Secret&gt;
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>DISCORD_BOT_WEBHOOK_URL=http://152.96.10.11:3001
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>GOOGLE_CALENDAR_CLIENT_ID=&lt;Ihr Client ID&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>GOOGLE_CALENDAR_CLIENT_SECRET=&lt;Ihr Secret&gt;
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>GOOGLE_CALENDAR_REDIRECT_URI=http://152.96.10.11/calendarToken
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>CLANSCORE_API_URL=http://152.96.10.11:3000/api
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>CLANSCORE_API_KEY=&lt;Ihr API Key&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>JWT_SECRET=&lt;Ihr JWT Secret&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>DASHBOARD_API_URL=http://152.96.10.11:3000/api
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>CORS_ORIGIN=http://152.96.10.11
-</code></pre></div>
-<h2 id="anzahl-der-secrets">Anzahl der Secrets<a class="headerlink" href="#anzahl-der-secrets" title="Permanent link">&para;</a></h2>
+<h1 id="dashboard-benutzerhandbuch">📊 Dashboard - Benutzerhandbuch<a class="headerlink" href="#dashboard-benutzerhandbuch" title="Permanent link">&para;</a></h1>
+<p>Vollständiges Handbuch für das Clanscore Dashboard.</p>
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>Das Clanscore Dashboard ist eine Angular-basierte Web-Anwendung für die Verwaltung des Vereins. Es bietet Administratoren und Vorstandsmitgliedern eine zentrale Oberfläche für:</p>
 <ul>
-<li><strong>Erforderlich</strong>: 17 Secrets</li>
-<li><strong>Optional</strong>: 3 Secrets</li>
-<li><strong>Gesamt</strong>: 20 Secrets</li>
+<li>Benutzerverwaltung</li>
+<li>Aufgaben-Management</li>
+<li>Event-Verwaltung</li>
+<li>Ranglisten-Verwaltung</li>
+<li>Belohnungen-Verwaltung</li>
+<li>Rollen-Management</li>
 </ul>
-<p>Siehe <a href="../secrets/">GitHub Secrets Guide</a> für detaillierte Beschreibungen.</p>
+<h2 id="zugriff">Zugriff<a class="headerlink" href="#zugriff" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Lokal:</strong> http://localhost:4200</li>
+<li><strong>Production:</strong> http://your-server oder https://your-domain.com</li>
+</ul>
+<h2 id="anmeldung">Anmeldung<a class="headerlink" href="#anmeldung" title="Permanent link">&para;</a></h2>
+<h3 id="erste-anmeldung">Erste Anmeldung<a class="headerlink" href="#erste-anmeldung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Öffnen Sie das Dashboard</li>
+<li>Klicken Sie auf "Registrieren"</li>
+<li>Geben Sie Ihre Daten ein:</li>
+<li>Benutzername</li>
+<li>E-Mail</li>
+<li>Passwort</li>
+<li>Klicken Sie auf "Registrieren"</li>
+</ol>
+<h3 id="einloggen">Einloggen<a class="headerlink" href="#einloggen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Geben Sie Ihre Anmeldedaten ein</li>
+<li>Klicken Sie auf "Anmelden"</li>
+<li>Sie werden zum Dashboard weitergeleitet</li>
+</ol>
+<h2 id="hauptfunktionen">Hauptfunktionen<a class="headerlink" href="#hauptfunktionen" title="Permanent link">&para;</a></h2>
+<h3 id="benutzerverwaltung">Benutzerverwaltung<a class="headerlink" href="#benutzerverwaltung" title="Permanent link">&para;</a></h3>
+<p><strong>Übersicht:</strong>
+- Liste aller registrierten Mitglieder
+- Filter nach Rollen
+- Suche nach Namen oder Discord-ID</p>
+<p><strong>Aktionen:</strong>
+- <strong>Benutzer anzeigen:</strong> Klicken Sie auf einen Benutzer für Details
+- <strong>Rollen zuweisen:</strong> Benutzer auswählen → Rollen hinzufügen/entfernen
+- <strong>Punkte verwalten:</strong> Punkte hinzufügen oder entfernen
+- <strong>Bewerbungen bearbeiten:</strong> Bewerbungen akzeptieren oder ablehnen
+- <strong>Benutzer löschen:</strong> Benutzer aus dem System entfernen</p>
+<p><strong>Bewerbungen:</strong>
+- Neue Bewerbungen werden im Dashboard angezeigt
+- Akzeptieren: Benutzer erhält "Mitglied"-Rolle
+- Ablehnen: Bewerbung wird abgelehnt, Benutzer wird benachrichtigt</p>
+<h3 id="aufgaben-management">Aufgaben-Management<a class="headerlink" href="#aufgaben-management" title="Permanent link">&para;</a></h3>
+<p><strong>Aufgaben erstellen:</strong>
+1. Navigieren Sie zu "Aufgaben"
+2. Klicken Sie auf "Neue Aufgabe"
+3. Füllen Sie aus:
+   - Titel
+   - Beschreibung
+   - Aufgabentyp
+   - Punkte-Belohnung
+   - Fälligkeitsdatum
+4. Klicken Sie auf "Erstellen"</p>
+<p><strong>Aufgaben verwalten:</strong>
+- <strong>Offene Aufgaben:</strong> Alle verfügbaren Aufgaben
+- <strong>Erledigte Aufgaben:</strong> Abgeschlossene Aufgaben
+- <strong>Abgelaufene Aufgaben:</strong> Überschrittene Fälligkeitsdaten</p>
+<p><strong>Aufgaben bearbeiten:</strong>
+- Klicken Sie auf eine Aufgabe für Details
+- Teilnehmer verwalten
+- Aufgabe als erledigt markieren
+- Punkte vergeben</p>
+<h3 id="event-verwaltung">Event-Verwaltung<a class="headerlink" href="#event-verwaltung" title="Permanent link">&para;</a></h3>
+<p><strong>Events anzeigen:</strong>
+- Übersicht aller Events
+- Anstehende Events
+- Event-Details</p>
+<p><strong>Events verwalten:</strong>
+- Event-Details bearbeiten
+- Teilnehmer verwalten
+- Events mit Google Calendar synchronisieren</p>
+<h3 id="ranglisten">Ranglisten<a class="headerlink" href="#ranglisten" title="Permanent link">&para;</a></h3>
+<p><strong>Ranglisten erstellen:</strong>
+1. Navigieren Sie zu "Ranglisten"
+2. Klicken Sie auf "Neue Rangliste"
+3. Geben Sie einen Namen ein (z.B. "Jahr 2025")
+4. Klicken Sie auf "Erstellen"</p>
+<p><strong>Ranglisten anzeigen:</strong>
+- Top-Mitglieder nach Punkten
+- Filter nach Zeitraum
+- Export-Funktion</p>
+<h3 id="belohnungen">Belohnungen<a class="headerlink" href="#belohnungen" title="Permanent link">&para;</a></h3>
+<p><strong>Belohnungen erstellen:</strong>
+1. Navigieren Sie zu "Belohnungen"
+2. Klicken Sie auf "Neue Belohnung"
+3. Füllen Sie aus:
+   - Name
+   - Beschreibung
+   - Benötigte Punkte
+   - Verfügbare Menge
+4. Klicken Sie auf "Erstellen"</p>
+<p><strong>Belohnungs-Anfragen:</strong>
+- Mitglieder können Belohnungen einfordern
+- Vorstand kann Anfragen akzeptieren oder ablehnen
+- Punkte werden bei Akzeptierung abgezogen</p>
+<h3 id="rollen-management">Rollen-Management<a class="headerlink" href="#rollen-management" title="Permanent link">&para;</a></h3>
+<p><strong>Rollen verwalten:</strong>
+- Rollen erstellen
+- Rollen bearbeiten (Name, Farbe, Berechtigungen)
+- Rollen löschen
+- Rollen mit Discord synchronisieren</p>
+<p><strong>Rollen zuweisen:</strong>
+- Benutzer auswählen
+- Rollen hinzufügen oder entfernen
+- Änderungen werden automatisch mit Discord synchronisiert</p>
+<h2 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h2>
+<h3 id="hauptmenu">Hauptmenü<a class="headerlink" href="#hauptmenu" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dashboard:</strong> Übersicht und Statistiken</li>
+<li><strong>Benutzer:</strong> Benutzerverwaltung</li>
+<li><strong>Aufgaben:</strong> Aufgaben-Management</li>
+<li><strong>Events:</strong> Event-Verwaltung</li>
+<li><strong>Ranglisten:</strong> Ranglisten-Verwaltung</li>
+<li><strong>Belohnungen:</strong> Belohnungen-Verwaltung</li>
+<li><strong>Rollen:</strong> Rollen-Management</li>
+<li><strong>Einstellungen:</strong> System-Einstellungen</li>
+</ul>
+<h3 id="benutzer-menu">Benutzer-Menü<a class="headerlink" href="#benutzer-menu" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Profil:</strong> Eigene Profil-Daten</li>
+<li><strong>Abmelden:</strong> Ausloggen</li>
+</ul>
+<h2 id="berechtigungen">Berechtigungen<a class="headerlink" href="#berechtigungen" title="Permanent link">&para;</a></h2>
+<h3 id="rollen">Rollen<a class="headerlink" href="#rollen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Berechtigungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mitglied</strong></td>
+<td>Eigene Daten anzeigen</td>
+</tr>
+<tr>
+<td><strong>Vorstand</strong></td>
+<td>Alle Verwaltungs-Funktionen</td>
+</tr>
+<tr>
+<td><strong>Admin</strong></td>
+<td>Vollzugriff + System-Einstellungen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="funktionen-nach-rolle">Funktionen nach Rolle<a class="headerlink" href="#funktionen-nach-rolle" title="Permanent link">&para;</a></h3>
+<p><strong>Mitglied:</strong>
+- Eigene Punkte anzeigen
+- Eigene Aufgaben anzeigen
+- Eigene Transaktionen anzeigen</p>
+<p><strong>Vorstand:</strong>
+- Alle Benutzer-Funktionen
+- Benutzer verwalten
+- Aufgaben erstellen/bearbeiten
+- Events verwalten
+- Belohnungen verwalten
+- Ranglisten verwalten</p>
+<p><strong>Admin:</strong>
+- Alle Vorstand-Funktionen
+- Rollen verwalten
+- System-Einstellungen
+- API-Konfiguration</p>
+<h2 id="tastenkurzel">Tastenkürzel<a class="headerlink" href="#tastenkurzel" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Strg + K:</strong> Schnellsuche</li>
+<li><strong>Strg + S:</strong> Speichern (in Formularen)</li>
+<li><strong>Esc:</strong> Dialog schließen</li>
+</ul>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="benutzerverwaltung_1">Benutzerverwaltung<a class="headerlink" href="#benutzerverwaltung_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Regelmäßige Synchronisation:</strong></li>
+<li>Synchronisieren Sie regelmäßig mit Discord</li>
+<li>
+<p>Prüfen Sie neue Bewerbungen täglich</p>
+</li>
+<li>
+<p><strong>Rollen zuweisen:</strong></p>
+</li>
+<li>Verwenden Sie konsistente Rollen-Namen</li>
+<li>Dokumentieren Sie Rollen-Berechtigungen</li>
+</ol>
+<h3 id="aufgaben-management_1">Aufgaben-Management<a class="headerlink" href="#aufgaben-management_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Klare Beschreibungen:</strong></li>
+<li>Geben Sie detaillierte Aufgaben-Beschreibungen</li>
+<li>
+<p>Setzen Sie realistische Fälligkeitsdaten</p>
+</li>
+<li>
+<p><strong>Punkte vergeben:</strong></p>
+</li>
+<li>Verwenden Sie konsistente Punkte-Werte</li>
+<li>Dokumentieren Sie Punkte-Verteilung</li>
+</ol>
+<h3 id="event-verwaltung_1">Event-Verwaltung<a class="headerlink" href="#event-verwaltung_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Kalender-Synchronisation:</strong></li>
+<li>Synchronisieren Sie regelmäßig mit Google Calendar</li>
+<li>Prüfen Sie Event-Details vor Veröffentlichung</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="nicht-angemeldet">"Nicht angemeldet"<a class="headerlink" href="#nicht-angemeldet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie Ihre Anmeldedaten</li>
+<li>Prüfen Sie die API-Verbindung</li>
+<li>Prüfen Sie die CORS-Konfiguration</li>
+</ul>
+<h3 id="fehler-beim-laden">"Fehler beim Laden"<a class="headerlink" href="#fehler-beim-laden" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie die API-Verbindung</li>
+<li>Prüfen Sie die Browser-Konsole für Fehler</li>
+<li>Prüfen Sie die Logs: <code>docker-compose logs clanscore-api</code></li>
+</ul>
+<h3 id="anderungen-werden-nicht-gespeichert">"Änderungen werden nicht gespeichert"<a class="headerlink" href="#anderungen-werden-nicht-gespeichert" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfen Sie Ihre Berechtigungen</li>
+<li>Prüfen Sie die API-Verbindung</li>
+<li>Prüfen Sie die Browser-Konsole</li>
+</ul>
+<h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../configuration/development/api-endpoints/">API-Endpunkte</a> - Vollständige API-Dokumentation</li>
+<li><a href="../../configuration/setup/">Konfiguration</a> - Setup-Anleitung</li>
+<li><a href="../../bot/manual/">Discord Bot</a> - Bot-Funktionen</li>
+</ul>
 
 
 
@@ -1944,7 +2681,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:51:55 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     
@@ -1954,7 +2691,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     

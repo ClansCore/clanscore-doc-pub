@@ -6,35 +6,35 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Vollständige Dokumentation für das Clanscore Projekt - API, Dashboard und Discord Bot">
+        <meta name="description" content="Vollständige Dokumentation für das Clanscore - API, Dashboard und Discord Bot">
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/DEPLOYMENT-SETUP/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/deployment/setup/">
       
       
-        <link rel="prev" href="../deployment/scripts/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../DEPLOYMENT/">
+        <link rel="next" href="../guide/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>deployment/setup - Clanscore Dokumentation</title>
+        <title>Setup - Clanscore Doku</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dokumentations-deployment-setup" class="md-skip">
+        <a href="#deployment-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Clanscore Dokumentation" class="md-header__button md-logo" aria-label="Clanscore Dokumentation" data-md-component="logo">
+    <a href="../.." title="Clanscore Doku" class="md-header__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,13 +106,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Clanscore Dokumentation
+            Clanscore Doku
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              deployment/setup
+              Setup
             
           </span>
         </div>
@@ -125,7 +125,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../quickstart/" class="md-tabs__link">
+      <a href="../../quickstart/" class="md-tabs__link">
         
   
   
@@ -261,13 +261,33 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../configuration/setup/" class="md-tabs__link">
+          
+  
+  
+  Konfiguration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     
   
   
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../deployment/overview/" class="md-tabs__link">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -287,27 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../configuration/secrets/" class="md-tabs__link">
-          
-  
-  
-  Konfiguration
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../development/local/" class="md-tabs__link">
+        <a href="../../development/local/" class="md-tabs__link">
           
   
   
@@ -327,7 +327,27 @@
     
     
       <li class="md-tabs__item">
-        <a href="../bot/overview/" class="md-tabs__link">
+        <a href="../../dashboard/overview/" class="md-tabs__link">
+          
+  
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bot/overview/" class="md-tabs__link">
           
   
   
@@ -347,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../backup/guide/" class="md-tabs__link">
+        <a href="../../backup/guide/" class="md-tabs__link">
           
   
   
@@ -356,25 +376,6 @@
         </a>
       </li>
     
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../documentation-overview/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Übersicht
-
-      </a>
-    </li>
   
 
       
@@ -400,13 +401,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Clanscore Dokumentation" class="md-nav__button md-logo" aria-label="Clanscore Dokumentation" data-md-component="logo">
+    <a href="../.." title="Clanscore Doku" class="md-nav__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Clanscore Dokumentation
+    Clanscore Doku
   </label>
   
     <div class="md-nav__source">
@@ -430,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -457,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart/" class="md-nav__link">
+      <a href="../../quickstart/" class="md-nav__link">
         
   
   
@@ -473,6 +474,471 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfiguration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfiguration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/env-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment-Variablen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ssh-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entwicklung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architektur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API-Endpunkte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datenbank
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datenbank
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/database/backups-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backups & Restore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/calendar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -502,10 +968,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -523,8 +989,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -541,98 +1007,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../deployment/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🚀 Clanscore Deployment - Schnellstart
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deployment/guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deployment Guide - Clanscore
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deployment/quickstart-server/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ⚡ Quick Start für srbsci-11.ost.ch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deployment/scripts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🚀 Deployment-Skripte
+    Übersicht
   
 
     
@@ -669,7 +1051,7 @@
   <span class="md-ellipsis">
     
   
-    deployment/setup
+    Setup
   
 
     
@@ -687,7 +1069,7 @@
   <span class="md-ellipsis">
     
   
-    deployment/setup
+    Setup
   
 
     
@@ -713,22 +1095,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schnellstart-repos-in-derselben-organisation" class="md-nav__link">
+  <a href="#voraussetzungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚡ Schnellstart (Repos in derselben Organisation)
+        Voraussetzungen
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚡ Schnellstart (Repos in derselben Organisation)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schnellstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnellstart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schnellstart">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#personal-access-token-erstellen-erforderlich" class="md-nav__link">
+  <a href="#1-server-vorbereiten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Personal Access Token erstellen (Erforderlich)
+        1. Server vorbereiten
       
     </span>
   </a>
@@ -736,10 +1129,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-github-pages-aktivieren" class="md-nav__link">
+  <a href="#2-projekt-auf-server-klonen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. GitHub Pages aktivieren
+        2. Projekt auf Server klonen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-github-secrets-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. GitHub Secrets konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-github-actions-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. GitHub Actions Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-services-starten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Services starten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-services-verifizieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Services verifizieren
       
     </span>
   </a>
@@ -752,10 +1189,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fertig" class="md-nav__link">
+  <a href="#nachste-schritte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fertig! ✅
+        Nächste Schritte
       
     </span>
   </a>
@@ -763,60 +1200,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manuell-testen" class="md-nav__link">
+  <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manuell testen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#permission-denied-beim-push" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        "Permission denied" beim Push
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#repository-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        "Repository not found"
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weitere-informationen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weitere Informationen
+        Support
       
     </span>
   </a>
@@ -839,103 +1226,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../DEPLOYMENT/" class="md-nav__link">
+      <a href="../guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    deployment/details
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Konfiguration
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Konfiguration
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/secrets/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🔐 GitHub Secrets - Vollständige Anleitung
+    Vollständiger Guide
   
 
     
@@ -956,14 +1254,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/secrets-cheatsheet/" class="md-nav__link">
+      <a href="../details/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📋 GitHub Secrets - Schnellreferenz
+    Details
   
 
     
@@ -984,14 +1282,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/env-variables/" class="md-nav__link">
+      <a href="../quickstart-server/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📋 Environment-Variablen Mapping
+    Server-spezifisch
   
 
     
@@ -1012,14 +1310,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/ssh-setup/" class="md-nav__link">
+      <a href="../scripts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🔐 SSH-Setup für Passwort-Authentifizierung
+    Deployment-Skripte
   
 
     
@@ -1101,14 +1399,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/local/" class="md-nav__link">
+      <a href="../../development/local/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    💻 Lokale Entwicklung
+    Lokale Entwicklung
   
 
     
@@ -1129,14 +1427,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/local-docker/" class="md-nav__link">
+      <a href="../../development/local-docker/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🐳 Lokales Docker Setup
+    Lokales Docker
   
 
     
@@ -1157,14 +1455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/troubleshooting/" class="md-nav__link">
+      <a href="../../development/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🔧 Lokales Docker Troubleshooting
+    Troubleshooting
   
 
     
@@ -1217,7 +1515,7 @@
   <span class="md-ellipsis">
     
   
-    Discord Bot
+    Dashboard
   
 
     
@@ -1233,7 +1531,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Discord Bot
+    Dashboard
   
 
           </label>
@@ -1246,14 +1544,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bot/overview/" class="md-nav__link">
+      <a href="../../dashboard/overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🤖 Discord Bot - Übersicht
+    Übersicht
   
 
     
@@ -1274,14 +1572,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../bot/manual/" class="md-nav__link">
+      <a href="../../dashboard/manual/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📘 Benutzerhandbuch – Discord-Bot für Vereine
+    Benutzerhandbuch
   
 
     
@@ -1334,7 +1632,7 @@
   <span class="md-ellipsis">
     
   
-    Backup & Restore
+    Discord Bot
   
 
     
@@ -1350,7 +1648,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Backup & Restore
+    Discord Bot
   
 
           </label>
@@ -1363,14 +1661,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../backup/guide/" class="md-nav__link">
+      <a href="../../bot/overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Discord-Bot für Vereine – MongoDB Backup
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benutzerhandbuch
   
 
     
@@ -1397,15 +1723,69 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup & Restore
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backup & Restore
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../documentation-overview/" class="md-nav__link">
+      <a href="../../backup/guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Übersicht
+    💾 Backup &amp; Restore Guide
   
 
     
@@ -1414,6 +1794,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1445,22 +1833,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schnellstart-repos-in-derselben-organisation" class="md-nav__link">
+  <a href="#voraussetzungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚡ Schnellstart (Repos in derselben Organisation)
+        Voraussetzungen
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚡ Schnellstart (Repos in derselben Organisation)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schnellstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnellstart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schnellstart">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#personal-access-token-erstellen-erforderlich" class="md-nav__link">
+  <a href="#1-server-vorbereiten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Personal Access Token erstellen (Erforderlich)
+        1. Server vorbereiten
       
     </span>
   </a>
@@ -1468,10 +1867,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-github-pages-aktivieren" class="md-nav__link">
+  <a href="#2-projekt-auf-server-klonen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. GitHub Pages aktivieren
+        2. Projekt auf Server klonen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-github-secrets-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. GitHub Secrets konfigurieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-github-actions-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. GitHub Actions Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-services-starten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Services starten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-services-verifizieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Services verifizieren
       
     </span>
   </a>
@@ -1484,10 +1927,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fertig" class="md-nav__link">
+  <a href="#nachste-schritte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fertig! ✅
+        Nächste Schritte
       
     </span>
   </a>
@@ -1495,60 +1938,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manuell-testen" class="md-nav__link">
+  <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manuell testen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#permission-denied-beim-push" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        "Permission denied" beim Push
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#repository-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        "Repository not found"
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weitere-informationen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weitere Informationen
+        Support
       
     </span>
   </a>
@@ -1575,63 +1968,99 @@
   
 
 
-<h1 id="dokumentations-deployment-setup">🔧 Dokumentations-Deployment Setup<a class="headerlink" href="#dokumentations-deployment-setup" title="Permanent link">&para;</a></h1>
-<p>Kurzanleitung zum Einrichten des automatischen Deployments der Dokumentation vom privaten ins öffentliche Repository.</p>
-<h2 id="schnellstart-repos-in-derselben-organisation">⚡ Schnellstart (Repos in derselben Organisation)<a class="headerlink" href="#schnellstart-repos-in-derselben-organisation" title="Permanent link">&para;</a></h2>
-<p><strong>Wichtig:</strong> Der <code>GITHUB_TOKEN</code> hat nur Zugriff auf das aktuelle Repository. Für Cross-Repository-Zugriff benötigen Sie einen <strong>Personal Access Token</strong>.</p>
-<h3 id="personal-access-token-erstellen-erforderlich">Personal Access Token erstellen (Erforderlich)<a class="headerlink" href="#personal-access-token-erstellen-erforderlich" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Personal Access Token erstellen:</strong></li>
-<li>Gehen Sie zu: <a href="https://github.com/settings/tokens">GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)</a></li>
-<li>Klicken Sie auf <strong>Generate new token (classic)</strong></li>
-<li>Name: <code>clanscore-doc-deploy</code></li>
-<li>Scopes: ✅ <code>repo</code> (vollständiger Zugriff)</li>
-<li>Klicken Sie auf <strong>Generate token</strong></li>
-<li>
-<p><strong>Token kopieren</strong> (wird nur einmal angezeigt!)</p>
-</li>
-<li>
-<p><strong>Secret hinzufügen:</strong></p>
-</li>
-<li>Gehen Sie zu: <code>ClansCore/clanscore</code> → <strong>Settings</strong> → <strong>Secrets and variables</strong> → <strong>Actions</strong></li>
-<li>Klicken Sie auf <strong>New repository secret</strong></li>
-<li>Name: <code>PUBLIC_REPO_DEPLOY_TOKEN</code></li>
-<li>Value: Den kopierten Token einfügen</li>
-<li>Klicken Sie auf <strong>Add secret</strong></li>
-</ol>
-<h3 id="3-github-pages-aktivieren">3. GitHub Pages aktivieren<a class="headerlink" href="#3-github-pages-aktivieren" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Gehen Sie zu: <code>ClansCore/clanscore-doc-pub</code> → <strong>Settings</strong> → <strong>Pages</strong></li>
-<li>Source: <strong>Deploy from a branch</strong></li>
-<li>Branch: <code>main</code> (oder <code>master</code>)</li>
-<li>Folder: <code>/ (root)</code></li>
-<li>Klicken Sie auf <strong>Save</strong></li>
-</ol>
-<h2 id="fertig">Fertig! ✅<a class="headerlink" href="#fertig" title="Permanent link">&para;</a></h2>
-<p>Nach dem nächsten Push zu <code>docs/**</code> oder <code>mkdocs.yml</code> wird die Dokumentation automatisch deployed.</p>
-<p>Die Dokumentation ist dann verfügbar unter:
-<strong>https://clanscore.github.io/clanscore-doc-pub/</strong></p>
-<h2 id="manuell-testen">Manuell testen<a class="headerlink" href="#manuell-testen" title="Permanent link">&para;</a></h2>
-<p>Sie können den Workflow auch manuell auslösen:</p>
-<ol>
-<li>Gehen Sie zu: <code>ClansCore/clanscore</code> → <strong>Actions</strong></li>
-<li>Wählen Sie <strong>Deploy Documentation</strong></li>
-<li>Klicken Sie auf <strong>Run workflow</strong></li>
-</ol>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="permission-denied-beim-push">"Permission denied" beim Push<a class="headerlink" href="#permission-denied-beim-push" title="Permanent link">&para;</a></h3>
+<h1 id="deployment-setup">🚀 Deployment Setup<a class="headerlink" href="#deployment-setup" title="Permanent link">&para;</a></h1>
+<p>Schnellstart-Anleitung für das Deployment des Clanscore-Systems auf einem Server.</p>
+<h2 id="voraussetzungen">Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Der GITHUB_TOKEN funktioniert nicht für Cross-Repository-Zugriff:</strong> Sie müssen einen Personal Access Token verwenden</li>
-<li><strong>Prüfen Sie:</strong> Ob der Token die <code>repo</code> Scope hat und Zugriff auf die Organisation hat</li>
-<li><strong>Prüfen Sie:</strong> Ob der Secret <code>PUBLIC_REPO_DEPLOY_TOKEN</code> korrekt gesetzt ist</li>
+<li>Virtueller Server mit:</li>
+<li>Docker (Version 20.10 oder höher)</li>
+<li>Docker Compose (Version 2.0 oder höher)</li>
+<li>Mindestens 2GB RAM</li>
+<li>Mindestens 10GB freier Speicherplatz</li>
+<li>GitHub Repository mit aktivierten Actions</li>
+<li>GitHub Secrets konfiguriert (siehe <a href="../../configuration/secrets/">GitHub Secrets Guide</a>)</li>
 </ul>
-<h3 id="repository-not-found">"Repository not found"<a class="headerlink" href="#repository-not-found" title="Permanent link">&para;</a></h3>
+<h2 id="schnellstart">Schnellstart<a class="headerlink" href="#schnellstart" title="Permanent link">&para;</a></h2>
+<h3 id="1-server-vorbereiten">1. Server vorbereiten<a class="headerlink" href="#1-server-vorbereiten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Docker installieren (Ubuntu/Debian)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Docker Compose installieren</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;https://github.com/docker/compose/releases/latest/download/docker-compose-</span><span class="k">$(</span>uname<span class="w"> </span>-s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span>/usr/local/bin/docker-compose
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/docker-compose
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Neu einloggen, damit Docker-Gruppe aktiv wird</span>
+</code></pre></div>
+<h3 id="2-projekt-auf-server-klonen">2. Projekt auf Server klonen<a class="headerlink" href="#2-projekt-auf-server-klonen" title="Permanent link">&para;</a></h3>
+<p><strong>Wichtig:</strong> GitHub unterstützt keine Passwort-Authentifizierung mehr!</p>
+<p><strong>Option A: Direkt auf Server klonen (Empfohlen)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Auf dem Server: SSH-Key einrichten (siehe [SSH Setup](../configuration/ssh-setup.md))</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:ClansCore/clanscore.git
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>clanscore
+</code></pre></div></p>
+<p><strong>Option B: Per SCP vom lokalen Rechner</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Auf Ihrem lokalen Rechner</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>clanscore
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Auf Server kopieren</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>scp<span class="w"> </span>-r<span class="w"> </span>clanscore<span class="w"> </span>user@your-server.com:~/
+</code></pre></div></p>
+<h3 id="3-github-secrets-konfigurieren">3. GitHub Secrets konfigurieren<a class="headerlink" href="#3-github-secrets-konfigurieren" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Gehen Sie zu Ihrem GitHub Repository</li>
+<li><strong>Settings</strong> → <strong>Secrets and variables</strong> → <strong>Actions</strong></li>
+<li>Fügen Sie alle erforderlichen Secrets hinzu (siehe <a href="../../configuration/secrets/">GitHub Secrets Guide</a>)</li>
+</ol>
+<p><strong>Wichtig:</strong> Für Production verwenden wir <strong>GitHub Secrets</strong>, nicht <code>.env</code> Dateien auf dem Server!</p>
+<p><strong>Erforderliche Secrets:</strong>
+- <code>MONGO_INITDB_ROOT_USERNAME</code> / <code>MONGO_INITDB_ROOT_PASSWORD</code>: MongoDB Credentials
+- <code>DISCORD_TOKEN</code> / <code>DISCORD_CLIENT_ID</code> / <code>DISCORD_GUILD_ID</code>: Discord Bot Konfiguration
+- <code>WEBHOOK_SHARED_SECRET</code>: Geheimer Schlüssel für Webhooks
+- <code>GOOGLE_CALENDAR_CLIENT_ID</code> / <code>GOOGLE_CALENDAR_CLIENT_SECRET</code> / <code>GOOGLE_CALENDAR_REDIRECT_URI</code>: Google Calendar OAuth
+- <code>JWT_SECRET</code>: Geheimer Schlüssel für JWT-Tokens
+- <code>CLANSCORE_API_URL</code> / <code>CLANSCORE_API_KEY</code>: API Konfiguration
+- <code>DASHBOARD_API_URL</code> / <code>CORS_ORIGIN</code>: Dashboard Konfiguration
+- <code>SERVER_HOST</code> / <code>SERVER_USER</code> / <code>SERVER_SSH_KEY</code> oder <code>SERVER_SSH_PASSWORD</code>: Server-Verbindung</p>
+<p><strong>Vollständige Liste:</strong> Siehe <a href="../../configuration/secrets/">GitHub Secrets Guide</a></p>
+<h3 id="4-github-actions-workflow">4. GitHub Actions Workflow<a class="headerlink" href="#4-github-actions-workflow" title="Permanent link">&para;</a></h3>
+<p>Der Workflow <code>.github/workflows/deploy.yml</code> verwendet automatisch GitHub Secrets und erstellt die <code>.env</code> Datei auf dem Server.</p>
+<p><strong>Keine manuelle <code>.env</code> Datei auf dem Server nötig!</strong></p>
+<p>Die Variablen werden automatisch aus GitHub Secrets geladen:
+- Dashboard API URL: <code>DASHBOARD_API_URL</code> Secret
+- CORS Origin: <code>CORS_ORIGIN</code> Secret
+- Alle anderen Variablen: Entsprechende GitHub Secrets</p>
+<h3 id="5-services-starten">5. Services starten<a class="headerlink" href="#5-services-starten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Alle Services bauen und starten</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Logs anzeigen</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Status prüfen</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>docker-compose<span class="w"> </span>ps
+</code></pre></div>
+<h3 id="6-services-verifizieren">6. Services verifizieren<a class="headerlink" href="#6-services-verifizieren" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Prüfen Sie, ob alle Repos in derselben Organisation sind</li>
-<li>Prüfen Sie, ob der verwendete Token/Benutzer Zugriff auf das öffentliche Repository hat</li>
+<li><strong>API</strong>: <code>http://your-server-ip:3000/api</code></li>
+<li><strong>Dashboard</strong>: <code>http://your-server-ip</code></li>
+<li><strong>Discord Bot</strong>: Läuft im Hintergrund</li>
 </ul>
-<h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
-<p>Siehe <a href="../DEPLOYMENT/">DEPLOYMENT.md</a> für detaillierte Informationen und Troubleshooting.</p>
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nach dem erfolgreichen Setup:</p>
+<ul>
+<li><a href="../guide/">Vollständiger Deployment Guide</a> - Detaillierte Schritt-für-Schritt-Anleitung</li>
+<li><a href="../details/">Deployment Details</a> - Erweiterte Konfiguration (Reverse Proxy, SSL, etc.)</li>
+<li><a href="../quickstart-server/">Server-spezifische Anleitung</a> - Für srbsci-11.ost.ch</li>
+<li><a href="../scripts/">Deployment-Skripte</a> - Automatisierte Deployment-Tools</li>
+</ul>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Bei Problemen:
+1. Prüfen Sie die Logs: <code>docker-compose logs -f</code>
+2. Lesen Sie die <a href="../../development/troubleshooting/">Troubleshooting-Sektion</a>
+3. Erstellen Sie ein Issue im <a href="https://github.com/ClansCore/clanscore/issues">GitHub Repository</a></p>
 
 
 
@@ -1654,7 +2083,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:54:22 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:58:49 UTC">December 3, 2025</span>
   </span>
 
     
@@ -1664,7 +2093,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:58:49 UTC">December 3, 2025</span>
   </span>
 
     
@@ -1721,10 +2150,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
