@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/dashboard/overview/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/database/mongodb/">
       
       
-        <link rel="prev" href="../../development/troubleshooting/">
+        <link rel="prev" href="../backups-restore/">
       
       
-        <link rel="next" href="../manual/">
+        <link rel="next" href="../../calendar/integration/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Übersicht - Clanscore Doku</title>
+        <title>Externer Zugriff MongoDB Compass - ClansCore Doku</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dashboard-ubersicht" class="md-skip">
+        <a href="#externer-zugriff-mongodb-compass" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Clanscore Doku" class="md-header__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
+    <a href="../../.." title="ClansCore Doku" class="md-header__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,13 +106,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Clanscore Doku
+            ClansCore Doku
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Übersicht
+              Externer Zugriff MongoDB Compass
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quickstart/" class="md-tabs__link">
+      <a href="../../../quickstart/" class="md-tabs__link">
         
   
   
@@ -261,11 +261,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../configuration/setup/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../setup/" class="md-tabs__link">
           
   
   
@@ -285,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../deployment/overview/" class="md-tabs__link">
+        <a href="../../../deployment/overview/" class="md-tabs__link">
           
   
   
@@ -305,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../development/local/" class="md-tabs__link">
+        <a href="../../../development/local/" class="md-tabs__link">
           
   
   
@@ -321,21 +323,18 @@
   
   
   
-    
+  
+    <li class="md-tabs__item">
+      <a href="../../../dashboard/manual/" class="md-tabs__link">
+        
   
   
     
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
   
   Dashboard
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -344,38 +343,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../bot/overview/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../../bot/manual/" class="md-tabs__link">
+        
   
+  
+    
   
   Discord Bot
 
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../backup/guide/" class="md-tabs__link">
-          
-  
-  
-  Backup & Restore
-
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -401,13 +379,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Clanscore Doku" class="md-nav__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
+    <a href="../../.." title="ClansCore Doku" class="md-nav__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Clanscore Doku
+    ClansCore Doku
   </label>
   
     <div class="md-nav__source">
@@ -431,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -458,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
+      <a href="../../../quickstart/" class="md-nav__link">
         
   
   
@@ -482,28 +460,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -521,7 +502,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -539,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/setup/" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         
   
   
@@ -566,8 +547,65 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets und Umgebungs-Variablen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secrets und Umgebungs-Variablen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../configuration/secrets/" class="md-nav__link">
+      <a href="../../secrets-env/github-secrets/" class="md-nav__link">
         
   
   
@@ -595,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/secrets-cheatsheet/" class="md-nav__link">
+      <a href="../../secrets-env/secrets-cheatsheet/" class="md-nav__link">
         
   
   
@@ -623,14 +661,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/env-variables/" class="md-nav__link">
+      <a href="../../secrets-env/env-mapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Environment-Variablen
+    Umgebungs-Variablen Mapping
   
 
     
@@ -644,6 +682,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -651,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/ssh-setup/" class="md-nav__link">
+      <a href="../../ssh-setup/" class="md-nav__link">
         
   
   
@@ -685,19 +731,22 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
             
   
   
@@ -715,8 +764,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -733,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/architecture/" class="md-nav__link">
+      <a href="../../development/architecture/" class="md-nav__link">
         
   
   
@@ -761,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
+      <a href="../../development/api-endpoints/" class="md-nav__link">
         
   
   
@@ -789,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/webhooks/" class="md-nav__link">
+      <a href="../../development/webhooks/" class="md-nav__link">
         
   
   
@@ -822,28 +871,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
             
   
   
@@ -861,8 +913,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -879,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/database/backups-restore/" class="md-nav__link">
+      <a href="../backups-restore/" class="md-nav__link">
         
   
   
@@ -900,6 +952,44 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Externer Zugriff MongoDB Compass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -915,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/calendar/" class="md-nav__link">
+      <a href="../../calendar/integration/" class="md-nav__link">
         
   
   
@@ -1004,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/overview/" class="md-nav__link">
+      <a href="../../../deployment/overview/" class="md-nav__link">
         
   
   
@@ -1032,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/setup/" class="md-nav__link">
+      <a href="../../../deployment/setup/" class="md-nav__link">
         
   
   
@@ -1060,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/guide/" class="md-nav__link">
+      <a href="../../../deployment/guide/" class="md-nav__link">
         
   
   
@@ -1088,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/details/" class="md-nav__link">
+      <a href="../../../deployment/details/" class="md-nav__link">
         
   
   
@@ -1116,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/quickstart-server/" class="md-nav__link">
+      <a href="../../../deployment/quickstart-server/" class="md-nav__link">
         
   
   
@@ -1144,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/scripts/" class="md-nav__link">
+      <a href="../../../deployment/scripts/" class="md-nav__link">
         
   
   
@@ -1233,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/local/" class="md-nav__link">
+      <a href="../../../development/local/" class="md-nav__link">
         
   
   
@@ -1261,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/local-docker/" class="md-nav__link">
+      <a href="../../../development/local-docker/" class="md-nav__link">
         
   
   
@@ -1289,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/troubleshooting/" class="md-nav__link">
+      <a href="../../../development/troubleshooting/" class="md-nav__link">
         
   
   
@@ -1321,32 +1411,11 @@
       
   
   
-    
   
   
-  
-    
-    
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../dashboard/manual/" class="md-nav__link">
         
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
   
   
   <span class="md-ellipsis">
@@ -1360,334 +1429,20 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Dashboard
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Übersicht
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Übersicht
-  
-
-    
-  </span>
-  
-  
-
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#was-ist-das-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Was ist das Dashboard?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technologie" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Technologie
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hauptfunktionen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hauptfunktionen
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hauptfunktionen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#benutzerverwaltung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Benutzerverwaltung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aufgaben-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Aufgaben-Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-verwaltung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Event-Verwaltung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gamification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Gamification
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rollen-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Rollen-Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zielgruppe" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Zielgruppe
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zugriff" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Zugriff
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entwicklung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entwicklung
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Entwicklung">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lokale-entwicklung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lokale Entwicklung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#production-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production Build
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weitere-informationen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weitere Informationen
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../manual/" class="md-nav__link">
+      <a href="../../../bot/manual/" class="md-nav__link">
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Benutzerhandbuch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
@@ -1701,168 +1456,7 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Discord Bot
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../bot/overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Übersicht
-  
-
-    
-  </span>
-  
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../bot/manual/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Benutzerhandbuch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Backup & Restore
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Backup & Restore
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup/guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    💾 Backup &amp; Restore Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1887,191 +1481,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#was-ist-das-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Was ist das Dashboard?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technologie" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Technologie
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hauptfunktionen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hauptfunktionen
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hauptfunktionen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#benutzerverwaltung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Benutzerverwaltung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aufgaben-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Aufgaben-Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-verwaltung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Event-Verwaltung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gamification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Gamification
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rollen-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Rollen-Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zielgruppe" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Zielgruppe
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zugriff" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Zugriff
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entwicklung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entwicklung
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Entwicklung">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lokale-entwicklung" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lokale Entwicklung
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#production-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production Build
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weitere-informationen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weitere Informationen
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2090,80 +1499,17 @@
   
 
 
-<h1 id="dashboard-ubersicht">📊 Dashboard - Übersicht<a class="headerlink" href="#dashboard-ubersicht" title="Permanent link">&para;</a></h1>
-<p>Übersicht über das Clanscore Dashboard.</p>
-<h2 id="was-ist-das-dashboard">Was ist das Dashboard?<a class="headerlink" href="#was-ist-das-dashboard" title="Permanent link">&para;</a></h2>
-<p>Das Clanscore Dashboard ist eine moderne Web-Anwendung für die Verwaltung des Vereins. Es bietet Administratoren und Vorstandsmitgliedern eine intuitive Oberfläche für alle Verwaltungsaufgaben.</p>
-<h2 id="technologie">Technologie<a class="headerlink" href="#technologie" title="Permanent link">&para;</a></h2>
+<h1 id="externer-zugriff-mongodb-compass">!!! 🔗 Externer Zugriff MongoDB Compass<a class="headerlink" href="#externer-zugriff-mongodb-compass" title="Permanent link">&para;</a></h1>
+<p>Es ist möglich sich extern über <a href="https://www.mongodb.com/try/download/compass">MongoDB Compass</a> mit der Datenbank zu verbinden. Hierzu muss auf dem Server ein Endpunkt gegen aussen geöffnet werden:</p>
+<p><code>&lt;deine-server-url&gt;:27018</code></p>
+<p>Der Port kann in <code>docker-compose.yml</code> angepasst werden.</p>
+<p>In der <code>.env</code>-Datei muss jetzt ein <strong>sicheres</strong> Passwort bei <code>MONGO_INITDB_ROOT_PASSWORD</code> gesetzt werden (mind. 20 Stellen inkl. Symbole und Zahlen).</p>
+<p>Danach kannst du dich mit MongoDB Compass verbinden und einloggen. Möglichkeiten:</p>
 <ul>
-<li><strong>Framework:</strong> Angular 18</li>
-<li><strong>Sprache:</strong> TypeScript</li>
-<li><strong>Styling:</strong> SCSS</li>
-<li><strong>Build:</strong> Angular CLI</li>
-<li><strong>Deployment:</strong> Nginx (Production)</li>
+<li>Add new connection &gt; Advanced Connection Options &gt; Authentication (dann Username/Password eingeben)</li>
+<li>URI: <code>mongodb://admin:***@&lt;deine-serer-url&gt;:27018/</code> (ersetze "***" mit dem Passwort)</li>
 </ul>
-<h2 id="hauptfunktionen">Hauptfunktionen<a class="headerlink" href="#hauptfunktionen" title="Permanent link">&para;</a></h2>
-<h3 id="benutzerverwaltung">✅ Benutzerverwaltung<a class="headerlink" href="#benutzerverwaltung" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Mitglieder-Verwaltung</li>
-<li>Bewerbungen bearbeiten</li>
-<li>Rollen zuweisen</li>
-<li>Punkte verwalten</li>
-</ul>
-<h3 id="aufgaben-management">✅ Aufgaben-Management<a class="headerlink" href="#aufgaben-management" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Aufgaben erstellen und verwalten</li>
-<li>Teilnehmer zuweisen</li>
-<li>Aufgaben als erledigt markieren</li>
-<li>Punkte vergeben</li>
-</ul>
-<h3 id="event-verwaltung">✅ Event-Verwaltung<a class="headerlink" href="#event-verwaltung" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Events anzeigen und bearbeiten</li>
-<li>Google Calendar Integration</li>
-<li>Teilnehmer-Verwaltung</li>
-</ul>
-<h3 id="gamification">✅ Gamification<a class="headerlink" href="#gamification" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Ranglisten verwalten</li>
-<li>Belohnungen erstellen</li>
-<li>Belohnungs-Anfragen bearbeiten</li>
-<li>Punkte-Historie anzeigen</li>
-</ul>
-<h3 id="rollen-management">✅ Rollen-Management<a class="headerlink" href="#rollen-management" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Rollen erstellen und bearbeiten</li>
-<li>Rollen mit Discord synchronisieren</li>
-<li>Berechtigungen verwalten</li>
-</ul>
-<h2 id="zielgruppe">Zielgruppe<a class="headerlink" href="#zielgruppe" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Vorstandsmitglieder:</strong> Hauptnutzer für Verwaltungsaufgaben</li>
-<li><strong>Administratoren:</strong> System-Verwaltung und Konfiguration</li>
-</ul>
-<h2 id="zugriff">Zugriff<a class="headerlink" href="#zugriff" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Lokal:</strong> http://localhost:4200</li>
-<li><strong>Production:</strong> http://your-server oder https://your-domain.com</li>
-</ul>
-<h2 id="entwicklung">Entwicklung<a class="headerlink" href="#entwicklung" title="Permanent link">&para;</a></h2>
-<h3 id="lokale-entwicklung">Lokale Entwicklung<a class="headerlink" href="#lokale-entwicklung" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>apps/dashboard
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>install
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>npm<span class="w"> </span>start
-</code></pre></div>
-<h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build
-</code></pre></div>
-<h3 id="production-build">Production Build<a class="headerlink" href="#production-build" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build<span class="w"> </span>--<span class="w"> </span>--configuration<span class="w"> </span>production
-</code></pre></div>
-<h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../manual/">Benutzerhandbuch</a> - Vollständiges Handbuch</li>
-<li><a href="../../configuration/development/api-endpoints/">API-Endpunkte</a> - API-Dokumentation</li>
-<li><a href="../../configuration/setup/">Konfiguration</a> - Setup-Anleitung</li>
-</ul>
+<p><strong>Wichtiger Hinweis:</strong> Es gibt momentan keine zusätzliche Sicherheits-Barriere, bis auf dieses Passwort. Der User hat damit Admin-Rechte in der Datenbank und somit volle Zugriffskontrolle. <strong>Behandle das Passwort streng geheim</strong> oder lass den Endpunkt geschlossen, falls du ihn nicht benötigst.</p>
 
 
 
@@ -2186,7 +1532,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 00:44:15 UTC">December 4, 2025</span>
   </span>
 
     
@@ -2196,7 +1542,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 00:44:15 UTC">December 4, 2025</span>
   </span>
 
     
@@ -2253,10 +1599,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

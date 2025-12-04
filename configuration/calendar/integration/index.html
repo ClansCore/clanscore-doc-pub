@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/secrets-cheatsheet/">
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/configuration/calendar/integration/">
       
       
-        <link rel="prev" href="../secrets/">
+        <link rel="prev" href="../../database/mongodb/">
       
       
-        <link rel="next" href="../env-variables/">
+        <link rel="next" href="../../../deployment/overview/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Secrets Cheatsheet - Clanscore Doku</title>
+        <title>Kalender - ClansCore Doku</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-secrets-schnellreferenz" class="md-skip">
+        <a href="#kalender-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Clanscore Doku" class="md-header__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
+    <a href="../../.." title="ClansCore Doku" class="md-header__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,13 +106,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Clanscore Doku
+            ClansCore Doku
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Secrets Cheatsheet
+              Kalender
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quickstart/" class="md-tabs__link">
+      <a href="../../../quickstart/" class="md-tabs__link">
         
   
   
@@ -267,7 +267,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../setup/" class="md-tabs__link">
+        <a href="../../setup/" class="md-tabs__link">
           
   
   
@@ -287,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../deployment/overview/" class="md-tabs__link">
+        <a href="../../../deployment/overview/" class="md-tabs__link">
           
   
   
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../development/local/" class="md-tabs__link">
+        <a href="../../../development/local/" class="md-tabs__link">
           
   
   
@@ -324,18 +324,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../dashboard/overview/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../../dashboard/manual/" class="md-tabs__link">
+        
   
+  
+    
   
   Dashboard
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -344,38 +343,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../bot/overview/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../../bot/manual/" class="md-tabs__link">
+        
   
+  
+    
   
   Discord Bot
 
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../backup/guide/" class="md-tabs__link">
-          
-  
-  
-  Backup & Restore
-
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -401,13 +379,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Clanscore Doku" class="md-nav__button md-logo" aria-label="Clanscore Doku" data-md-component="logo">
+    <a href="../../.." title="ClansCore Doku" class="md-nav__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Clanscore Doku
+    ClansCore Doku
   </label>
   
     <div class="md-nav__source">
@@ -431,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -458,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
+      <a href="../../../quickstart/" class="md-nav__link">
         
   
   
@@ -542,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         
   
   
@@ -569,8 +547,65 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets und Umgebungs-Variablen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secrets und Umgebungs-Variablen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../secrets/" class="md-nav__link">
+      <a href="../../secrets-env/github-secrets/" class="md-nav__link">
         
   
   
@@ -595,153 +630,17 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Secrets Cheatsheet
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Secrets Cheatsheet
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#alle-secrets-auf-einen-blick" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alle Secrets auf einen Blick
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Alle Secrets auf einen Blick">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#erforderlich-muss-vorhanden-sein" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Erforderlich (Muss vorhanden sein)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-haben-standardwerte" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚙️ Optional (Haben Standardwerte)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#copy-paste-liste-fur-srbsci-11ostch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Copy-Paste Liste für srbsci-11.ost.ch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anzahl-der-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anzahl der Secrets
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../env-variables/" class="md-nav__link">
+      <a href="../../secrets-env/secrets-cheatsheet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Environment-Variablen
+    Secrets Cheatsheet
   
 
     
@@ -762,7 +661,43 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh-setup/" class="md-nav__link">
+      <a href="../../secrets-env/env-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umgebungs-Variablen Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssh-setup/" class="md-nav__link">
         
   
   
@@ -808,10 +743,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
             
   
   
@@ -829,8 +764,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -847,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/architecture/" class="md-nav__link">
+      <a href="../../development/architecture/" class="md-nav__link">
         
   
   
@@ -875,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/api-endpoints/" class="md-nav__link">
+      <a href="../../development/api-endpoints/" class="md-nav__link">
         
   
   
@@ -903,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/webhooks/" class="md-nav__link">
+      <a href="../../development/webhooks/" class="md-nav__link">
         
   
   
@@ -957,10 +892,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
             
   
   
@@ -978,8 +913,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -996,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/backups-restore/" class="md-nav__link">
+      <a href="../../database/backups-restore/" class="md-nav__link">
         
   
   
@@ -1004,6 +939,34 @@
     
   
     Backups & Restore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Externer Zugriff MongoDB Compass
   
 
     
@@ -1029,10 +992,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../calendar/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalender
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1048,6 +1038,181 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-google-cloud-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Google Cloud Console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-oauth-20-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. OAuth 2.0 Credentials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-secrets-umgebungs-variablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Secrets / Umgebungs-Variablen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalender-verknupfen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalender verknüpfen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth-callback-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "OAuth callback failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendar-not-linked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Calendar not linked"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Sync failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-not-showing-in-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Events not showing in Discord"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wartung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wartung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1121,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/overview/" class="md-nav__link">
+      <a href="../../../deployment/overview/" class="md-nav__link">
         
   
   
@@ -1149,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/setup/" class="md-nav__link">
+      <a href="../../../deployment/setup/" class="md-nav__link">
         
   
   
@@ -1177,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/guide/" class="md-nav__link">
+      <a href="../../../deployment/guide/" class="md-nav__link">
         
   
   
@@ -1205,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/details/" class="md-nav__link">
+      <a href="../../../deployment/details/" class="md-nav__link">
         
   
   
@@ -1233,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/quickstart-server/" class="md-nav__link">
+      <a href="../../../deployment/quickstart-server/" class="md-nav__link">
         
   
   
@@ -1261,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/scripts/" class="md-nav__link">
+      <a href="../../../deployment/scripts/" class="md-nav__link">
         
   
   
@@ -1350,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/local/" class="md-nav__link">
+      <a href="../../../development/local/" class="md-nav__link">
         
   
   
@@ -1378,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/local-docker/" class="md-nav__link">
+      <a href="../../../development/local-docker/" class="md-nav__link">
         
   
   
@@ -1406,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../development/troubleshooting/" class="md-nav__link">
+      <a href="../../../development/troubleshooting/" class="md-nav__link">
         
   
   
@@ -1440,27 +1605,9 @@
   
   
   
-    
-    
-    
-    
-      
-      
+    <li class="md-nav__item">
+      <a href="../../../dashboard/manual/" class="md-nav__link">
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
@@ -1474,110 +1621,20 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Dashboard
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../../dashboard/overview/" class="md-nav__link">
+      <a href="../../../bot/manual/" class="md-nav__link">
         
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Übersicht
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/manual/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Benutzerhandbuch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
@@ -1591,168 +1648,7 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Discord Bot
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../bot/overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Übersicht
-  
-
-    
-  </span>
-  
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../bot/manual/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Benutzerhandbuch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Backup & Restore
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Backup & Restore
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup/guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    💾 Backup &amp; Restore Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1784,22 +1680,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alle-secrets-auf-einen-blick" class="md-nav__link">
+  <a href="#1-google-cloud-console" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Alle Secrets auf einen Blick
+        1. Google Cloud Console
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Alle Secrets auf einen Blick">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-oauth-20-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. OAuth 2.0 Credentials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-secrets-umgebungs-variablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Secrets / Umgebungs-Variablen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalender-verknupfen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalender verknüpfen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#erforderlich-muss-vorhanden-sein" class="md-nav__link">
+  <a href="#oauth-callback-failed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ Erforderlich (Muss vorhanden sein)
+        "OAuth callback failed"
       
     </span>
   </a>
@@ -1807,10 +1747,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-haben-standardwerte" class="md-nav__link">
+  <a href="#calendar-not-linked" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Optional (Haben Standardwerte)
+        "Calendar not linked"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Sync failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-not-showing-in-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Events not showing in Discord"
       
     </span>
   </a>
@@ -1823,21 +1785,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-paste-liste-fur-srbsci-11ostch" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy-Paste Liste für srbsci-11.ost.ch
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheit
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#anzahl-der-secrets" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#wartung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Anzahl der Secrets
+        Wartung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-informationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Informationen
       
     </span>
   </a>
@@ -1864,64 +1854,239 @@
   
 
 
-<h1 id="github-secrets-schnellreferenz">📋 GitHub Secrets - Schnellreferenz<a class="headerlink" href="#github-secrets-schnellreferenz" title="Permanent link">&para;</a></h1>
-<h2 id="alle-secrets-auf-einen-blick">Alle Secrets auf einen Blick<a class="headerlink" href="#alle-secrets-auf-einen-blick" title="Permanent link">&para;</a></h2>
-<h3 id="erforderlich-muss-vorhanden-sein">✅ Erforderlich (Muss vorhanden sein)<a class="headerlink" href="#erforderlich-muss-vorhanden-sein" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SERVER_HOST
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>SERVER_USER
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>SERVER_SSH_KEY
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>MONGO_INITDB_ROOT_USERNAME
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>MONGO_INITDB_ROOT_PASSWORD
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>DISCORD_TOKEN
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>DISCORD_CLIENT_ID
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>DISCORD_GUILD_ID
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>WEBHOOK_SHARED_SECRET
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>DISCORD_BOT_WEBHOOK_URL
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>GOOGLE_CALENDAR_CLIENT_ID
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>GOOGLE_CALENDAR_CLIENT_SECRET
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>GOOGLE_CALENDAR_REDIRECT_URI
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>CLANSCORE_API_URL
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>CLANSCORE_API_KEY
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>JWT_SECRET
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>DASHBOARD_API_URL
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>CORS_ORIGIN
-</code></pre></div>
-<h3 id="optional-haben-standardwerte">⚙️ Optional (Haben Standardwerte)<a class="headerlink" href="#optional-haben-standardwerte" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SERVER_SSH_PORT (Standard: 22)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>MONGO_DB (Standard: clanscore)
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>DISCORD_SERVER_PORT (Standard: 3001)
-</code></pre></div>
-<h2 id="copy-paste-liste-fur-srbsci-11ostch">Copy-Paste Liste für srbsci-11.ost.ch<a class="headerlink" href="#copy-paste-liste-fur-srbsci-11ostch" title="Permanent link">&para;</a></h2>
-<p>Fügen Sie diese Secrets in GitHub hinzu (Settings → Secrets → Actions):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SERVER_HOST=srbsci-11.ost.ch
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SERVER_USER=ins
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SERVER_SSH_KEY=&lt;Privater SSH-Key&gt;  # ODER
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>SERVER_SSH_PASSWORD=&lt;Ihr SSH-Passwort&gt;  # Alternative zu KEY
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>MONGO_INITDB_ROOT_USERNAME=admin
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>MONGO_INITDB_ROOT_PASSWORD=&lt;Ihr Passwort&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>MONGO_DB=clanscore
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>DISCORD_TOKEN=&lt;Ihr Discord Token&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>DISCORD_CLIENT_ID=&lt;Ihr Client ID&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>DISCORD_GUILD_ID=&lt;Ihr Guild ID&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>DISCORD_SERVER_PORT=3001
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>WEBHOOK_SHARED_SECRET=&lt;Ihr Secret&gt;
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>DISCORD_BOT_WEBHOOK_URL=http://152.96.10.11:3001
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>GOOGLE_CALENDAR_CLIENT_ID=&lt;Ihr Client ID&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>GOOGLE_CALENDAR_CLIENT_SECRET=&lt;Ihr Secret&gt;
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>GOOGLE_CALENDAR_REDIRECT_URI=http://152.96.10.11/calendarToken
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>CLANSCORE_API_URL=http://152.96.10.11:3000/api
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>CLANSCORE_API_KEY=&lt;Ihr API Key&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>JWT_SECRET=&lt;Ihr JWT Secret&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>DASHBOARD_API_URL=http://152.96.10.11:3000/api
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>CORS_ORIGIN=http://152.96.10.11
-</code></pre></div>
-<h2 id="anzahl-der-secrets">Anzahl der Secrets<a class="headerlink" href="#anzahl-der-secrets" title="Permanent link">&para;</a></h2>
+<h1 id="kalender-integration">📅 Kalender-Integration<a class="headerlink" href="#kalender-integration" title="Permanent link">&para;</a></h1>
+<p>Das ClansCore-System synchronisiert Events zwischen Google Calendar und Discord. Events aus dem Google Calendar werden automatisch im Discord-Server angezeigt und können vom Vorstand verwaltet werden:</p>
 <ul>
-<li><strong>Erforderlich</strong>: 17 Secrets</li>
-<li><strong>Optional</strong>: 3 Secrets</li>
-<li><strong>Gesamt</strong>: 20 Secrets</li>
+<li><strong>Bidirektionale Synchronisation:</strong> Google Calendar ↔ Discord</li>
+<li><strong>Automatische Event-Erinnerungen</strong> in Discord</li>
+<li><strong>Teilnahme-Verwaltung</strong> über Discord</li>
+<li><strong>OAuth 2.0 Authentifizierung</strong> für sicheren Zugriff</li>
 </ul>
-<p>Siehe <a href="../secrets/">GitHub Secrets Guide</a> für detaillierte Beschreibungen.</p>
+<hr />
+<p>Um ClansCore mit dem Google Calendar verbinden zu können, ist eine einmalige Konfiguration in der Google Cloud notwendig. Dabei wird ein Projekt erstellt, API-Zugriff eingerichtet und die Authentifizierungsdaten generiert, die anschliessend als Secrets beim Projekt hinterlegt werden. Diese Schritte ermöglichen es dem Bot, Kalenderfunktionen wie das Abrufen und Verknüpfen von Terminen sicher über OAuth2 zu nutzen.</p>
+<h2 id="1-google-cloud-console">1. Google Cloud Console<a class="headerlink" href="#1-google-cloud-console" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Projekt erstellen:</strong></li>
+<li>Gehe zu: https://console.cloud.google.com</li>
+<li>Melde dich mit dem Vereins-Google-Account an</li>
+<li>IAM und Verwaltung → Projekt erstellen</li>
+<li>
+<p>Gib dem Projekt einen Namen</p>
+</li>
+<li>
+<p><strong>Google Calendar API aktivieren:</strong></p>
+</li>
+<li>APIs und Dienste → Bibliothek</li>
+<li>Suche nach "Google Calendar API"</li>
+<li>
+<p>Klicke auf "Aktivieren"</p>
+</li>
+<li>
+<p><strong>OAuth-Zustimmungsbildschirm:</strong></p>
+</li>
+<li>APIs und Dienste → OAuth‑Zustimmungsbildschirm → Zielgruppe</li>
+<li>Füge bei Testnutzer den Vereins-Google-Account hinzu</li>
+</ol>
+<hr />
+<h2 id="2-oauth-20-credentials">2. OAuth 2.0 Credentials<a class="headerlink" href="#2-oauth-20-credentials" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Client ID erstellen:</strong></li>
+<li>APIs und Dienste → Anmeldedaten</li>
+<li>Anmeldedaten erstellen → OAuth‑Client‑ID</li>
+<li>
+<p>Anwendungstyp: "Webanwendung"</p>
+</li>
+<li>
+<p><strong>Autorisierte Weiterleitungs-URIs:</strong></p>
+</li>
+<li><strong>Lokal:</strong> <code>http://localhost:3000/calendarToken</code></li>
+<li><strong>Production:</strong> <code>https://your-domain.com/calendarToken</code></li>
+</ol>
+<p>⚠️ <strong>Wichtig:</strong> Die URI muss exakt übereinstimmen!</p>
+<ol>
+<li><strong>Credentials speichern:</strong></li>
+<li>Kopiere die <strong>Client-ID</strong></li>
+<li>Kopiere den <strong>Clientschlüssel</strong></li>
+<li>Speicher diese sicher</li>
+</ol>
+<hr />
+<h2 id="3-secrets-umgebungs-variablen">3. Secrets / Umgebungs-Variablen<a class="headerlink" href="#3-secrets-umgebungs-variablen" title="Permanent link">&para;</a></h2>
+<p>Setze die entsprechenden Secrets oder Variablen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GOOGLE_CALENDAR_CLIENT_ID=your_client_id.apps.googleusercontent.com
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>GOOGLE_CALENDAR_CLIENT_SECRET=your_client_secret
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>GOOGLE_CALENDAR_REDIRECT_URI=http://localhost:3000/calendarToken
+</code></pre></div>
+<p><strong>Für Production:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GOOGLE_CALENDAR_REDIRECT_URI=https://your-domain.com/calendarToken
+</code></pre></div></p>
+<hr />
+<h2 id="kalender-verknupfen">Kalender verknüpfen<a class="headerlink" href="#kalender-verknupfen" title="Permanent link">&para;</a></h2>
+<p>Führe diesen Bot-Befehl im Discord-Server aus:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/linkcalendar
+</code></pre></div>
+<p>OAuth-Flow:</p>
+<ol>
+<li>Der Bot sendet einen Link</li>
+<li>Klicke auf den Link</li>
+<li>Du wirst zu Google weitergeleitet</li>
+<li>Autorisiere den Zugriff</li>
+<li>Du wirst zurückgeleitet</li>
+<li>Der Bot bestätigt die Verknüpfung</li>
+</ol>
+<p>Mit dem folgenden Bot-Befehl startest du die Synchronisation aller Events aus dem Google Calendar mit Discord manuell:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/synccalendar
+</code></pre></div>
+<hr />
+<!-- 
+## API-Endpunkte
+
+### Kalender-Info
+
+**GET** `/api/calendar/info/:guildId`
+- Ruft Kalender-Informationen ab
+
+**PUT** `/api/calendar/info/:guildId`
+- Speichert Kalender-Informationen
+
+### OAuth
+
+**GET** `/api/calendar/link-url`
+- Generiert OAuth-Link
+
+**GET** `/api/calendar/callback`
+- Verarbeitet OAuth-Callback
+
+### Synchronisation
+
+**POST** `/api/calendar/sync`
+- Synchronisiert Google Calendar → Datenbank
+
+**POST** `/api/calendar/from-discord/create`
+- Erstellt Event von Discord → Google Calendar
+
+**POST** `/api/calendar/from-discord/update`
+- Aktualisiert Event von Discord → Google Calendar
+
+**GET** `/api/calendar/provider-events`
+- Ruft Events vom Provider (Google Calendar) ab
+
+## Funktionsweise
+
+### Google Calendar → Discord
+
+1. **Synchronisation:**
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/synccalendar
+</code></pre></div>
+
+2. **Ablauf:**
+   - Bot ruft Events aus Google Calendar ab
+   - Events werden in Datenbank gespeichert
+   - Events werden im Discord `#events` Channel angezeigt
+
+3. **Automatische Updates:**
+   - Events werden regelmässig aktualisiert
+   - Änderungen werden im Discord reflektiert
+
+### Discord → Google Calendar
+
+1. **Event erstellen:**
+   - Vorstand erstellt Event im Dashboard
+   - Event wird in Datenbank gespeichert
+   - Event wird an Google Calendar gesendet
+
+2. **Event aktualisieren:**
+   - Änderungen im Dashboard
+   - Automatische Synchronisation mit Google Calendar
+
+## Event-Verwaltung
+
+### Discord-Commands
+
+| Befehl | Beschreibung |
+|--------|--------------|
+| `/events` | Zeigt geplante Events |
+| `/linkcalendar` | Verknüpft Google Calendar |
+| `/synccalendar` | Synchronisiert Events |
+
+### Dashboard
+
+- Event-Erstellung
+- Event-Bearbeitung
+- Teilnehmer-Verwaltung
+- Event-Details
+
+## Event-Erinnerungen
+
+Der Bot sendet automatisch Erinnerungen für anstehende Events:
+
+- **24 Stunden vorher**
+- **1 Stunde vorher**
+
+Erinnerungen werden im Discord `#events` Channel gepostet.
+
+-->
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="oauth-callback-failed">"OAuth callback failed"<a class="headerlink" href="#oauth-callback-failed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfe die <code>GOOGLE_CALENDAR_REDIRECT_URI</code></li>
+<li>Sie muss exakt mit der in Google Cloud Console übereinstimmen</li>
+<li>Prüfe, ob der Port korrekt ist (3000 für API)</li>
+</ul>
+<h3 id="calendar-not-linked">"Calendar not linked"<a class="headerlink" href="#calendar-not-linked" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Führe <code>/linkcalendar</code> erneut aus</li>
+<li>Prüfe die OAuth-Credentials</li>
+<li>Prüfe die Logs: <code>docker-compose logs discord-bot</code></li>
+</ul>
+<h3 id="sync-failed">"Sync failed"<a class="headerlink" href="#sync-failed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prüfe die Google Calendar API-Berechtigungen</li>
+<li>Prüfe, ob der Kalender zugänglich ist</li>
+<li>Prüfe die Logs: <code>docker-compose logs ClansCore-api</code></li>
+</ul>
+<h3 id="events-not-showing-in-discord">"Events not showing in Discord"<a class="headerlink" href="#events-not-showing-in-discord" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Führe <code>/synccalendar</code> aus</li>
+<li>Prüfe, ob der <code>#events</code> Channel existiert</li>
+<li>Prüfe die Bot-Berechtigungen im Discord Server und Channel</li>
+</ul>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="sicherheit">Sicherheit<a class="headerlink" href="#sicherheit" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>OAuth-Credentials:</strong></li>
+<li>Niemals in Git committen</li>
+<li>Verwende GitHub Secrets für Production</li>
+<li>
+<p>Regelmässig rotieren</p>
+</li>
+<li>
+<p><strong>Berechtigungen:</strong></p>
+</li>
+<li>Minimal notwendige Berechtigungen</li>
+<li>Nur auf Vereins-Kalender zugreifen</li>
+</ol>
+<h3 id="wartung">Wartung<a class="headerlink" href="#wartung" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Regelmässige Synchronisation:</strong></li>
+<li>Täglich automatische Sync</li>
+<li>
+<p>Manuelle Sync bei Bedarf</p>
+</li>
+<li>
+<p><strong>Event-Bereinigung:</strong></p>
+</li>
+<li>Alte Events automatisch archivieren</li>
+<li>Regelmässig Kalender aufräumen</li>
+</ol>
+<hr />
+<h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../development/api-endpoints/">API-Endpunkte</a> - Vollständige API-Dokumentation</li>
+<li><a href="../../setup/">Konfiguration</a> - Setup-Anleitung</li>
+<li><a href="../../../bot/manual/">Discord Bot</a> - Bot-Funktionen</li>
+</ul>
+<hr />
 
 
 
@@ -1944,7 +2109,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:51:55 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     
@@ -1954,7 +2119,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
   </span>
 
     
@@ -2011,10 +2176,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
