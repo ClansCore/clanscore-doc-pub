@@ -1111,10 +1111,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#oauth-callback-failed" class="md-nav__link">
+  <a href="#oauth-callback-failed-err_connection_refused" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "OAuth callback failed"
+        "OAuth callback failed" / "ERR_CONNECTION_REFUSED"
       
     </span>
   </a>
@@ -1736,10 +1736,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#oauth-callback-failed" class="md-nav__link">
+  <a href="#oauth-callback-failed-err_connection_refused" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "OAuth callback failed"
+        "OAuth callback failed" / "ERR_CONNECTION_REFUSED"
       
     </span>
   </a>
@@ -1900,9 +1900,12 @@
 <p><strong>Autorisierte Weiterleitungs-URIs:</strong></p>
 </li>
 <li><strong>Lokal:</strong> <code>http://localhost:3000/calendarToken</code></li>
-<li><strong>Production:</strong> <code>https://your-domain.com/calendarToken</code></li>
+<li><strong>Production (ohne Port):</strong> <code>http://your-domain.com/calendarToken</code> oder <code>https://your-domain.com/calendarToken</code></li>
 </ol>
-<p>⚠️ <strong>Wichtig:</strong> Die URI muss exakt übereinstimmen!</p>
+<p>⚠️ <strong>Wichtig:</strong> 
+   - Die URI muss exakt übereinstimmen!
+   - Für Production: Verwende <strong>KEINEN</strong> Port in der URI (z.B. <code>http://srbsci-11.ost.ch/calendarToken</code>, NICHT <code>http://srbsci-11.ost.ch:3000/calendarToken</code>)
+   - Der <code>/calendarToken</code> Endpoint wird über den Nginx Reverse Proxy auf Port 80 erreichbar gemacht</p>
 <ol>
 <li><strong>Credentials speichern:</strong></li>
 <li>Kopiere die <strong>Client-ID</strong></li>
@@ -1917,7 +1920,10 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>GOOGLE_CALENDAR_REDIRECT_URI=http://localhost:3000/calendarToken
 </code></pre></div>
 <p><strong>Für Production:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GOOGLE_CALENDAR_REDIRECT_URI=https://your-domain.com/calendarToken
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># WICHTIG: Kein Port in der URI! Der Endpoint wird über Nginx auf Port 80 erreichbar gemacht
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>GOOGLE_CALENDAR_REDIRECT_URI=http://srbsci-11.ost.ch/calendarToken
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># ODER mit HTTPS (falls SSL konfiguriert):
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># GOOGLE_CALENDAR_REDIRECT_URI=https://srbsci-11.ost.ch/calendarToken
 </code></pre></div></p>
 <hr />
 <h2 id="kalender-verknupfen">Kalender verknüpfen<a class="headerlink" href="#kalender-verknupfen" title="Permanent link">&para;</a></h2>
@@ -2026,11 +2032,13 @@ Erinnerungen werden im Discord `#events` Channel gepostet.
 
 -->
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="oauth-callback-failed">"OAuth callback failed"<a class="headerlink" href="#oauth-callback-failed" title="Permanent link">&para;</a></h3>
+<h3 id="oauth-callback-failed-err_connection_refused">"OAuth callback failed" / "ERR_CONNECTION_REFUSED"<a class="headerlink" href="#oauth-callback-failed-err_connection_refused" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Prüfe die <code>GOOGLE_CALENDAR_REDIRECT_URI</code></li>
+<li>Prüfe die <code>GOOGLE_CALENDAR_REDIRECT_URI</code> in der <code>.env</code> Datei</li>
 <li>Sie muss exakt mit der in Google Cloud Console übereinstimmen</li>
-<li>Prüfe, ob der Port korrekt ist (3000 für API)</li>
+<li><strong>Für Production:</strong> Verwende KEINEN Port in der URI (z.B. <code>http://srbsci-11.ost.ch/calendarToken</code>, NICHT <code>http://srbsci-11.ost.ch:3000/calendarToken</code>)</li>
+<li>Prüfe, ob der Nginx Proxy <code>/calendarToken</code> weiterleitet (siehe <code>apps/dashboard/nginx.conf</code>)</li>
+<li>Prüfe, ob der Server auf Port 80 erreichbar ist: <code>curl http://your-domain.com/calendarToken?code=test&amp;state=test</code></li>
 </ul>
 <h3 id="calendar-not-linked">"Calendar not linked"<a class="headerlink" href="#calendar-not-linked" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2109,7 +2117,7 @@ Erinnerungen werden im Discord `#events` Channel gepostet.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 3, 2025 12:32:05 UTC">December 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 12, 2025 19:07:24 UTC">December 12, 2025</span>
   </span>
 
     
