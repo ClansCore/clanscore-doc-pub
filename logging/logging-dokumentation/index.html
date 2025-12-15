@@ -1,0 +1,3051 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Vollständige Dokumentation für das Clanscore - API, Dashboard und Discord Bot">
+      
+      
+      
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/logging/logging-dokumentation/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Logging-Dokumentation - ClansCore Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#logging-dokumentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ClansCore Doku" class="md-header__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ClansCore Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Logging-Dokumentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ClansCore/clanscore" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ClansCore/clanscore
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Schnellstart
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../configuration/setup/" class="md-tabs__link">
+          
+  
+  
+  Konfiguration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deployment/overview/" class="md-tabs__link">
+          
+  
+  
+  Deployment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/local/" class="md-tabs__link">
+          
+  
+  
+  Entwicklung
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dashboard/manual/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dashboard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../bot/manual/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Discord Bot
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ClansCore Doku" class="md-nav__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ClansCore Doku
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ClansCore/clanscore" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ClansCore/clanscore
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schnellstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfiguration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfiguration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets und Umgebungs-Variablen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secrets und Umgebungs-Variablen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-env/github-secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-env/secrets-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-env/env-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umgebungs-Variablen Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ssh-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entwicklung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architektur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API-Endpunkte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datenbank
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datenbank
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/database/backups-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backups & Restore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/database/mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Externer Zugriff MongoDB Compass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/calendar/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiger Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Details
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/quickstart-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server-spezifisch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment-Skripte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entwicklung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/local/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lokale Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/local-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lokales Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discord Bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inhaltsverzeichnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inhaltsverzeichnis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#der-bot-log-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Der bot-log Channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Der bot-log Channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zweck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zweck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-mechanismen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging-Mechanismen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging-Mechanismen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-discord-embed-nachrichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Discord Embed-Nachrichten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-embed-struktur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel-Embed-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwendung-des-bot-log-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung des bot-log Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verwendung des bot-log Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rollenanderungen-dashboard-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rollenänderungen (Dashboard → Discord)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rollenaktualisierungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Rollenaktualisierungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-user-synchronisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. User-Synchronisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rollen-synchronisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rollen-Synchronisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-spenden-protokollierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Spenden-Protokollierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aufgaben-erstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Aufgaben-Erstellung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ranglisten-erstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ranglisten-Erstellung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-kalender-synchronisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Kalender-Synchronisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-kalender-verknupfung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Kalender-Verknüpfung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard-Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard-Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubersicht_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architektur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geloggte-dashboard-aktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geloggte Dashboard-Aktionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geloggte Dashboard-Aktionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rollenanderungen-an-benutzern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rollenänderungen an Benutzern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rollenaktualisierungen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Rollenaktualisierungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nicht-geloggte-dashboard-aktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nicht geloggte Dashboard-Aktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benutzer-feedback-im-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzer-Feedback im Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console-logging-im-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console-Logging im Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zusammenfassung-dashboard-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusammenfassung Dashboard-Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empfehlungen-fur-zukunftige-entwicklung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfehlungen für zukünftige Entwicklung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console-Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Console-Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord-Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clanscore-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClansCore-API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-und-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error-Handling und Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error-Handling und Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error-Handling-System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-typen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error-Typen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerbehandlung-im-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerbehandlung im Discord-Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerbehandlung-in-der-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerbehandlung in der API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-service-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification-Service Error-Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-basiertes-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-basiertes Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook-basiertes Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhook-endpunkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-Endpunkte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-aufrufe-aus-der-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-Aufrufe aus der API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umgebungsvariablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umgebungsvariablen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel-Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker-Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeral-messages-direkte-benutzerinformationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ephemeral Messages - Direkte Benutzerinformationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ephemeral Messages - Direkte Benutzerinformationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sind-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sind Ephemeral Messages?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-im-clanscore-projekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung im ClansCore-Projekt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#befehle-mit-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Befehle mit Ephemeral Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlermeldungen-als-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlermeldungen als Ephemeral Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorteile-von-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorteile von Ephemeral Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachrichten-in-anderen-bot-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nachrichten in anderen Bot-Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nachrichten in anderen Bot-Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-channel-aufgaben-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Channel: aufgaben (TASKS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-channel-events-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Channel: events (EVENTS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-channel-rangliste-leaderboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Channel: rangliste (LEADERBOARDS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-channel-bot-bewerbungen-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Channel: bot-bewerbungen (APPLICATIONS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-channel-bot-belohnungen-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Channel: bot-belohnungen (REWARDS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-channel-bot-aufgaben-completed_tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Channel: bot-aufgaben (COMPLETED_TASKS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht-channel-zuordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht: Channel-Zuordnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusammenfassung
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="logging-dokumentation">Logging-Dokumentation<a class="headerlink" href="#logging-dokumentation" title="Permanent link">&para;</a></h1>
+<p>Diese Dokumentation beschreibt das gesamte Logging-System im ClansCore-Projekt, mit besonderem Fokus auf den <strong>bot-log</strong> Channel.</p>
+<h2 id="inhaltsverzeichnis">Inhaltsverzeichnis<a class="headerlink" href="#inhaltsverzeichnis" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#übersicht">Übersicht</a></li>
+<li><a href="#der-bot-log-channel">Der bot-log Channel</a></li>
+<li><a href="#logging-mechanismen">Logging-Mechanismen</a></li>
+<li><a href="#verwendung-des-bot-log-channels">Verwendung des bot-log Channels</a></li>
+<li><a href="#ephemeral-messages---direkte-benutzerinformationen">Ephemeral Messages - Direkte Benutzerinformationen</a></li>
+<li><a href="#nachrichten-in-anderen-bot-channels">Nachrichten in anderen Bot-Channels</a></li>
+<li><a href="#dashboard-logging">Dashboard-Logging</a></li>
+<li><a href="#console-logging">Console-Logging</a></li>
+<li><a href="#error-handling-und-logging">Error-Handling und Logging</a></li>
+<li><a href="#webhook-basiertes-logging">Webhook-basiertes Logging</a></li>
+<li><a href="#konfiguration">Konfiguration</a></li>
+</ol>
+<hr />
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>Das ClansCore-Projekt verwendet mehrere Logging-Mechanismen:</p>
+<ol>
+<li><strong>Discord bot-log Channel</strong>: Zentraler Log-Channel für wichtige Ereignisse und Änderungen</li>
+<li><strong>Console-Logging</strong>: Standard-Logging für Entwicklungs- und Debugging-Zwecke</li>
+<li><strong>Error-Handling</strong>: Strukturierte Fehlerbehandlung mit Logging</li>
+<li><strong>Webhook-Notifications</strong>: Automatische Benachrichtigungen über API-Webhooks</li>
+</ol>
+<hr />
+<h2 id="der-bot-log-channel">Der bot-log Channel<a class="headerlink" href="#der-bot-log-channel" title="Permanent link">&para;</a></h2>
+<h3 id="zweck">Zweck<a class="headerlink" href="#zweck" title="Permanent link">&para;</a></h3>
+<p>Der <strong>bot-log</strong> Channel ist ein Discord-Textkanal, der als zentrales Logging-System für relevante Änderungen und Ereignisse dient. Er befindet sich im <strong>Vorstands-Bereich</strong> des Discord-Servers und ist nur für Vorstandsmitglieder sichtbar.</p>
+<h3 id="konfiguration">Konfiguration<a class="headerlink" href="#konfiguration" title="Permanent link">&para;</a></h3>
+<p>Der Channel-Name ist in <code>shared/src/channelNames.ts</code> definiert:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ChannelNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// ... andere Channels</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">BotLog</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;bot-log&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kd">const</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Wichtig:</strong> Der Channel muss im Discord-Server mit dem exakten Namen <code>bot-log</code> erstellt werden.</p>
+<h3 id="verwendung">Verwendung<a class="headerlink" href="#verwendung" title="Permanent link">&para;</a></h3>
+<p>Der bot-log Channel wird verwendet, um folgende Ereignisse zu protokollieren:</p>
+<ul>
+<li>✅ Rollenänderungen (Dashboard und Discord)</li>
+<li>✅ User-Synchronisierungen</li>
+<li>✅ Rollen-Synchronisierungen</li>
+<li>✅ Spenden-Protokollierung</li>
+<li>✅ Aufgaben-Erstellung und -Verwaltung</li>
+<li>✅ Ranglisten-Erstellung</li>
+<li>✅ Kalender-Synchronisierungen</li>
+<li>✅ Kalender-Verknüpfungen</li>
+</ul>
+<hr />
+<h2 id="logging-mechanismen">Logging-Mechanismen<a class="headerlink" href="#logging-mechanismen" title="Permanent link">&para;</a></h2>
+<h3 id="1-discord-embed-nachrichten">1. Discord Embed-Nachrichten<a class="headerlink" href="#1-discord-embed-nachrichten" title="Permanent link">&para;</a></h3>
+<p>Die meisten Log-Einträge im bot-log Channel werden als <strong>Discord Embeds</strong> gesendet. Diese bieten strukturierte Informationen mit:</p>
+<ul>
+<li><strong>Titel</strong>: Beschreibt den Typ des Ereignisses</li>
+<li><strong>Farbe</strong>: Visuelle Unterscheidung (z.B. grün für Erfolg, orange für Warnung)</li>
+<li><strong>Felder</strong>: Strukturierte Daten (Benutzer, Änderungen, Details)</li>
+<li><strong>Timestamp</strong>: Automatische Zeitstempel</li>
+<li><strong>Footer</strong>: Zusätzliche Metadaten (z.B. Task-ID, Leaderboard-ID)</li>
+</ul>
+<h3 id="beispiel-embed-struktur">Beispiel-Embed-Struktur<a class="headerlink" href="#beispiel-embed-struktur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">logEmbed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">EmbedBuilder</span><span class="p">()</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="p">.</span><span class="nx">setTitle</span><span class="p">(</span><span class="s2">&quot;🔄 Rollenänderung (Dashboard)&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mh">0x3498db</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">.</span><span class="nx">addFields</span><span class="p">(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Benutzer&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="sb">`&lt;@</span><span class="si">${</span><span class="nx">discordId</span><span class="si">}</span><span class="sb">&gt; (</span><span class="si">${</span><span class="nx">username</span><span class="si">}</span><span class="sb">)`</span><span class="p">,</span><span class="w"> </span><span class="nx">inline</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Geändert von&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">changedBy</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">&quot;Dashboard&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">inline</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;➕ Hinzugefügt&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">addedRoles.join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">inline</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">.</span><span class="nx">setTimestamp</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="verwendung-des-bot-log-channels">Verwendung des bot-log Channels<a class="headerlink" href="#verwendung-des-bot-log-channels" title="Permanent link">&para;</a></h2>
+<h3 id="1-rollenanderungen-dashboard-discord">1. Rollenänderungen (Dashboard → Discord)<a class="headerlink" href="#1-rollenanderungen-dashboard-discord" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/web/routes/webhook.routes.ts</code></p>
+<p><strong>Webhook-Endpoint:</strong> <code>POST /api/notifications/role-changed</code></p>
+<p><strong>Ereignis:</strong> Wenn Benutzerrollen im Dashboard geändert werden, wird eine Log-Nachricht gesendet.</p>
+<p><strong>Log-Details:</strong>
+- Benutzer (Discord-Mention)
+- Geändert von (Admin-Name)
+- Hinzugefügte Rollen
+- Entfernte Rollen
+- Fehler (falls vorhanden)</p>
+<p><strong>Embed-Farbe:</strong> <code>0x3498db</code> (Blau)</p>
+<hr />
+<h3 id="2-rollenaktualisierungen">2. Rollenaktualisierungen<a class="headerlink" href="#2-rollenaktualisierungen" title="Permanent link">&para;</a></h3>
+<p><strong>Webhook-Endpoint:</strong> <code>POST /api/notifications/role-updated</code></p>
+<p><strong>Ereignis:</strong> Wenn eine Rolle im Dashboard aktualisiert wird (Name, Farbe, etc.).</p>
+<p><strong>Log-Details:</strong>
+- Rollenname
+- Geändert von
+- Liste der Änderungen (Name, Farbe, Hervorheben, Erwähnbar)</p>
+<p><strong>Embed-Farbe:</strong> <code>0xf39c12</code> (Orange)</p>
+<hr />
+<h3 id="3-user-synchronisierung">3. User-Synchronisierung<a class="headerlink" href="#3-user-synchronisierung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/user/syncusers.ts</code></p>
+<p><strong>Befehl:</strong> <code>/syncusers</code> (manuell) oder automatisch via Cron-Job</p>
+<p><strong>Ereignis:</strong> Synchronisierung von Discord-Mitgliedern mit der Datenbank.</p>
+<p><strong>Log-Details:</strong>
+- Ausgeführt von (Benutzer oder "Automatisch (Cron-Job)")
+- Anzahl neue Personen
+- Anzahl Wieder-Eintritte
+- Anzahl Austritte
+- Anzahl Rollenänderungen
+- Details der ersten 5 Änderungen
+- Warnung bei Verwendung von gecachten Daten</p>
+<p><strong>Embed-Farbe:</strong> <code>0x9634eb</code> (Lila)</p>
+<p><strong>Automatische Ausführung:</strong> Täglich um 03:00 Uhr via Cron-Job (<code>apps/clanscore-api/src/infrastructure/cron/jobs.ts</code>)</p>
+<hr />
+<h3 id="4-rollen-synchronisierung">4. Rollen-Synchronisierung<a class="headerlink" href="#4-rollen-synchronisierung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/user/syncroles.ts</code></p>
+<p><strong>Befehl:</strong> <code>/syncroles</code></p>
+<p><strong>Ereignis:</strong> Synchronisierung von Discord-Rollen mit der Datenbank.</p>
+<p><strong>Log-Details:</strong>
+- Ausgeführt von (Benutzer)
+- In DB erstellt (Rollen)
+- In DB aktualisiert (Rollen)
+- In Discord erstellt (Rollen)
+- Fehler (falls vorhanden)</p>
+<p><strong>Embed-Farbe:</strong> <code>0x9634eb</code> (Lila)</p>
+<hr />
+<h3 id="5-spenden-protokollierung">5. Spenden-Protokollierung<a class="headerlink" href="#5-spenden-protokollierung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/gamification/donation.ts</code></p>
+<p><strong>Befehl:</strong> <code>/donation</code></p>
+<p><strong>Ereignis:</strong> Wenn eine Spende protokolliert und Punkte vergeben werden.</p>
+<p><strong>Log-Details:</strong>
+- Spender (Name und Nickname)
+- Betrag (CHF)
+- Punkte
+- Datum
+- Protokolliert von (Vorstandsmitglied)
+- Interne Notizen</p>
+<p><strong>Embed-Farbe:</strong> <code>0xff9500</code> (Orange)</p>
+<hr />
+<h3 id="6-aufgaben-erstellung">6. Aufgaben-Erstellung<a class="headerlink" href="#6-aufgaben-erstellung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/gamification/task/createTask.ts</code></p>
+<p><strong>Befehl:</strong> <code>/createtask</code> → Modal → Aufgabe erstellen</p>
+<p><strong>Ereignis:</strong> Wenn eine neue Aufgabe erstellt wird.</p>
+<p><strong>Log-Details:</strong>
+- Erstellt von (Benutzer)
+- Aufgabenname
+- Punkte
+- Max. Teilnehmer
+- Deadline
+- Verantwortlich (wird aktualisiert, wenn zugewiesen)
+- Beschreibung</p>
+<p><strong>Embed-Farbe:</strong> <code>0x2ecc71</code> (Grün)</p>
+<p><strong>Besonderheit:</strong> Das Log-Embed wird aktualisiert, wenn ein Verantwortlicher zugewiesen wird (durch Suche nach der ursprünglichen Nachricht anhand der Task-ID).</p>
+<hr />
+<h3 id="7-ranglisten-erstellung">7. Ranglisten-Erstellung<a class="headerlink" href="#7-ranglisten-erstellung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/gamification/createLeaderboard.ts</code></p>
+<p><strong>Befehl:</strong> <code>/createleaderboard</code></p>
+<p><strong>Ereignis:</strong> Wenn eine neue Rangliste erstellt wird.</p>
+<p><strong>Log-Details:</strong>
+- Erstellt von (Benutzer)
+- Ranglistenname
+- Startdatum
+- Enddatum
+- Anzahl sichtbarer Einträge
+- Beschreibung</p>
+<p><strong>Embed-Farbe:</strong> <code>0xffd900</code> (Gelb)</p>
+<hr />
+<h3 id="8-kalender-synchronisierung">8. Kalender-Synchronisierung<a class="headerlink" href="#8-kalender-synchronisierung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/events/calendar/synccalendar.ts</code></p>
+<p><strong>Befehl:</strong> <code>/synccalendar</code></p>
+<p><strong>Ereignis:</strong> Manuelle Synchronisierung von Google Calendar Events mit Discord.</p>
+<p><strong>Log-Details:</strong>
+- Ausgeführt von (Benutzer)
+- Anzahl synchronisierte Events
+- Anzahl erstellte Events
+- Anzahl gelöschte Events</p>
+<p><strong>Embed-Farbe:</strong> <code>0x34dbca</code> (Türkis)</p>
+<hr />
+<h3 id="9-kalender-verknupfung">9. Kalender-Verknüpfung<a class="headerlink" href="#9-kalender-verknupfung" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/events/calendar/linkcalendar.ts</code></p>
+<p><strong>Befehl:</strong> <code>/linkcalendar</code></p>
+<p><strong>Ereignis:</strong> Wenn ein Admin den Prozess zur Verknüpfung eines Google Calendars startet.</p>
+<p><strong>Log-Details:</strong>
+- Initiiert von (Benutzer)</p>
+<p><strong>Embed-Farbe:</strong> <code>0xeb34c6</code> (Pink)</p>
+<hr />
+<h2 id="dashboard-logging">Dashboard-Logging<a class="headerlink" href="#dashboard-logging" title="Permanent link">&para;</a></h2>
+<h3 id="ubersicht_1">Übersicht<a class="headerlink" href="#ubersicht_1" title="Permanent link">&para;</a></h3>
+<p>Das <strong>Dashboard</strong> (Angular Frontend) hat <strong>kein eigenes Logging-System</strong> im traditionellen Sinne. Es sendet keine direkten Logs an Discord oder andere externe Systeme. Stattdessen werden Dashboard-Aktionen <strong>indirekt über die API geloggt</strong>, wenn die API entsprechende Webhooks auslöst.</p>
+<h3 id="architektur">Architektur<a class="headerlink" href="#architektur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Dashboard (Angular) 
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    ↓ HTTP Request
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>API (Express/Node.js)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    ↓ Webhook
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Discord-Bot
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    ↓ Nachricht
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>bot-log Channel
+</code></pre></div>
+<h3 id="geloggte-dashboard-aktionen">Geloggte Dashboard-Aktionen<a class="headerlink" href="#geloggte-dashboard-aktionen" title="Permanent link">&para;</a></h3>
+<p>Die folgenden Dashboard-Aktionen werden im <strong>bot-log</strong> Channel protokolliert:</p>
+<h4 id="1-rollenanderungen-an-benutzern">1. Rollenänderungen an Benutzern<a class="headerlink" href="#1-rollenanderungen-an-benutzern" title="Permanent link">&para;</a></h4>
+<p><strong>Dashboard-Aktion:</strong> Benutzer-Rolle hinzufügen oder entfernen</p>
+<p><strong>API-Endpunkt:</strong> 
+- <code>POST /api/user/:personId/role</code> (Rolle hinzufügen)
+- <code>DELETE /api/user/:personId/role/:roleId</code> (Rolle entfernen)</p>
+<p><strong>Logging:</strong> 
+- ✅ Wird im <strong>bot-log</strong> Channel geloggt
+- ✅ Embed mit Benutzer, hinzugefügten/entfernten Rollen, geändert von (Dashboard-Admin)</p>
+<p><strong>Datei:</strong> <code>apps/clanscore-api/src/presentation/controllers/user.controller.ts</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Beispiel: Rolle hinzufügen</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">await</span><span class="w"> </span><span class="nx">notificationService</span><span class="p">.</span><span class="nx">notifyRoleChanged</span><span class="p">({</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nx">userId</span><span class="o">:</span><span class="w"> </span><span class="kt">personId</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nx">platformUserId</span><span class="o">:</span><span class="w"> </span><span class="kt">personResult.value.discordId</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">username</span><span class="o">:</span><span class="w"> </span><span class="kt">personResult.value.nickname</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="nx">personResult</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">discordId</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nx">addedRoles</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">roleResult</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">name</span><span class="p">],</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">removedRoles</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nx">changedBy</span><span class="o">:</span><span class="w"> </span><span class="kt">getChangedByFromRequest</span><span class="p">(</span><span class="nx">req</span><span class="p">),</span><span class="w"> </span><span class="c1">// Dashboard-Admin</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">});</span>
+</code></pre></div>
+<h4 id="2-rollenaktualisierungen_1">2. Rollenaktualisierungen<a class="headerlink" href="#2-rollenaktualisierungen_1" title="Permanent link">&para;</a></h4>
+<p><strong>Dashboard-Aktion:</strong> Rolle bearbeiten (Name, Farbe, Position, etc.)</p>
+<p><strong>API-Endpunkt:</strong> <code>PATCH /api/role/:roleId</code></p>
+<p><strong>Logging:</strong>
+- ✅ Wird im <strong>bot-log</strong> Channel geloggt
+- ✅ Embed mit Rollenname, Änderungen (Name, Farbe, Hervorheben, Erwähnbar), geändert von</p>
+<p><strong>Datei:</strong> <code>apps/clanscore-api/src/presentation/controllers/roles.controller.ts</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">notificationService</span><span class="p">.</span><span class="nx">notifyRoleUpdated</span><span class="p">({</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nx">roleId</span><span class="o">:</span><span class="w"> </span><span class="kt">role.id</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nx">oldName</span><span class="o">:</span><span class="w"> </span><span class="kt">oldRole.name</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nx">newName</span><span class="o">:</span><span class="w"> </span><span class="kt">role.name</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="nx">oldRole</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="kt">role.discordColor</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nx">permissions</span><span class="o">:</span><span class="w"> </span><span class="kt">role.discordPermissions</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nx">hoist</span><span class="o">:</span><span class="w"> </span><span class="kt">role.hoist</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nx">mentionable</span><span class="o">:</span><span class="w"> </span><span class="kt">role.mentionable</span><span class="p">,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nx">changedBy</span><span class="o">:</span><span class="w"> </span><span class="kt">getChangedByFromRequest</span><span class="p">(</span><span class="nx">req</span><span class="p">),</span><span class="w"> </span><span class="c1">// Dashboard-Admin</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">});</span>
+</code></pre></div>
+<h3 id="nicht-geloggte-dashboard-aktionen">Nicht geloggte Dashboard-Aktionen<a class="headerlink" href="#nicht-geloggte-dashboard-aktionen" title="Permanent link">&para;</a></h3>
+<p>Die folgenden Dashboard-Aktionen werden <strong>NICHT</strong> im bot-log Channel protokolliert:</p>
+<ul>
+<li>❌ <strong>Benutzer erstellen</strong> (<code>POST /api/user</code>) - Keine Notification</li>
+<li>❌ <strong>Benutzer aktualisieren</strong> (<code>PATCH /api/user/:personId</code>) - Keine Notification (außer Rollenänderungen)</li>
+<li>❌ <strong>Benutzer löschen</strong> (<code>DELETE /api/user/:personId</code>) - Keine Notification</li>
+<li>❌ <strong>Rolle erstellen</strong> (<code>POST /api/role</code>) - Keine Notification</li>
+<li>❌ <strong>Rolle löschen</strong> (<code>DELETE /api/role/:roleId</code>) - Keine Notification</li>
+<li>❌ <strong>Aufgaben verwalten</strong> - Keine Notification</li>
+<li>❌ <strong>Events verwalten</strong> - Keine Notification</li>
+<li>❌ <strong>Ranglisten verwalten</strong> - Keine Notification</li>
+<li>❌ <strong>Spenden verwalten</strong> - Keine Notification</li>
+<li>❌ <strong>Belohnungen verwalten</strong> - Keine Notification</li>
+<li>❌ <strong>Passwort ändern</strong> - Keine Notification</li>
+</ul>
+<p><strong>Hinweis:</strong> Diese Aktionen werden nur in der Datenbank gespeichert, aber nicht im Discord bot-log Channel protokolliert.</p>
+<h3 id="benutzer-feedback-im-dashboard">Benutzer-Feedback im Dashboard<a class="headerlink" href="#benutzer-feedback-im-dashboard" title="Permanent link">&para;</a></h3>
+<p>Das Dashboard verwendet <strong>Angular Material Snackbar</strong> für Benutzer-Feedback:</p>
+<p><strong>Datei:</strong> <code>apps/dashboard/src/app/app.component.ts</code></p>
+<p><strong>Verwendung:</strong>
+- ✅ <strong>Passwort-Änderung erfolgreich</strong>: "Ihr Passwort wurde erfolgreich geändert."
+- ❌ <strong>Passwort-Änderung fehlgeschlagen</strong>: "Fehler beim Ändern des Passworts: {error}"</p>
+<p><strong>Technische Details:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">snackBar</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="s1">&#39;Ihr Passwort wurde erfolgreich geändert.&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="s1">&#39;Schließen&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="kt">3000</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Wichtig:</strong> Snackbar-Nachrichten sind <strong>nur für den aktuellen Benutzer sichtbar</strong> und werden nicht geloggt.</p>
+<h3 id="console-logging-im-dashboard">Console-Logging im Dashboard<a class="headerlink" href="#console-logging-im-dashboard" title="Permanent link">&para;</a></h3>
+<p>Das Dashboard verwendet <strong>minimales Console-Logging</strong>, hauptsächlich für Debugging-Zwecke:</p>
+<p><strong>Gefundene Console-Logs:</strong>
+- <code>apps/dashboard/src/app/sections/task/components/task-form/task-form.component.ts</code> - Debug-Ausgabe bei Task-Updates
+- <code>apps/dashboard/src/app/sections/gamification-management/components/task-type-form/task-type-form.component.ts</code> - Debug-Ausgabe bei Task-Type-Formularen
+- <code>apps/dashboard/src/app/sections/gamification-management/components/jahresplanung-table/jahresplanung-table.component.ts</code> - Error-Logging bei Validierungsfehlern
+- <code>apps/dashboard/src/app/sections/role/pages/role-page/role-page.component.ts</code> - Debug-Ausgabe
+- <code>apps/dashboard/src/main.ts</code> - Error-Logging bei Bootstrap-Fehlern</p>
+<p><strong>Hinweis:</strong> Diese Console-Logs sind nur in der Browser-Konsole sichtbar und werden nicht an externe Systeme gesendet.</p>
+<h3 id="zusammenfassung-dashboard-logging">Zusammenfassung Dashboard-Logging<a class="headerlink" href="#zusammenfassung-dashboard-logging" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Geloggt?</th>
+<th>Wo?</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rolle zu Benutzer hinzufügen</strong></td>
+<td>✅ Ja</td>
+<td>bot-log</td>
+<td>Embed mit Benutzer, Rolle, geändert von</td>
+</tr>
+<tr>
+<td><strong>Rolle von Benutzer entfernen</strong></td>
+<td>✅ Ja</td>
+<td>bot-log</td>
+<td>Embed mit Benutzer, Rolle, geändert von</td>
+</tr>
+<tr>
+<td><strong>Rolle aktualisieren</strong></td>
+<td>✅ Ja</td>
+<td>bot-log</td>
+<td>Embed mit Rollenname, Änderungen, geändert von</td>
+</tr>
+<tr>
+<td><strong>Benutzer erstellen</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Keine Notification</td>
+</tr>
+<tr>
+<td><strong>Benutzer aktualisieren</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Keine Notification (außer Rollen)</td>
+</tr>
+<tr>
+<td><strong>Benutzer löschen</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Keine Notification</td>
+</tr>
+<tr>
+<td><strong>Rolle erstellen</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Keine Notification</td>
+</tr>
+<tr>
+<td><strong>Rolle löschen</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Keine Notification</td>
+</tr>
+<tr>
+<td><strong>Aufgaben/Events/Ranglisten</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Keine Notification</td>
+</tr>
+<tr>
+<td><strong>Passwort ändern</strong></td>
+<td>❌ Nein</td>
+<td>-</td>
+<td>Nur Snackbar-Feedback</td>
+</tr>
+</tbody>
+</table>
+<h3 id="empfehlungen-fur-zukunftige-entwicklung">Empfehlungen für zukünftige Entwicklung<a class="headerlink" href="#empfehlungen-fur-zukunftige-entwicklung" title="Permanent link">&para;</a></h3>
+<p>Um das Dashboard-Logging zu verbessern, könnten folgende Aktionen zusätzlich geloggt werden:</p>
+<ol>
+<li><strong>Benutzer erstellen/aktualisieren/löschen</strong> - Wichtige Änderungen sollten protokolliert werden</li>
+<li><strong>Rolle erstellen/löschen</strong> - Neue Rollen sollten im bot-log erscheinen</li>
+<li><strong>Aufgaben-Verwaltung</strong> - Erstellung/Bearbeitung von Aufgaben im Dashboard</li>
+<li><strong>Events-Verwaltung</strong> - Erstellung/Bearbeitung von Events im Dashboard</li>
+<li><strong>Ranglisten-Verwaltung</strong> - Erstellung/Bearbeitung von Ranglisten im Dashboard</li>
+</ol>
+<p><strong>Hinweis:</strong> Diese Erweiterungen würden Änderungen in der API erfordern, um entsprechende Notifications auszulösen.</p>
+<hr />
+<h2 id="console-logging">Console-Logging<a class="headerlink" href="#console-logging" title="Permanent link">&para;</a></h2>
+<h3 id="discord-bot">Discord-Bot<a class="headerlink" href="#discord-bot" title="Permanent link">&para;</a></h3>
+<p><strong>Verwendete Dateien:</strong>
+- <code>apps/discord-bot/src/index.ts</code>
+- <code>apps/discord-bot/src/discord.handler.ts</code>
+- <code>apps/discord-bot/src/discord.bot.ts</code>
+- <code>apps/discord-bot/src/web/server.ts</code>
+- <code>apps/discord-bot/src/deploy.commands.ts</code>
+- <code>apps/discord-bot/src/commands/gamification/task/createTask.ts</code>
+- <code>apps/discord-bot/src/commands/gamification/task/selectTaskTypeModal.ts</code>
+- <code>apps/discord-bot/src/api/apiClient.ts</code>
+- <code>apps/discord-bot/src/config.ts</code></p>
+<p><strong>Log-Nachrichten:</strong>
+- ✅ Bot-Start: <code>"✅ Discord bot started successfully"</code>
+- ✅ Discord-Client-Verbindung: <code>"✅ Discord client connected."</code>
+- ✅ Event-Handler-Registrierung: <code>"✅ Event handlers registered."</code>
+- ✅ Bot-Bereitschaft: <code>"🤖 Discord-Bot is ready."</code>
+- ✅ Initiale Synchronisierung: <code>"🔄 Running initial sync..."</code>
+- ✅ Webhook-Server: <code>"🔔 Bot webhook server listening on http://localhost:${port}"</code>
+- ✅ Commands-Registrierung: <code>"✅ Commands successfully registered / updated."</code>
+- ⚠️ Fehler: <code>console.error()</code> für Fehlerbehandlung</p>
+<h3 id="clanscore-api">ClansCore-API<a class="headerlink" href="#clanscore-api" title="Permanent link">&para;</a></h3>
+<p><strong>Verwendete Dateien:</strong>
+- <code>apps/clanscore-api/src/index.ts</code>
+- <code>apps/clanscore-api/src/infrastructure/database/db.init.ts</code>
+- <code>apps/clanscore-api/src/infrastructure/cron/jobs.ts</code>
+- <code>apps/clanscore-api/src/application/notifications/notification.service.ts</code>
+- <code>apps/clanscore-api/src/config.ts</code></p>
+<p><strong>Log-Nachrichten:</strong>
+- ✅ Datenbankverbindung: <code>"✅ Connected to the database"</code>
+- ✅ Datenbank bereits verbunden: <code>"✅ Already connected to the database"</code>
+- ✅ Server-Start: <code>"API / OAuth server running at ${url}"</code>
+- ✅ Cron-Jobs: <code>"✅ Registered all Cron-Jobs"</code>
+- ✅ Notification-Service: <code>"✅ NotificationService: ${adapter.name} adapter registered"</code>
+- ⚠️ Fehler: Detaillierte Fehlerausgaben bei Datenbankverbindungsfehlern</p>
+<p><strong>Cron-Job-Logging:</strong>
+- <code>"Starte geplante Löschung..."</code>
+- <code>"Starte User-Synchronisierung..."</code></p>
+<hr />
+<h2 id="error-handling-und-logging">Error-Handling und Logging<a class="headerlink" href="#error-handling-und-logging" title="Permanent link">&para;</a></h2>
+<h3 id="error-handling-system">Error-Handling-System<a class="headerlink" href="#error-handling-system" title="Permanent link">&para;</a></h3>
+<p>Das Projekt verwendet ein strukturiertes Error-Handling-System über <code>@clanscore/shared</code>:</p>
+<p><strong>Datei:</strong> <code>shared/src/errors/messages.ts</code></p>
+<p><strong>Funktion:</strong> <code>getErrorMessage(error: ErrorDetails): string</code></p>
+<h3 id="error-typen">Error-Typen<a class="headerlink" href="#error-typen" title="Permanent link">&para;</a></h3>
+<p>Die wichtigsten Error-Typen für Logging:</p>
+<ul>
+<li><code>ErrorType.UnknownError</code>: Unbekannte Fehler</li>
+<li><code>ErrorType.MessageNotSend</code>: Fehler beim Senden von Nachrichten</li>
+<li><code>ErrorType.NotificationFailed</code>: Fehler bei Benachrichtigungen</li>
+<li><code>ErrorType.NetworkFailure</code>: Netzwerkfehler</li>
+<li><code>ErrorType.RoleAssignmentFailed</code>: Fehler bei Rollenzuweisungen</li>
+</ul>
+<h3 id="fehlerbehandlung-im-discord-bot">Fehlerbehandlung im Discord-Bot<a class="headerlink" href="#fehlerbehandlung-im-discord-bot" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/errors/dsicordAdapter.ts</code></p>
+<p><strong>Funktion:</strong> <code>replyWithDeferredError()</code> - Sendet Fehlermeldungen an Benutzer</p>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/discord.bot.ts</code></p>
+<p><strong>Event-Handler:</strong>
+- <code>client.on("error")</code> - Loggt Discord-Client-Fehler
+- <code>process.on("unhandledRejection")</code> - Loggt unbehandelte Promise-Rejections</p>
+<h3 id="fehlerbehandlung-in-der-api">Fehlerbehandlung in der API<a class="headerlink" href="#fehlerbehandlung-in-der-api" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/clanscore-api/src/presentation/middleware/error.middleware.ts</code></p>
+<p><strong>Funktion:</strong> <code>errorHandler()</code> - Zentrale Fehlerbehandlung für API-Requests</p>
+<h3 id="notification-service-error-handling">Notification-Service Error-Handling<a class="headerlink" href="#notification-service-error-handling" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/clanscore-api/src/application/notifications/notification.service.ts</code></p>
+<p><strong>Methode:</strong> <code>broadcast()</code> - Fängt Fehler in Notification-Adaptern ab und loggt sie</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">errorDetails</span><span class="o">:</span><span class="w"> </span><span class="kt">ErrorDetails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">ErrorType</span><span class="p">.</span><span class="nx">NotificationFailed</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="nx">details</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">            </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="sb">`NotificationService: Error in </span><span class="si">${</span><span class="nx">adapter</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">.</span><span class="si">${</span><span class="nx">method</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">errorMessage</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">            </span><span class="nx">adapter</span><span class="o">:</span><span class="w"> </span><span class="kt">adapter.name</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="kt">String</span><span class="p">(</span><span class="nx">method</span><span class="p">),</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nx">getErrorMessage</span><span class="p">(</span><span class="nx">errorDetails</span><span class="p">);</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="webhook-basiertes-logging">Webhook-basiertes Logging<a class="headerlink" href="#webhook-basiertes-logging" title="Permanent link">&para;</a></h2>
+<h3 id="webhook-endpunkte">Webhook-Endpunkte<a class="headerlink" href="#webhook-endpunkte" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/web/routes/webhook.routes.ts</code></p>
+<p>Die API sendet Webhooks an den Discord-Bot, um Ereignisse zu loggen:</p>
+<ol>
+<li><strong>POST <code>/api/notifications/role-changed</code></strong></li>
+<li>
+<p>Loggt Rollenänderungen im bot-log Channel</p>
+</li>
+<li>
+<p><strong>POST <code>/api/notifications/role-updated</code></strong></p>
+</li>
+<li>
+<p>Loggt Rollenaktualisierungen im bot-log Channel</p>
+</li>
+<li>
+<p><strong>POST <code>/api/notifications/sync-users</code></strong></p>
+</li>
+<li>Löst eine User-Synchronisierung aus (wird automatisch geloggt)</li>
+</ol>
+<h3 id="webhook-authentifizierung">Webhook-Authentifizierung<a class="headerlink" href="#webhook-authentifizierung" title="Permanent link">&para;</a></h3>
+<p>Alle Webhook-Requests müssen einen gültigen <code>x-webhook-token</code> Header enthalten:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">verifySecret</span><span class="p">(</span><span class="nx">req</span><span class="o">:</span><span class="w"> </span><span class="kt">express.Request</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;x-webhook-token&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">WEBHOOK_SHARED_SECRET</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">WEBHOOK_SHARED_SECRET</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="webhook-aufrufe-aus-der-api">Webhook-Aufrufe aus der API<a class="headerlink" href="#webhook-aufrufe-aus-der-api" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>apps/clanscore-api/src/infrastructure/cron/jobs.ts</code></p>
+<p>Automatische User-Synchronisierung via Webhook:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">config</span><span class="p">.</span><span class="nx">DISCORD_BOT_WEBHOOK_URL</span><span class="si">}</span><span class="sb">/api/notifications/sync-users`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="s2">&quot;x-webhook-token&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">WEBHOOK_SHARED_SECRET</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="kt">JSON.stringify</span><span class="p">({</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="nx">guildId</span><span class="o">:</span><span class="w"> </span><span class="kt">config.DISCORD_GUILD_ID</span><span class="p">,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">}),</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="konfiguration_1">Konfiguration<a class="headerlink" href="#konfiguration_1" title="Permanent link">&para;</a></h2>
+<h3 id="umgebungsvariablen">Umgebungsvariablen<a class="headerlink" href="#umgebungsvariablen" title="Permanent link">&para;</a></h3>
+<p><strong>Discord-Bot:</strong>
+- <code>DISCORD_GUILD_ID</code>: Discord Server ID
+- <code>WEBHOOK_SHARED_SECRET</code>: Shared Secret für Webhook-Authentifizierung</p>
+<p><strong>ClansCore-API:</strong>
+- <code>DISCORD_BOT_WEBHOOK_URL</code>: URL des Discord-Bot Webhook-Servers
+- <code>WEBHOOK_SHARED_SECRET</code>: Shared Secret für Webhook-Authentifizierung
+- <code>DISCORD_GUILD_ID</code>: Discord Server ID</p>
+<h3 id="channel-setup">Channel-Setup<a class="headerlink" href="#channel-setup" title="Permanent link">&para;</a></h3>
+<p>Der <code>bot-log</code> Channel muss im Discord-Server erstellt werden:</p>
+<ol>
+<li><strong>Channel-Name:</strong> <code>bot-log</code> (exakt, case-sensitive)</li>
+<li><strong>Bereich:</strong> Vorstands-Bereich (nur für Vorstandsmitglieder sichtbar)</li>
+<li><strong>Typ:</strong> Text-Channel</li>
+<li><strong>Berechtigungen:</strong> Bot benötigt <code>Send Messages</code> und <code>Embed Links</code></li>
+</ol>
+<h3 id="docker-logging">Docker-Logging<a class="headerlink" href="#docker-logging" title="Permanent link">&para;</a></h3>
+<p><strong>Datei:</strong> <code>docker-compose.yml</code> (falls vorhanden)</p>
+<p>Logs können über Docker Compose angezeigt werden:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Alle Services</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Einzelner Service</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>discord-bot
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clanscore-api
+</code></pre></div>
+<hr />
+<h2 id="ephemeral-messages-direkte-benutzerinformationen">Ephemeral Messages - Direkte Benutzerinformationen<a class="headerlink" href="#ephemeral-messages-direkte-benutzerinformationen" title="Permanent link">&para;</a></h2>
+<h3 id="was-sind-ephemeral-messages">Was sind Ephemeral Messages?<a class="headerlink" href="#was-sind-ephemeral-messages" title="Permanent link">&para;</a></h3>
+<p><strong>Ephemeral Messages</strong> sind private Nachrichten, die nur für den ausführenden Benutzer sichtbar sind. Sie werden direkt als Antwort auf Discord-Befehle gesendet und verschwinden nicht automatisch, bleiben aber für andere Server-Mitglieder unsichtbar.</p>
+<h3 id="verwendung-im-clanscore-projekt">Verwendung im ClansCore-Projekt<a class="headerlink" href="#verwendung-im-clanscore-projekt" title="Permanent link">&para;</a></h3>
+<p>Fast alle Discord-Befehle verwenden Ephemeral Messages, um Benutzer direkt zu informieren:</p>
+<p><strong>Technische Implementierung:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">interaction</span><span class="p">.</span><span class="nx">deferReply</span><span class="p">({</span><span class="w"> </span><span class="nx">flags</span><span class="o">:</span><span class="w"> </span><span class="kt">MessageFlags.Ephemeral</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1">// oder</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">await</span><span class="w"> </span><span class="nx">interaction</span><span class="p">.</span><span class="nx">reply</span><span class="p">({</span><span class="w"> </span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Nachricht&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nx">flags</span><span class="o">:</span><span class="w"> </span><span class="kt">MessageFlags.Ephemeral</span><span class="w"> </span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">});</span>
+</code></pre></div></p>
+<h3 id="befehle-mit-ephemeral-messages">Befehle mit Ephemeral Messages<a class="headerlink" href="#befehle-mit-ephemeral-messages" title="Permanent link">&para;</a></h3>
+<p><strong>Alle folgenden Befehle senden Ephemeral Messages an den ausführenden Benutzer:</strong></p>
+<ol>
+<li><strong><code>/syncusers</code></strong> - Zeigt Synchronisierungs-Ergebnisse (neue Benutzer, Änderungen, etc.)</li>
+<li><strong><code>/syncroles</code></strong> - Zeigt Rollen-Synchronisierungs-Ergebnisse</li>
+<li><strong><code>/donation</code></strong> - Bestätigt Spenden-Protokollierung</li>
+<li><strong><code>/createtask</code></strong> - Bestätigt Aufgaben-Erstellung und zeigt Konfigurationsoptionen</li>
+<li><strong><code>/createleaderboard</code></strong> - Bestätigt Ranglisten-Erstellung</li>
+<li><strong><code>/synccalendar</code></strong> - Zeigt Synchronisierungs-Statistiken</li>
+<li><strong><code>/linkcalendar</code></strong> - Zeigt Link zur Kalender-Verknüpfung</li>
+<li><strong><code>/claim</code></strong> - Bestätigt Aufgaben-Übernahme</li>
+<li><strong><code>/task-complete</code></strong> - Bestätigt Aufgaben-Abschluss</li>
+<li><strong><code>/rewards</code></strong> - Zeigt verfügbare Belohnungen</li>
+<li><strong><code>/join</code></strong> - Zeigt Bewerbungsstatus</li>
+<li><strong><code>/leave</code></strong> - Bestätigt Austrittsanfrage</li>
+<li><strong><code>/getdata</code></strong> - Zeigt persönliche Daten</li>
+<li><strong><code>/score</code></strong> - Zeigt persönlichen Punktestand</li>
+<li><strong><code>/events</code></strong> - Zeigt Event-Informationen</li>
+<li><strong><code>/help</code></strong> - Zeigt Hilfe-Informationen</li>
+<li><strong><code>/ping</code></strong> - Zeigt Bot-Latenz</li>
+</ol>
+<h3 id="fehlermeldungen-als-ephemeral-messages">Fehlermeldungen als Ephemeral Messages<a class="headerlink" href="#fehlermeldungen-als-ephemeral-messages" title="Permanent link">&para;</a></h3>
+<p>Alle Fehlermeldungen werden ebenfalls als Ephemeral Messages gesendet, sodass nur der betroffene Benutzer die Fehlerinformationen sieht:</p>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/errors/dsicordAdapter.ts</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">replyWithError</span><span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="nx">interaction</span><span class="o">:</span><span class="w"> </span><span class="kt">CommandInteraction</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ModalSubmitInteraction</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">...,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kt">ErrorDetails</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">interaction</span><span class="p">.</span><span class="nx">reply</span><span class="p">({</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="kt">getErrorMessage</span><span class="p">(</span><span class="nx">error</span><span class="p">),</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="nx">flags</span><span class="o">:</span><span class="w"> </span><span class="kt">MessageFlags.Ephemeral</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="vorteile-von-ephemeral-messages">Vorteile von Ephemeral Messages<a class="headerlink" href="#vorteile-von-ephemeral-messages" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Privatsphäre</strong>: Sensible Informationen (z.B. persönliche Daten) bleiben privat</li>
+<li>✅ <strong>Keine Channel-Verschmutzung</strong>: Erfolgs- und Fehlermeldungen erscheinen nicht in öffentlichen Channels</li>
+<li>✅ <strong>Bessere UX</strong>: Benutzer erhalten sofortiges Feedback zu ihren Aktionen</li>
+<li>✅ <strong>Fehlerbehandlung</strong>: Fehlermeldungen werden nur dem betroffenen Benutzer angezeigt</li>
+</ul>
+<hr />
+<h2 id="nachrichten-in-anderen-bot-channels">Nachrichten in anderen Bot-Channels<a class="headerlink" href="#nachrichten-in-anderen-bot-channels" title="Permanent link">&para;</a></h2>
+<p>Nicht alle Bot-Nachrichten landen im <strong>bot-log</strong> Channel. Viele Nachrichten werden in spezialisierten Channels für bestimmte Zwecke gesendet:</p>
+<h3 id="1-channel-aufgaben-tasks">1. Channel: <code>aufgaben</code> (TASKS)<a class="headerlink" href="#1-channel-aufgaben-tasks" title="Permanent link">&para;</a></h3>
+<p><strong>Zweck:</strong> Veröffentlichung von Aufgaben für alle Mitglieder</p>
+<p><strong>Nachrichten:</strong>
+- ✅ <strong>Aufgaben-Veröffentlichung</strong>: Wenn eine Aufgabe mit <code>/createtask</code> erstellt und veröffentlicht wird, erscheint sie hier als Embed mit:
+  - Aufgabenname
+  - Beschreibung
+  - Punkte
+  - Maximale Teilnehmer
+  - Deadline
+  - Verknüpftes Event (falls vorhanden)
+  - Button "Aufgabe beanspruchen"</p>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/gamification/task/createTask.ts</code> (handlePublishTask)</p>
+<p><strong>Hinweis:</strong> Die Erstellung der Aufgabe wird im <strong>bot-log</strong> geloggt, die Veröffentlichung erfolgt im <strong>aufgaben</strong> Channel.</p>
+<hr />
+<h3 id="2-channel-events-events">2. Channel: <code>events</code> (EVENTS)<a class="headerlink" href="#2-channel-events-events" title="Permanent link">&para;</a></h3>
+<p><strong>Zweck:</strong> Event-Übersicht und Event-Benachrichtigungen</p>
+<p><strong>Nachrichten:</strong>
+- ✅ <strong>Event-Übersicht</strong>: Automatische Übersicht der nächsten 5 Events (wird regelmäßig aktualisiert)
+- ✅ <strong>Event-Benachrichtigungen</strong>: Benachrichtigungen für anstehende Events mit:
+  - Event-Name
+  - Datum und Uhrzeit
+  - Beschreibung
+  - Teilnehmer-Mentions
+  - Relative Zeitangabe (z.B. "in 2 Stunden")</p>
+<p><strong>Datei:</strong> 
+- <code>apps/discord-bot/src/intergration/event/event-discord.service.ts</code> (sendEventOverviewToChannel)
+- <code>apps/discord-bot/src/utils-discord/guild.ts</code> (notifyEvent)</p>
+<p><strong>Aktualisierung:</strong> Die Event-Übersicht wird automatisch aktualisiert, wenn Events synchronisiert werden.</p>
+<hr />
+<h3 id="3-channel-rangliste-leaderboards">3. Channel: <code>rangliste</code> (LEADERBOARDS)<a class="headerlink" href="#3-channel-rangliste-leaderboards" title="Permanent link">&para;</a></h3>
+<p><strong>Zweck:</strong> Anzeige aktiver Ranglisten</p>
+<p><strong>Nachrichten:</strong>
+- ✅ <strong>Ranglisten-Embed</strong>: Zeigt alle aktiven Ranglisten mit:
+  - Top-Teilnehmer (nach Anzahl sichtbarer Einträge)
+  - Punkte pro Teilnehmer
+  - Zeitraum (Start- und Enddatum)
+  - Gewinner-Embed (falls vorhanden)</p>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/intergration/leaderboard-discord.service.ts</code> (updateLeaderboards)</p>
+<p><strong>Aktualisierung:</strong> Wird automatisch aktualisiert, wenn:
+- Punkte vergeben werden (Aufgaben, Spenden, Events)
+- Neue Ranglisten erstellt werden
+- Belohnungen akzeptiert werden</p>
+<p><strong>Hinweis:</strong> Die Erstellung einer Rangliste wird im <strong>bot-log</strong> geloggt, die Anzeige erfolgt im <strong>rangliste</strong> Channel.</p>
+<hr />
+<h3 id="4-channel-bot-bewerbungen-applications">4. Channel: <code>bot-bewerbungen</code> (APPLICATIONS)<a class="headerlink" href="#4-channel-bot-bewerbungen-applications" title="Permanent link">&para;</a></h3>
+<p><strong>Zweck:</strong> Vorstands-Bereich für Bewerbungen und Austritte</p>
+<p><strong>Nachrichten:</strong>
+- ✅ <strong>Neue Bewerbungen</strong>: Wenn ein Benutzer <code>/join</code> ausführt, erscheint hier ein Embed mit:
+  - Benutzerinformationen (Name, Discord-ID, etc.)
+  - Bewerbungsdaten
+  - Buttons "Akzeptieren" und "Ablehnen"
+- ✅ <strong>Austrittsanfragen</strong>: Wenn ein Benutzer <code>/leave</code> ausführt, erscheint hier eine Nachricht</p>
+<p><strong>Datei:</strong>
+- <code>apps/discord-bot/src/commands/user/join/joinStep2.ts</code> (Bewerbungen)
+- <code>apps/discord-bot/src/commands/user/leave.ts</code> (Austritte)
+- <code>apps/discord-bot/src/intergration/user-discord.service.ts</code> (handleGuildMemberAdd)</p>
+<p><strong>Zugriff:</strong> Nur für Vorstandsmitglieder sichtbar</p>
+<hr />
+<h3 id="5-channel-bot-belohnungen-rewards">5. Channel: <code>bot-belohnungen</code> (REWARDS)<a class="headerlink" href="#5-channel-bot-belohnungen-rewards" title="Permanent link">&para;</a></h3>
+<p><strong>Zweck:</strong> Vorstands-Bereich für Belohnungsanfragen</p>
+<p><strong>Nachrichten:</strong>
+- ✅ <strong>Belohnungsanfragen</strong>: Wenn ein Benutzer eine Belohnung mit <code>/rewards</code> anfordert, erscheint hier ein Embed mit:
+  - Benutzerinformationen
+  - Belohnungsname
+  - Kosten (Punkte)
+  - Buttons "Akzeptieren" und "Ablehnen"</p>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/gamification/rewards.ts</code> (processReward)</p>
+<p><strong>Zugriff:</strong> Nur für Vorstandsmitglieder sichtbar</p>
+<hr />
+<h3 id="6-channel-bot-aufgaben-completed_tasks">6. Channel: <code>bot-aufgaben</code> (COMPLETED_TASKS)<a class="headerlink" href="#6-channel-bot-aufgaben-completed_tasks" title="Permanent link">&para;</a></h3>
+<p><strong>Zweck:</strong> Vorstands-Bereich für erledigte Aufgaben</p>
+<p><strong>Nachrichten:</strong>
+- ✅ <strong>Erledigte Aufgaben</strong>: Wenn ein Benutzer eine Aufgabe mit <code>/task-complete</code> abschließt, erscheint hier ein Embed mit:
+  - Aufgabenname
+  - Benutzer, der die Aufgabe erledigt hat
+  - Punkte
+  - Buttons "Akzeptieren" und "Ablehnen"
+  - Feedback-Feld (wenn vom Vorstand ausgefüllt)</p>
+<p><strong>Datei:</strong> <code>apps/discord-bot/src/commands/gamification/task/feedback.ts</code> (processTaskCompletionButton)</p>
+<p><strong>Zugriff:</strong> Nur für Vorstandsmitglieder sichtbar</p>
+<p><strong>Workflow:</strong>
+1. Benutzer erledigt Aufgabe → Nachricht erscheint in <code>bot-aufgaben</code>
+2. Vorstand gibt Feedback (optional) und akzeptiert/lehnt ab
+3. Benutzer erhält DM mit Feedback und Punkte (falls akzeptiert)</p>
+<hr />
+<h2 id="ubersicht-channel-zuordnung">Übersicht: Channel-Zuordnung<a class="headerlink" href="#ubersicht-channel-zuordnung" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Zweck</th>
+<th>Sichtbarkeit</th>
+<th>Nachrichten-Typ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>bot-log</strong></td>
+<td>Logging wichtiger Ereignisse</td>
+<td>Vorstand</td>
+<td>Log-Embeds (9 Event-Typen)</td>
+</tr>
+<tr>
+<td><strong>aufgaben</strong></td>
+<td>Aufgaben-Veröffentlichung</td>
+<td>Alle Mitglieder</td>
+<td>Aufgaben-Embeds mit Claim-Button</td>
+</tr>
+<tr>
+<td><strong>events</strong></td>
+<td>Event-Übersicht &amp; Benachrichtigungen</td>
+<td>Alle Mitglieder</td>
+<td>Event-Embeds &amp; Übersicht</td>
+</tr>
+<tr>
+<td><strong>rangliste</strong></td>
+<td>Ranglisten-Anzeige</td>
+<td>Alle Mitglieder</td>
+<td>Ranglisten-Embeds</td>
+</tr>
+<tr>
+<td><strong>bot-bewerbungen</strong></td>
+<td>Bewerbungen &amp; Austritte</td>
+<td>Vorstand</td>
+<td>Bewerbungs-Embeds mit Buttons</td>
+</tr>
+<tr>
+<td><strong>bot-belohnungen</strong></td>
+<td>Belohnungsanfragen</td>
+<td>Vorstand</td>
+<td>Belohnungs-Embeds mit Buttons</td>
+</tr>
+<tr>
+<td><strong>bot-aufgaben</strong></td>
+<td>Erledigte Aufgaben</td>
+<td>Vorstand</td>
+<td>Aufgaben-Abschluss-Embeds mit Buttons</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="zusammenfassung">Zusammenfassung<a class="headerlink" href="#zusammenfassung" title="Permanent link">&para;</a></h2>
+<p>Das Logging-System im ClansCore-Projekt besteht aus:</p>
+<ol>
+<li><strong>bot-log Channel</strong>: Zentraler Discord-Channel für wichtige Ereignisse und Änderungen (9 Event-Typen)</li>
+<li><strong>Ephemeral Messages</strong>: Private Nachrichten direkt an Benutzer bei Befehlen (17+ Befehle)</li>
+<li><strong>Spezialisierte Channels</strong>: 6 weitere Channels für spezifische Zwecke (Aufgaben, Events, Ranglisten, Bewerbungen, Belohnungen, erledigte Aufgaben)</li>
+<li><strong>Console-Logging</strong>: Entwicklungs- und Debugging-Logs in beiden Services</li>
+<li><strong>Error-Handling</strong>: Strukturierte Fehlerbehandlung mit zentraler Fehlermeldungsverarbeitung</li>
+<li><strong>Webhook-System</strong>: Automatische Benachrichtigungen zwischen API und Discord-Bot</li>
+</ol>
+<p><strong>Wichtigste Logging-Punkte:</strong>
+- ✅ Alle Rollenänderungen (Dashboard und Discord) → <strong>bot-log</strong>
+- ✅ User- und Rollen-Synchronisierungen → <strong>bot-log</strong> + Ephemeral Messages
+- ✅ Spenden-Protokollierung → <strong>bot-log</strong> + Ephemeral Messages
+- ✅ Aufgaben-Erstellung → <strong>bot-log</strong>, Aufgaben-Veröffentlichung → <strong>aufgaben</strong>
+- ✅ Ranglisten-Erstellung → <strong>bot-log</strong>, Ranglisten-Anzeige → <strong>rangliste</strong>
+- ✅ Kalender-Synchronisierungen → <strong>bot-log</strong> + Ephemeral Messages
+- ✅ Automatische Cron-Job-Ausführungen → <strong>bot-log</strong></p>
+<p><strong>Benutzerinformationen:</strong>
+- ✅ Alle Befehlsantworten → <strong>Ephemeral Messages</strong> (nur für ausführenden Benutzer sichtbar)
+- ✅ Fehlermeldungen → <strong>Ephemeral Messages</strong> (privat)
+- ✅ Erfolgsmeldungen → <strong>Ephemeral Messages</strong> (privat)</p>
+<p>Alle Log-Einträge im bot-log Channel sind als strukturierte Discord Embeds formatiert und enthalten relevante Metadaten für die Nachverfolgung von Änderungen.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 14, 2025 23:44:11 UTC">December 14, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 14, 2025 23:44:11 UTC">December 14, 2025</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
