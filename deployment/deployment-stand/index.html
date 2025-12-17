@@ -1,0 +1,5744 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Vollständige Dokumentation für das Clanscore - API, Dashboard und Discord Bot">
+      
+      
+      
+        <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/deployment/deployment-stand/">
+      
+      
+        <link rel="prev" href="../details/">
+      
+      
+        <link rel="next" href="../quickstart-server/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Deployment-Stand - ClansCore Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deployment-stand-detaillierte-dokumentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ClansCore Doku" class="md-header__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ClansCore Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deployment-Stand
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ClansCore/clanscore" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ClansCore/clanscore
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Schnellstart
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../configuration/setup/" class="md-tabs__link">
+          
+  
+  
+  Konfiguration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Deployment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/local/" class="md-tabs__link">
+          
+  
+  
+  Entwicklung
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dashboard/manual/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dashboard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../bot/manual/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Discord Bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../logging/logging-dokumentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Logging
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ClansCore Doku" class="md-nav__button md-logo" aria-label="ClansCore Doku" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ClansCore Doku
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ClansCore/clanscore" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ClansCore/clanscore
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schnellstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfiguration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfiguration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets und Umgebungs-Variablen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secrets und Umgebungs-Variablen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-env/github-secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-env/secrets-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secrets Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secrets-env/env-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umgebungs-Variablen Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ssh-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entwicklung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architektur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/architektur-detail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architektur-Detail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API-Endpunkte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datenbank
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datenbank
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/database/backups-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backups & Restore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/database/mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Externer Zugriff MongoDB Compass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/calendar/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiger Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Details
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment-Stand
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment-Stand
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übersicht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-komponenten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System-Komponenten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment-Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktueller-deployment-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktueller Deployment-Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment-Architektur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment-Architektur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level-Architektur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-abhangigkeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Abhängigkeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kommunikations-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kommunikations-Flows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-dateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose Dateien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Compose Dateien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-composeyml-hauptkonfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. docker-compose.yml (Hauptkonfiguration)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-docker-composeproductionyml-production-mit-docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. docker-compose.production.yml (Production mit Docker Hub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-docker-composeoptimizedyml-ressourcen-optimierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. docker-compose.optimized.yml (Ressourcen-Optimierung)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-netzwerk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Netzwerk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Volumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clanscore-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. clanscore-api
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. clanscore-api">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-struktur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-struktur_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nginx-Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. discord-bot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. discord-bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-struktur_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. mongodb
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. mongodb">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-prozesse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Prozesse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build-Prozesse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-ordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Ordnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-strategien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Strategien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build-Strategien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lokaler-build-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lokaler Build (Standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub-build-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Hub Build (Production)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-optimierungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Optimierungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build-Optimierungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer-Caching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-stage-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Stage Builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-zeiten-schatzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Zeiten (Schätzungen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netzwerk-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzwerk-Architektur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Netzwerk-Architektur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port-Mappings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interne-kommunikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interne Kommunikation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#externe-kommunikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Externe Kommunikation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-empfehlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall-Empfehlungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umgebungsvariablen-und-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umgebungsvariablen und Secrets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Umgebungsvariablen und Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secrets-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secrets-Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secrets-Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-env-datei-lokale-entwicklung-manuelles-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. .env Datei (Lokale Entwicklung / Manuelles Deployment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-github-secrets-cicd-automatisches-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. GitHub Secrets (CI/CD / Automatisches Deployment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erforderliche-umgebungsvariablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erforderliche Umgebungsvariablen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erforderliche Umgebungsvariablen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-calendar-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Calendar OAuth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-deployment-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server-Deployment (GitHub Actions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Hub (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umgebungsvariablen-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umgebungsvariablen-Mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Umgebungsvariablen-Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clanscore-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clanscore-api
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        discord-bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mongodb
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment-Methoden
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment-Methoden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-manuelles-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Manuelles Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Manuelles Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mit-deployment-skripten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mit Deployment-Skripten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manuell-mit-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuell mit Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-automatisches-deployment-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Automatisches Deployment (GitHub Actions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Automatisches Deployment (GitHub Actions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verfugbare-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verfügbare Workflows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-deploy-sshyml-ssh-key-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: deploy-ssh.yml (SSH Key Auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-deploy-passwordyml-password-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: deploy-password.yml (Password Auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-deploy-dockerhubyml-docker-hub-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: deploy-dockerhub.yml (Docker Hub Build)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow aktivieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deployment-mit-docker-hub-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deployment mit Docker Hub Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deployment-mit-ressourcen-optimierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deployment mit Ressourcen-Optimierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-checks-und-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Checks und Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Health Checks und Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check-endpunkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Check Endpunkte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Health Check Endpunkte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clanscore-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clanscore-api
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mongodb
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check-status-prufen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Check Status prüfen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring-Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log-Rotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-strategien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Strategien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup-Strategien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB Backup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MongoDB Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manuelles-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuelles Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatisches-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatisches Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-wiederherstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Wiederherstellung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container-Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Container-Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Scanning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secrets-Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netzwerk-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzwerk-Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentifizierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentifizierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API-Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB-Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates-und-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updates und Patches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#haufige-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Häufige Probleme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Häufige Probleme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-container-startet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Container startet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mongodb-verbindungsfehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. MongoDB-Verbindungsfehler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-api-nicht-erreichbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. API nicht erreichbar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-discord-bot-verbindet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Discord Bot verbindet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-dashboard-zeigt-fehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dashboard zeigt Fehler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug-Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-analyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log-Analyse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance-Probleme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anhang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anhang
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anhang">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nutzliche-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nützliche Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server-spezifisch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment-Skripte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entwicklung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/local/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lokale Entwicklung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/local-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lokales Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discord Bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging/logging-dokumentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übersicht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-komponenten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System-Komponenten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment-Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktueller-deployment-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktueller Deployment-Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment-Architektur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment-Architektur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-level-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level-Architektur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-abhangigkeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Abhängigkeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kommunikations-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kommunikations-Flows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker-Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker-Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-dateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose Dateien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Compose Dateien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-composeyml-hauptkonfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. docker-compose.yml (Hauptkonfiguration)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-docker-composeproductionyml-production-mit-docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. docker-compose.production.yml (Production mit Docker Hub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-docker-composeoptimizedyml-ressourcen-optimierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. docker-compose.optimized.yml (Ressourcen-Optimierung)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-netzwerk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Netzwerk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Volumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clanscore-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. clanscore-api
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. clanscore-api">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-struktur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-struktur_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nginx-Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. discord-bot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. discord-bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-struktur_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. mongodb
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. mongodb">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-prozesse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Prozesse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build-Prozesse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-ordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Ordnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-strategien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Strategien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build-Strategien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lokaler-build-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lokaler Build (Standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub-build-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Hub Build (Production)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-optimierungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Optimierungen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build-Optimierungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer-Caching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-stage-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Stage Builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-zeiten-schatzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build-Zeiten (Schätzungen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netzwerk-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzwerk-Architektur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Netzwerk-Architektur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Port-Mappings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interne-kommunikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interne Kommunikation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#externe-kommunikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Externe Kommunikation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-empfehlungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall-Empfehlungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umgebungsvariablen-und-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umgebungsvariablen und Secrets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Umgebungsvariablen und Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secrets-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secrets-Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secrets-Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-env-datei-lokale-entwicklung-manuelles-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. .env Datei (Lokale Entwicklung / Manuelles Deployment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-github-secrets-cicd-automatisches-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. GitHub Secrets (CI/CD / Automatisches Deployment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erforderliche-umgebungsvariablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erforderliche Umgebungsvariablen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erforderliche Umgebungsvariablen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-calendar-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Calendar OAuth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-deployment-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server-Deployment (GitHub Actions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Hub (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umgebungsvariablen-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umgebungsvariablen-Mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Umgebungsvariablen-Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clanscore-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clanscore-api
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        discord-bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mongodb
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment-Methoden
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment-Methoden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-manuelles-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Manuelles Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Manuelles Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mit-deployment-skripten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mit Deployment-Skripten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manuell-mit-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuell mit Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-automatisches-deployment-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Automatisches Deployment (GitHub Actions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Automatisches Deployment (GitHub Actions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verfugbare-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verfügbare Workflows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-deploy-sshyml-ssh-key-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: deploy-ssh.yml (SSH Key Auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-deploy-passwordyml-password-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: deploy-password.yml (Password Auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-deploy-dockerhubyml-docker-hub-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: deploy-dockerhub.yml (Docker Hub Build)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow aktivieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deployment-mit-docker-hub-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deployment mit Docker Hub Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deployment-mit-ressourcen-optimierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deployment mit Ressourcen-Optimierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-checks-und-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Checks und Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Health Checks und Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check-endpunkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Check Endpunkte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Health Check Endpunkte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clanscore-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clanscore-api
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mongodb
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check-status-prufen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Check Status prüfen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring-Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log-Rotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-strategien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Strategien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup-Strategien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB Backup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MongoDB Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manuelles-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuelles Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatisches-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatisches Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-wiederherstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Wiederherstellung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container-Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Container-Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Scanning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secrets-Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netzwerk-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzwerk-Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentifizierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentifizierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API-Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB-Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates-und-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updates und Patches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#haufige-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Häufige Probleme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Häufige Probleme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-container-startet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Container startet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mongodb-verbindungsfehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. MongoDB-Verbindungsfehler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-api-nicht-erreichbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. API nicht erreichbar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-discord-bot-verbindet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Discord Bot verbindet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-dashboard-zeigt-fehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dashboard zeigt Fehler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug-Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-analyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log-Analyse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance-Probleme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anhang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anhang
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anhang">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nutzliche-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nützliche Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="deployment-stand-detaillierte-dokumentation">🚀 Deployment-Stand - Detaillierte Dokumentation<a class="headerlink" href="#deployment-stand-detaillierte-dokumentation" title="Permanent link">&para;</a></h1>
+<p>Diese Dokumentation beschreibt den aktuellen Stand des Deployment-Systems für das ClansCore-Projekt. Sie umfasst alle Aspekte des Deployments, von der Architektur bis hin zu den einzelnen Konfigurationsdetails.</p>
+<hr />
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<h3 id="system-komponenten">System-Komponenten<a class="headerlink" href="#system-komponenten" title="Permanent link">&para;</a></h3>
+<p>Das ClansCore-System besteht aus folgenden Hauptkomponenten:</p>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Technologie</th>
+<th>Port</th>
+<th>Container-Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>clanscore-api</strong></td>
+<td>Node.js/Express/TypeScript</td>
+<td>3000 (intern)</td>
+<td><code>clanscore-api</code></td>
+</tr>
+<tr>
+<td><strong>dashboard</strong></td>
+<td>Angular/TypeScript + Nginx</td>
+<td>80 (extern)</td>
+<td><code>clanscore-dashboard</code></td>
+</tr>
+<tr>
+<td><strong>discord-bot</strong></td>
+<td>Node.js/Discord.js/TypeScript</td>
+<td>3001 (extern)</td>
+<td><code>clanscore-discord-bot</code></td>
+</tr>
+<tr>
+<td><strong>mongodb</strong></td>
+<td>MongoDB 8</td>
+<td>27017 (intern)</td>
+<td><code>clanscore-mongodb</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deployment-stack">Deployment-Stack<a class="headerlink" href="#deployment-stack" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Container-Orchestrierung</strong>: Docker Compose</li>
+<li><strong>Container-Runtime</strong>: Docker 20.10+</li>
+<li><strong>Build-System</strong>: Multi-Stage Docker Builds</li>
+<li><strong>CI/CD</strong>: GitHub Actions (optional, aktuell deaktiviert)</li>
+<li><strong>Reverse Proxy</strong>: Nginx (im Dashboard-Container integriert)</li>
+<li><strong>Package Management</strong>: npm Workspaces</li>
+</ul>
+<h3 id="aktueller-deployment-status">Aktueller Deployment-Status<a class="headerlink" href="#aktueller-deployment-status" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Docker Compose Setup</strong>: Vollständig konfiguriert</li>
+<li>✅ <strong>Multi-Stage Builds</strong>: Implementiert für alle Services</li>
+<li>✅ <strong>Health Checks</strong>: Konfiguriert für alle Services</li>
+<li>✅ <strong>Netzwerk-Isolation</strong>: Bridge-Netzwerk implementiert</li>
+<li>⚠️ <strong>CI/CD</strong>: GitHub Actions Workflows vorhanden, aber deaktiviert</li>
+<li>✅ <strong>Deployment-Skripte</strong>: Bash und PowerShell verfügbar</li>
+<li>✅ <strong>Backup-System</strong>: Docker-Container für Backups vorhanden</li>
+</ul>
+<hr />
+<h2 id="deployment-architektur">Deployment-Architektur<a class="headerlink" href="#deployment-architektur" title="Permanent link">&para;</a></h2>
+<h3 id="high-level-architektur">High-Level-Architektur<a class="headerlink" href="#high-level-architektur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                    Externe Zugriffe                         │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  - Browser (Dashboard)                                      │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  - Discord API (Bot)                                         │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  - Google Calendar API (OAuth)                               │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└──────────────────────┬──────────────────────────────────────┘
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                        │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                        ▼
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>┌─────────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│                    Docker Host                              │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│                                                             │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  ┌─────────────────────────────────────────────────────┐  │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  │           clanscore-network (Bridge)                │  │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  │                                                       │  │
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│  │  ┌──────────────┐  ┌──────────────┐  ┌───────────┐ │  │
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│  │  │   Dashboard  │  │ clanscore-api│  │discord-bot │ │  │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│  │  │  (Nginx)     │  │  (Express)   │  │(Discord.js)│ │  │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│  │  │  Port: 80    │  │  Port: 3000  │  │ Port: 3001 │ │  │
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│  │  └──────┬───────┘  └──────┬───────┘  └─────┬───────┘ │  │
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│  │         │                 │                 │         │  │
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│  │         │                 │                 │         │  │
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│  │         └─────────────────┴─────────────────┘         │  │
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│  │                         │                             │  │
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>│  │                         ▼                             │  │
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>│  │                  ┌──────────────┐                    │  │
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>│  │                  │   MongoDB     │                    │  │
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│  │                  │   Port: 27017 │                    │  │
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│  │                  └──────────────┘                    │  │
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>│  └─────────────────────────────────────────────────────┘  │
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>│                                                           │
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>│  ┌─────────────────────────────────────────────────────┐  │
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>│  │              Docker Volumes                         │  │
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>│  │  - mongo_data (persistente Datenbank)              │  │
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>│  └─────────────────────────────────────────────────────┘  │
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>└─────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="service-abhangigkeiten">Service-Abhängigkeiten<a class="headerlink" href="#service-abhangigkeiten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mongodb (Health Check)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    │
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    ├──► clanscore-api (depends_on: mongodb)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    │         │
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    │         ├──► dashboard (depends_on: clanscore-api)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    │         │
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    │         └──► discord-bot (depends_on: clanscore-api, mongodb)
+</code></pre></div>
+<h3 id="kommunikations-flows">Kommunikations-Flows<a class="headerlink" href="#kommunikations-flows" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Browser → Dashboard → API</strong></li>
+<li>Browser sendet Request an Dashboard (Port 80)</li>
+<li>Dashboard (Nginx) leitet <code>/api/*</code> Requests an <code>clanscore-api:3000</code> weiter</li>
+<li>
+<p>Dashboard serviert statische Angular-Assets</p>
+</li>
+<li>
+<p><strong>API → Discord Bot (Webhooks)</strong></p>
+</li>
+<li>API sendet HTTP POST an <code>discord-bot:3001/api/notifications/*</code></li>
+<li>
+<p>Authentifizierung via <code>x-webhook-token</code> Header</p>
+</li>
+<li>
+<p><strong>Discord Bot → API (REST)</strong></p>
+</li>
+<li>Bot sendet HTTP Requests an <code>clanscore-api:3000/api/*</code></li>
+<li>
+<p>Authentifizierung via <code>x-api-key</code> Header</p>
+</li>
+<li>
+<p><strong>Alle Services → MongoDB</strong></p>
+</li>
+<li>Verbindung über Docker DNS: <code>mongodb:27017</code></li>
+<li>Authentifizierung via <code>MONGO_INITDB_ROOT_USERNAME</code> / <code>MONGO_INITDB_ROOT_PASSWORD</code></li>
+</ol>
+<hr />
+<h2 id="docker-konfiguration">Docker-Konfiguration<a class="headerlink" href="#docker-konfiguration" title="Permanent link">&para;</a></h2>
+<h3 id="docker-compose-dateien">Docker Compose Dateien<a class="headerlink" href="#docker-compose-dateien" title="Permanent link">&para;</a></h3>
+<p>Das Projekt verwendet mehrere Docker Compose Konfigurationen:</p>
+<h4 id="1-docker-composeyml-hauptkonfiguration">1. <code>docker-compose.yml</code> (Hauptkonfiguration)<a class="headerlink" href="#1-docker-composeyml-hauptkonfiguration" title="Permanent link">&para;</a></h4>
+<p><strong>Zweck</strong>: Standard-Deployment mit lokalen Builds</p>
+<p><strong>Features</strong>:
+- Baut alle Images lokal
+- Verwendet <code>.env</code> Datei für Konfiguration
+- Port-Mappings:
+  - Dashboard: <code>80:80</code> (extern)
+  - API: <code>127.0.0.1:3000:3000</code> (nur localhost)
+  - Discord Bot: <code>3001:3001</code> (extern)
+  - MongoDB: <code>27017:27017</code> (extern)</p>
+<p><strong>Verwendung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</code></pre></div></p>
+<h4 id="2-docker-composeproductionyml-production-mit-docker-hub">2. <code>docker-compose.production.yml</code> (Production mit Docker Hub)<a class="headerlink" href="#2-docker-composeproductionyml-production-mit-docker-hub" title="Permanent link">&para;</a></h4>
+<p><strong>Zweck</strong>: Deployment mit vorgebauten Images von Docker Hub</p>
+<p><strong>Features</strong>:
+- Verwendet Images von Docker Hub
+- Keine lokalen Builds nötig
+- Schnelleres Deployment
+- Erfordert <code>DOCKERHUB_USERNAME</code> in <code>.env</code></p>
+<p><strong>Verwendung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.production.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+<p><strong>Erforderliche Images</strong>:
+- <code>${DOCKERHUB_USERNAME}/clanscore-api:latest</code>
+- <code>${DOCKERHUB_USERNAME}/clanscore-dashboard:latest</code>
+- <code>${DOCKERHUB_USERNAME}/clanscore-discord-bot:latest</code></p>
+<h4 id="3-docker-composeoptimizedyml-ressourcen-optimierung">3. <code>docker-compose.optimized.yml</code> (Ressourcen-Optimierung)<a class="headerlink" href="#3-docker-composeoptimizedyml-ressourcen-optimierung" title="Permanent link">&para;</a></h4>
+<p><strong>Zweck</strong>: Ressourcen-Limits für Server mit begrenzten Kapazitäten</p>
+<p><strong>Features</strong>:
+- CPU- und Memory-Limits für alle Services
+- MongoDB Cache-Optimierung
+- Node.js Memory-Limits</p>
+<p><strong>Ressourcen-Limits</strong>:
+- <strong>MongoDB</strong>: 1.5 CPU, 2GB RAM (Limit) / 0.5 CPU, 1GB RAM (Reservation)
+- <strong>clanscore-api</strong>: 0.5 CPU, 512MB RAM (Limit) / 0.25 CPU, 256MB RAM (Reservation)
+- <strong>discord-bot</strong>: 0.5 CPU, 512MB RAM (Limit) / 0.25 CPU, 256MB RAM (Reservation)
+- <strong>dashboard</strong>: 0.25 CPU, 256MB RAM (Limit) / 0.1 CPU, 128MB RAM (Reservation)</p>
+<p><strong>Verwendung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.optimized.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+<h3 id="docker-netzwerk">Docker Netzwerk<a class="headerlink" href="#docker-netzwerk" title="Permanent link">&para;</a></h3>
+<p><strong>Netzwerk-Name</strong>: <code>clanscore-network</code></p>
+<p><strong>Typ</strong>: Bridge (Standard)</p>
+<p><strong>Services im Netzwerk</strong>:
+- <code>mongodb</code>
+- <code>clanscore-api</code>
+- <code>discord-bot</code>
+- <code>dashboard</code></p>
+<p><strong>Service Discovery</strong>: Docker DNS ermöglicht Kommunikation über Service-Namen:
+- <code>mongodb</code> → <code>mongodb:27017</code>
+- <code>clanscore-api</code> → <code>clanscore-api:3000</code>
+- <code>discord-bot</code> → <code>discord-bot:3001</code></p>
+<h3 id="docker-volumes">Docker Volumes<a class="headerlink" href="#docker-volumes" title="Permanent link">&para;</a></h3>
+<p><strong>Volume-Name</strong>: <code>mongo_data</code></p>
+<p><strong>Typ</strong>: Local Driver</p>
+<p><strong>Zweck</strong>: Persistente Speicherung der MongoDB-Daten</p>
+<p><strong>Mount-Point</strong>: <code>/data/db</code> (im Container)</p>
+<p><strong>Backup-Strategie</strong>: Siehe <a href="#backup-strategien">Backup-Strategien</a></p>
+<hr />
+<h2 id="service-details">Service-Details<a class="headerlink" href="#service-details" title="Permanent link">&para;</a></h2>
+<h3 id="1-clanscore-api">1. clanscore-api<a class="headerlink" href="#1-clanscore-api" title="Permanent link">&para;</a></h3>
+<h4 id="dockerfile-struktur">Dockerfile-Struktur<a class="headerlink" href="#dockerfile-struktur" title="Permanent link">&para;</a></h4>
+<p><strong>Multi-Stage Build</strong>:
+1. <strong>Builder Stage</strong> (node:20-alpine):
+   - Installiert Dependencies
+   - Baut <code>shared</code> Package
+   - Baut <code>clanscore-api</code> Application</p>
+<ol>
+<li><strong>Production Stage</strong> (node:20-alpine):</li>
+<li>Kopiert nur Production Dependencies</li>
+<li>Kopiert Build-Artefakte</li>
+<li>Startet Server mit <code>node dist/index.js</code></li>
+</ol>
+<h4 id="konfiguration">Konfiguration<a class="headerlink" href="#konfiguration" title="Permanent link">&para;</a></h4>
+<p><strong>Port</strong>: 3000 (intern, nur localhost von außen erreichbar)</p>
+<p><strong>Health Check</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;wget&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--quiet&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--tries=1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--spider&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:3000/health</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">exit</span><span class="nv"> </span><span class="s">1&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</code></pre></div></p>
+<p><strong>Umgebungsvariablen</strong>:
+- <code>NODE_ENV=production</code>
+- <code>MONGO_HOST=mongodb</code>
+- <code>MONGO_PORT=27017</code>
+- <code>MONGO_DB</code> (aus <code>.env</code>)
+- <code>MONGO_INITDB_ROOT_USERNAME</code> (aus <code>.env</code>)
+- <code>MONGO_INITDB_ROOT_PASSWORD</code> (aus <code>.env</code>)
+- <code>DISCORD_TOKEN</code> (aus <code>.env</code>)
+- <code>DISCORD_CLIENT_ID</code> (aus <code>.env</code>)
+- <code>DISCORD_GUILD_ID</code> (aus <code>.env</code>)
+- <code>DISCORD_SERVER_PORT</code> (aus <code>.env</code>, Default: 3001)
+- <code>DISCORD_BOT_WEBHOOK_URL</code> (aus <code>.env</code>, Default: <code>http://discord-bot:3001</code>)
+- <code>WEBHOOK_SHARED_SECRET</code> (aus <code>.env</code>)
+- <code>GOOGLE_CALENDAR_CLIENT_ID</code> (aus <code>.env</code>, optional)
+- <code>GOOGLE_CALENDAR_CLIENT_SECRET</code> (aus <code>.env</code>, optional)
+- <code>GOOGLE_CALENDAR_REDIRECT_URI</code> (aus <code>.env</code>, optional)
+- <code>CLANSCORE_ADMIN_PW</code> (aus <code>.env</code>)
+- <code>CLANSCORE_API_KEY</code> (aus <code>.env</code>)
+- <code>CLANSCORE_API_URL</code> (aus <code>.env</code>, Default: <code>http://clanscore-api:3000/api</code>)
+- <code>JWT_SECRET</code> (aus <code>.env</code>)
+- <code>CORS_ORIGIN</code> (aus <code>.env</code>, Default: <code>http://localhost,http://localhost:4200,http://152.96.10.11,http://srbsci-11.ost.ch</code>)</p>
+<p><strong>Abhängigkeiten</strong>:
+- <code>mongodb</code> (mit Health Check Condition)</p>
+<p><strong>Restart-Policy</strong>: <code>unless-stopped</code></p>
+<h3 id="2-dashboard">2. dashboard<a class="headerlink" href="#2-dashboard" title="Permanent link">&para;</a></h3>
+<h4 id="dockerfile-struktur_1">Dockerfile-Struktur<a class="headerlink" href="#dockerfile-struktur_1" title="Permanent link">&para;</a></h4>
+<p><strong>Multi-Stage Build</strong>:
+1. <strong>Builder Stage</strong> (node:20-alpine):
+   - Installiert Build-Tools (python3, make, g++)
+   - Installiert Dependencies
+   - Erstellt <code>environment.production.ts</code> mit API URL
+   - Baut Angular Application</p>
+<ol>
+<li><strong>Production Stage</strong> (nginx:alpine):</li>
+<li>Kopiert Nginx-Konfiguration</li>
+<li>Kopiert Build-Artefakte nach <code>/usr/share/nginx/html</code></li>
+<li>Startet Nginx</li>
+</ol>
+<h4 id="nginx-konfiguration">Nginx-Konfiguration<a class="headerlink" href="#nginx-konfiguration" title="Permanent link">&para;</a></h4>
+<p><strong>Datei</strong>: <code>apps/dashboard/nginx.conf</code></p>
+<p><strong>Features</strong>:
+- Gzip-Kompression
+- Health Check Proxy (<code>/health</code> → <code>clanscore-api:3000/health</code>)
+- API Proxy (<code>/api/*</code> → <code>clanscore-api:3000/api/*</code>)
+- Calendar Token OAuth Callback (<code>/calendarToken</code> → <code>clanscore-api:3000/calendarToken</code>)
+- Angular Routing Support (Fallback auf <code>index.html</code>)
+- Statische Asset-Caching (1 Jahr)</p>
+<p><strong>Wichtige Location-Blocks</strong>:
+1. <code>/health</code> → API Health Check
+2. <code>/api/health</code> → API Health Check (spezifisch)
+3. <code>/calendarToken</code> → OAuth Callback
+4. <code>/api</code> → API Proxy
+5. <code>/*.(js|css|png|...)</code> → Statische Assets mit Caching
+6. <code>/</code> → Angular Routing (try_files)</p>
+<h4 id="konfiguration_1">Konfiguration<a class="headerlink" href="#konfiguration_1" title="Permanent link">&para;</a></h4>
+<p><strong>Port</strong>: 80 (extern erreichbar)</p>
+<p><strong>Build-Argument</strong>: <code>CLANSCORE_API_URL</code>
+- Wird zur Build-Zeit verwendet
+- Wird in <code>environment.production.ts</code> geschrieben
+- Unterstützt vollständige URLs oder relative Pfade</p>
+<p><strong>Umgebungsvariablen</strong>: Keine (statische Assets)</p>
+<p><strong>Abhängigkeiten</strong>:
+- <code>clanscore-api</code> (für API-Proxy)</p>
+<p><strong>Restart-Policy</strong>: <code>unless-stopped</code></p>
+<h3 id="3-discord-bot">3. discord-bot<a class="headerlink" href="#3-discord-bot" title="Permanent link">&para;</a></h3>
+<h4 id="dockerfile-struktur_2">Dockerfile-Struktur<a class="headerlink" href="#dockerfile-struktur_2" title="Permanent link">&para;</a></h4>
+<p><strong>Multi-Stage Build</strong>:
+1. <strong>Builder Stage</strong> (node:20-alpine):
+   - Installiert Dependencies
+   - Baut <code>shared</code> Package
+   - Baut <code>discord-bot</code> Application</p>
+<ol>
+<li><strong>Production Stage</strong> (node:20-alpine):</li>
+<li>Kopiert nur Production Dependencies</li>
+<li>Kopiert Build-Artefakte</li>
+<li>Kopiert <code>public</code> Folder (Bot-Ressourcen)</li>
+<li>Startet Bot mit <code>node dist/index.cjs</code></li>
+</ol>
+<h4 id="konfiguration_2">Konfiguration<a class="headerlink" href="#konfiguration_2" title="Permanent link">&para;</a></h4>
+<p><strong>Port</strong>: 3001 (extern erreichbar, konfigurierbar via <code>DISCORD_SERVER_PORT</code>)</p>
+<p><strong>Umgebungsvariablen</strong>:
+- <code>NODE_ENV=production</code>
+- <code>DISCORD_TOKEN</code> (aus <code>.env</code>)
+- <code>DISCORD_CLIENT_ID</code> (aus <code>.env</code>)
+- <code>DISCORD_GUILD_ID</code> (aus <code>.env</code>)
+- <code>DISCORD_SERVER_PORT</code> (aus <code>.env</code>, Default: 3001)
+- <code>WEBHOOK_SHARED_SECRET</code> (aus <code>.env</code>)
+- <code>GOOGLE_CALENDAR_CLIENT_ID</code> (aus <code>.env</code>, optional)
+- <code>GOOGLE_CALENDAR_CLIENT_SECRET</code> (aus <code>.env</code>, optional)
+- <code>GOOGLE_CALENDAR_REDIRECT_URI</code> (aus <code>.env</code>, optional)
+- <code>CLANSCORE_API_URL</code> (aus <code>.env</code>, Default: <code>http://clanscore-api:3000/api</code>)
+- <code>CLANSCORE_API_KEY</code> (aus <code>.env</code>)
+- <code>MONGO_HOST=mongodb</code>
+- <code>MONGO_PORT=27017</code>
+- <code>MONGO_DB</code> (aus <code>.env</code>)
+- <code>MONGO_INITDB_ROOT_USERNAME</code> (aus <code>.env</code>)
+- <code>MONGO_INITDB_ROOT_PASSWORD</code> (aus <code>.env</code>)</p>
+<p><strong>Abhängigkeiten</strong>:
+- <code>clanscore-api</code>
+- <code>mongodb</code></p>
+<p><strong>Restart-Policy</strong>: <code>unless-stopped</code></p>
+<p><strong>Funktionen</strong>:
+- Discord Slash Commands
+- Webhook-Server (Port 3001)
+- Event-Synchronisation mit Google Calendar
+- API-Integration mit clanscore-api</p>
+<h3 id="4-mongodb">4. mongodb<a class="headerlink" href="#4-mongodb" title="Permanent link">&para;</a></h3>
+<h4 id="konfiguration_3">Konfiguration<a class="headerlink" href="#konfiguration_3" title="Permanent link">&para;</a></h4>
+<p><strong>Image</strong>: <code>mongo:8</code></p>
+<p><strong>Port</strong>: 27017 (extern erreichbar)</p>
+<p><strong>Health Check</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;mongosh&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--quiet&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--eval&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;db.adminCommand(&#39;ping&#39;).ok</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">exit(1)&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40s</span>
+</code></pre></div></p>
+<p><strong>Umgebungsvariablen</strong>:
+- <code>MONGO_INITDB_ROOT_USERNAME</code> (aus <code>.env</code>)
+- <code>MONGO_INITDB_ROOT_PASSWORD</code> (aus <code>.env</code>)</p>
+<p><strong>Volumes</strong>:
+- <code>mongo_data:/data/db</code> (persistente Daten)</p>
+<p><strong>Restart-Policy</strong>: <code>unless-stopped</code></p>
+<p><strong>Datenbank-Name</strong>: Konfigurierbar via <code>MONGO_DB</code> (Default: <code>clanscore</code>)</p>
+<hr />
+<h2 id="build-prozesse">Build-Prozesse<a class="headerlink" href="#build-prozesse" title="Permanent link">&para;</a></h2>
+<h3 id="build-ordnung">Build-Ordnung<a class="headerlink" href="#build-ordnung" title="Permanent link">&para;</a></h3>
+<p>Aufgrund der Workspace-Struktur müssen Services in folgender Reihenfolge gebaut werden:</p>
+<ol>
+<li><strong>shared</strong> Package (wird von allen Apps benötigt)</li>
+<li><strong>clanscore-api</strong> (benötigt shared)</li>
+<li><strong>discord-bot</strong> (benötigt shared)</li>
+<li><strong>dashboard</strong> (unabhängig, aber benötigt API für Proxy)</li>
+</ol>
+<h3 id="build-strategien">Build-Strategien<a class="headerlink" href="#build-strategien" title="Permanent link">&para;</a></h3>
+<h4 id="lokaler-build-standard">Lokaler Build (Standard)<a class="headerlink" href="#lokaler-build-standard" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker-compose<span class="w"> </span>build
+</code></pre></div>
+<p><strong>Vorteile</strong>:
+- Keine externe Abhängigkeit
+- Volle Kontrolle über Build-Prozess
+- Kann lokal getestet werden</p>
+<p><strong>Nachteile</strong>:
+- Langsamer (baut alles lokal)
+- Benötigt Build-Tools auf Host</p>
+<h4 id="docker-hub-build-production">Docker Hub Build (Production)<a class="headerlink" href="#docker-hub-build-production" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.production.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p><strong>Vorteile</strong>:
+- Schneller (lädt vorgebaute Images)
+- Keine Build-Tools auf Host nötig
+- Konsistente Builds</p>
+<p><strong>Nachteile</strong>:
+- Erfordert Docker Hub Account
+- Images müssen vorher gebaut und gepusht werden</p>
+<h3 id="build-optimierungen">Build-Optimierungen<a class="headerlink" href="#build-optimierungen" title="Permanent link">&para;</a></h3>
+<h4 id="layer-caching">Layer-Caching<a class="headerlink" href="#layer-caching" title="Permanent link">&para;</a></h4>
+<p>Dockerfiles sind optimiert für Layer-Caching:
+1. Dependencies werden vor Source-Code kopiert
+2. Source-Code wird erst nach Dependencies kopiert
+3. Änderungen am Source-Code invalidieren nur relevante Layers</p>
+<h4 id="multi-stage-builds">Multi-Stage Builds<a class="headerlink" href="#multi-stage-builds" title="Permanent link">&para;</a></h4>
+<p>Alle Dockerfiles verwenden Multi-Stage Builds:
+- <strong>Builder Stage</strong>: Enthält alle Build-Tools und Dependencies
+- <strong>Production Stage</strong>: Enthält nur Runtime-Dependencies und Artefakte</p>
+<p><strong>Vorteile</strong>:
+- Kleinere finale Images
+- Keine Build-Tools in Production
+- Bessere Sicherheit</p>
+<h3 id="build-zeiten-schatzungen">Build-Zeiten (Schätzungen)<a class="headerlink" href="#build-zeiten-schatzungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>shared</strong>: ~30 Sekunden</li>
+<li><strong>clanscore-api</strong>: ~2-3 Minuten</li>
+<li><strong>discord-bot</strong>: ~2-3 Minuten</li>
+<li><strong>dashboard</strong>: ~5-7 Minuten (Angular Build)</li>
+</ul>
+<p><strong>Gesamt</strong>: ~10-15 Minuten (bei Clean Build)</p>
+<hr />
+<h2 id="netzwerk-architektur">Netzwerk-Architektur<a class="headerlink" href="#netzwerk-architektur" title="Permanent link">&para;</a></h2>
+<h3 id="port-mappings">Port-Mappings<a class="headerlink" href="#port-mappings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Container-Port</th>
+<th>Host-Port</th>
+<th>Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dashboard</td>
+<td>80</td>
+<td>80</td>
+<td>Extern (HTTP)</td>
+</tr>
+<tr>
+<td>clanscore-api</td>
+<td>3000</td>
+<td>127.0.0.1:3000</td>
+<td>Nur localhost</td>
+</tr>
+<tr>
+<td>discord-bot</td>
+<td>3001</td>
+<td>3001</td>
+<td>Extern (Webhooks)</td>
+</tr>
+<tr>
+<td>mongodb</td>
+<td>27017</td>
+<td>27017</td>
+<td>Extern (optional)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interne-kommunikation">Interne Kommunikation<a class="headerlink" href="#interne-kommunikation" title="Permanent link">&para;</a></h3>
+<p>Alle Services kommunizieren über Docker DNS:</p>
+<ul>
+<li><code>mongodb</code> → <code>mongodb:27017</code></li>
+<li><code>clanscore-api</code> → <code>clanscore-api:3000</code></li>
+<li><code>discord-bot</code> → <code>discord-bot:3001</code></li>
+</ul>
+<h3 id="externe-kommunikation">Externe Kommunikation<a class="headerlink" href="#externe-kommunikation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dashboard</strong>: HTTP auf Port 80</li>
+<li><strong>API</strong>: Nur über Dashboard-Proxy (<code>/api/*</code>) oder localhost:3000</li>
+<li><strong>Discord Bot</strong>: HTTP auf Port 3001 (für Webhooks)</li>
+<li><strong>MongoDB</strong>: Port 27017 (optional, für direkten Zugriff)</li>
+</ul>
+<h3 id="firewall-empfehlungen">Firewall-Empfehlungen<a class="headerlink" href="#firewall-empfehlungen" title="Permanent link">&para;</a></h3>
+<p><strong>Öffentlich erreichbar</strong>:
+- Port 80 (HTTP)
+- Port 443 (HTTPS, falls SSL konfiguriert)
+- Port 22 (SSH)</p>
+<p><strong>Optional erreichbar</strong>:
+- Port 3001 (Discord Bot Webhooks, falls extern benötigt)
+- Port 27017 (MongoDB, nur für direkten Zugriff)</p>
+<p><strong>Nicht erreichbar</strong>:
+- Port 3000 (API, nur über Dashboard-Proxy)</p>
+<hr />
+<h2 id="umgebungsvariablen-und-secrets">Umgebungsvariablen und Secrets<a class="headerlink" href="#umgebungsvariablen-und-secrets" title="Permanent link">&para;</a></h2>
+<h3 id="secrets-management">Secrets-Management<a class="headerlink" href="#secrets-management" title="Permanent link">&para;</a></h3>
+<p>Das Projekt unterstützt zwei Methoden für Secrets-Management:</p>
+<h4 id="1-env-datei-lokale-entwicklung-manuelles-deployment">1. <code>.env</code> Datei (Lokale Entwicklung / Manuelles Deployment)<a class="headerlink" href="#1-env-datei-lokale-entwicklung-manuelles-deployment" title="Permanent link">&para;</a></h4>
+<p><strong>Verwendung</strong>:
+- Lokale Entwicklung
+- Manuelle Deployments
+- Testing</p>
+<p><strong>Datei</strong>: <code>.env</code> (im Root-Verzeichnis)</p>
+<p><strong>Wichtig</strong>: <code>.env</code> Dateien werden <strong>nicht</strong> in Git committed!</p>
+<h4 id="2-github-secrets-cicd-automatisches-deployment">2. GitHub Secrets (CI/CD / Automatisches Deployment)<a class="headerlink" href="#2-github-secrets-cicd-automatisches-deployment" title="Permanent link">&para;</a></h4>
+<p><strong>Verwendung</strong>:
+- Automatisches Deployment via GitHub Actions
+- Production-Deployments</p>
+<p><strong>Konfiguration</strong>: Repository → Settings → Secrets and variables → Actions</p>
+<p><strong>Workflow</strong>: GitHub Actions erstellt automatisch <code>.env</code> Datei aus Secrets</p>
+<h3 id="erforderliche-umgebungsvariablen">Erforderliche Umgebungsvariablen<a class="headerlink" href="#erforderliche-umgebungsvariablen" title="Permanent link">&para;</a></h3>
+<h4 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MONGO_INITDB_ROOT_USERNAME</code></td>
+<td>MongoDB Root Username</td>
+<td><code>admin</code></td>
+</tr>
+<tr>
+<td><code>MONGO_INITDB_ROOT_PASSWORD</code></td>
+<td>MongoDB Root Password</td>
+<td><code>secure-password</code></td>
+</tr>
+<tr>
+<td><code>MONGO_DB</code></td>
+<td>Datenbank-Name</td>
+<td><code>clanscore</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="discord-bot">Discord Bot<a class="headerlink" href="#discord-bot" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DISCORD_TOKEN</code></td>
+<td>Discord Bot Token</td>
+<td><code>...</code></td>
+</tr>
+<tr>
+<td><code>DISCORD_CLIENT_ID</code></td>
+<td>Discord Application Client ID</td>
+<td><code>123456789</code></td>
+</tr>
+<tr>
+<td><code>DISCORD_GUILD_ID</code></td>
+<td>Discord Server (Guild) ID</td>
+<td><code>987654321</code></td>
+</tr>
+<tr>
+<td><code>DISCORD_SERVER_PORT</code></td>
+<td>Webhook Server Port</td>
+<td><code>3001</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="webhooks">Webhooks<a class="headerlink" href="#webhooks" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WEBHOOK_SHARED_SECRET</code></td>
+<td>Geheimer Schlüssel für Webhook-Authentifizierung</td>
+<td><code>random-secret-key</code></td>
+</tr>
+<tr>
+<td><code>DISCORD_BOT_WEBHOOK_URL</code></td>
+<td>URL des Discord Bot Webhook-Servers</td>
+<td><code>http://discord-bot:3001</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="google-calendar-oauth">Google Calendar OAuth<a class="headerlink" href="#google-calendar-oauth" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GOOGLE_CALENDAR_CLIENT_ID</code></td>
+<td>Google OAuth Client ID</td>
+<td><code>...</code></td>
+</tr>
+<tr>
+<td><code>GOOGLE_CALENDAR_CLIENT_SECRET</code></td>
+<td>Google OAuth Client Secret</td>
+<td><code>...</code></td>
+</tr>
+<tr>
+<td><code>GOOGLE_CALENDAR_REDIRECT_URI</code></td>
+<td>OAuth Redirect URI</td>
+<td><code>http://your-domain.com/calendarToken</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="api-konfiguration">API Konfiguration<a class="headerlink" href="#api-konfiguration" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CLANSCORE_API_URL</code></td>
+<td>API Base URL</td>
+<td><code>http://clanscore-api:3000/api</code></td>
+</tr>
+<tr>
+<td><code>CLANSCORE_API_KEY</code></td>
+<td>API Key für Service-to-Service Auth</td>
+<td><code>api-key-here</code></td>
+</tr>
+<tr>
+<td><code>CLANSCORE_ADMIN_PW</code></td>
+<td>Admin-Passwort</td>
+<td><code>admin-password</code></td>
+</tr>
+<tr>
+<td><code>JWT_SECRET</code></td>
+<td>Geheimer Schlüssel für JWT-Tokens</td>
+<td><code>jwt-secret-key</code></td>
+</tr>
+<tr>
+<td><code>CORS_ORIGIN</code></td>
+<td>Erlaubte CORS Origins (komma-separiert)</td>
+<td><code>http://localhost,http://your-domain.com</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dashboard-konfiguration">Dashboard Konfiguration<a class="headerlink" href="#dashboard-konfiguration" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CLANSCORE_API_URL</code></td>
+<td>API URL für Dashboard Build</td>
+<td><code>http://clanscore-api:3000/api</code> oder <code>/api</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="server-deployment-github-actions">Server-Deployment (GitHub Actions)<a class="headerlink" href="#server-deployment-github-actions" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SERVER_HOST</code></td>
+<td>Server Hostname oder IP</td>
+<td><code>srbsci-11.ost.ch</code></td>
+</tr>
+<tr>
+<td><code>SERVER_USER</code></td>
+<td>SSH Username</td>
+<td><code>ins</code></td>
+</tr>
+<tr>
+<td><code>SERVER_SSH_KEY</code></td>
+<td>SSH Private Key (für Key-Auth)</td>
+<td><code>-----BEGIN RSA PRIVATE KEY-----...</code></td>
+</tr>
+<tr>
+<td><code>SERVER_SSH_PASSWORD</code></td>
+<td>SSH Password (für Password-Auth)</td>
+<td><code>password</code></td>
+</tr>
+<tr>
+<td><code>SERVER_SSH_PORT</code></td>
+<td>SSH Port</td>
+<td><code>22</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="docker-hub-optional">Docker Hub (Optional)<a class="headerlink" href="#docker-hub-optional" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DOCKERHUB_USERNAME</code></td>
+<td>Docker Hub Username</td>
+<td><code>username</code></td>
+</tr>
+<tr>
+<td><code>DOCKERHUB_TOKEN</code></td>
+<td>Docker Hub Access Token</td>
+<td><code>...</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="umgebungsvariablen-mapping">Umgebungsvariablen-Mapping<a class="headerlink" href="#umgebungsvariablen-mapping" title="Permanent link">&para;</a></h3>
+<p>Die Umgebungsvariablen werden in den Services wie folgt verwendet:</p>
+<h4 id="clanscore-api">clanscore-api<a class="headerlink" href="#clanscore-api" title="Permanent link">&para;</a></h4>
+<p>Alle oben genannten Variablen werden an den Container weitergegeben.</p>
+<h4 id="discord-bot_1">discord-bot<a class="headerlink" href="#discord-bot_1" title="Permanent link">&para;</a></h4>
+<p>Verwendet:
+- Discord-Konfiguration
+- Webhook-Konfiguration
+- Google Calendar OAuth
+- API-Konfiguration
+- MongoDB-Konfiguration</p>
+<h4 id="dashboard">dashboard<a class="headerlink" href="#dashboard" title="Permanent link">&para;</a></h4>
+<p>Verwendet nur:
+- <code>CLANSCORE_API_URL</code> (zur Build-Zeit als Build-Argument)</p>
+<h4 id="mongodb_1">mongodb<a class="headerlink" href="#mongodb_1" title="Permanent link">&para;</a></h4>
+<p>Verwendet nur:
+- <code>MONGO_INITDB_ROOT_USERNAME</code>
+- <code>MONGO_INITDB_ROOT_PASSWORD</code></p>
+<hr />
+<h2 id="deployment-methoden">Deployment-Methoden<a class="headerlink" href="#deployment-methoden" title="Permanent link">&para;</a></h2>
+<h3 id="1-manuelles-deployment">1. Manuelles Deployment<a class="headerlink" href="#1-manuelles-deployment" title="Permanent link">&para;</a></h3>
+<h4 id="mit-deployment-skripten">Mit Deployment-Skripten<a class="headerlink" href="#mit-deployment-skripten" title="Permanent link">&para;</a></h4>
+<p><strong>Linux/Mac</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./deploy.sh
+</code></pre></div></p>
+<p><strong>Windows PowerShell</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.\</span><span class="n">deploy</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div></p>
+<p><strong>Was die Skripte tun</strong>:
+1. Prüfen ob <code>.env</code> existiert
+2. Prüfen ob Docker installiert ist
+3. Stoppen laufende Services
+4. Bauen Images
+5. Starten Services
+6. Prüfen Container-Status
+7. Zeigen Logs bei Fehlern</p>
+<h4 id="manuell-mit-docker-compose">Manuell mit Docker Compose<a class="headerlink" href="#manuell-mit-docker-compose" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Services bauen und starten</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Status prüfen</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>docker-compose<span class="w"> </span>ps
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Logs anzeigen</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+</code></pre></div>
+<h3 id="2-automatisches-deployment-github-actions">2. Automatisches Deployment (GitHub Actions)<a class="headerlink" href="#2-automatisches-deployment-github-actions" title="Permanent link">&para;</a></h3>
+<h4 id="verfugbare-workflows">Verfügbare Workflows<a class="headerlink" href="#verfugbare-workflows" title="Permanent link">&para;</a></h4>
+<p><strong>Aktueller Status</strong>: ⚠️ <strong>Deaktiviert</strong> (kann manuell aktiviert werden)</p>
+<h4 id="workflow-deploy-sshyml-ssh-key-auth">Workflow: <code>deploy-ssh.yml</code> (SSH Key Auth)<a class="headerlink" href="#workflow-deploy-sshyml-ssh-key-auth" title="Permanent link">&para;</a></h4>
+<p><strong>Zweck</strong>: Deployment via SSH mit Key-Authentifizierung</p>
+<p><strong>Trigger</strong>: 
+- <code>workflow_dispatch</code> (manuell)
+- Optional: <code>push</code> auf <code>main</code>/<code>master</code> (aktuell deaktiviert)</p>
+<p><strong>Schritte</strong>:
+1. Checkout Code
+2. Setup Docker Buildx
+3. Erstelle <code>.env</code> aus GitHub Secrets
+4. Kopiere Code auf Server via SCP
+5. Führe Deployment auf Server aus
+6. Health Check</p>
+<p><strong>Erforderliche Secrets</strong>:
+- <code>SERVER_HOST</code>
+- <code>SERVER_USER</code>
+- <code>SERVER_SSH_KEY</code>
+- Alle anderen Secrets (siehe <a href="#umgebungsvariablen-und-secrets">Umgebungsvariablen</a>)</p>
+<h4 id="workflow-deploy-passwordyml-password-auth">Workflow: <code>deploy-password.yml</code> (Password Auth)<a class="headerlink" href="#workflow-deploy-passwordyml-password-auth" title="Permanent link">&para;</a></h4>
+<p><strong>Zweck</strong>: Deployment via SSH mit Password-Authentifizierung</p>
+<p><strong>Trigger</strong>: 
+- <code>workflow_dispatch</code> (manuell)
+- Optional: <code>push</code> auf <code>main</code>/<code>master</code> (aktuell deaktiviert)</p>
+<p><strong>Schritte</strong>: Wie <code>deploy-ssh.yml</code>, aber mit Password-Auth</p>
+<p><strong>Erforderliche Secrets</strong>:
+- <code>SERVER_HOST</code>
+- <code>SERVER_USER</code>
+- <code>SERVER_SSH_PASSWORD</code>
+- Alle anderen Secrets</p>
+<h4 id="workflow-deploy-dockerhubyml-docker-hub-build">Workflow: <code>deploy-dockerhub.yml</code> (Docker Hub Build)<a class="headerlink" href="#workflow-deploy-dockerhubyml-docker-hub-build" title="Permanent link">&para;</a></h4>
+<p><strong>Zweck</strong>: Build und Push von Images zu Docker Hub</p>
+<p><strong>Trigger</strong>: 
+- <code>workflow_dispatch</code> (manuell)
+- Optional: <code>push</code> auf <code>main</code>/<code>master</code> (aktuell deaktiviert)</p>
+<p><strong>Schritte</strong>:
+1. Checkout Code
+2. Setup Docker Buildx
+3. Login zu Docker Hub
+4. Build und Push für:
+   - <code>clanscore-api</code>
+   - <code>clanscore-dashboard</code>
+   - <code>clanscore-discord-bot</code></p>
+<p><strong>Erforderliche Secrets</strong>:
+- <code>DOCKERHUB_USERNAME</code>
+- <code>DOCKERHUB_TOKEN</code></p>
+<h4 id="workflow-aktivieren">Workflow aktivieren<a class="headerlink" href="#workflow-aktivieren" title="Permanent link">&para;</a></h4>
+<p>Um einen Workflow zu aktivieren:</p>
+<ol>
+<li>Öffne <code>.github/workflows/&lt;workflow-name&gt;.yml</code></li>
+<li>Entferne Kommentare bei <code>on:</code> Block</li>
+<li>Setze <code>if: false</code> auf <code>if: true</code> (oder entferne die Bedingung)</li>
+<li>Commit und Push</li>
+</ol>
+<h3 id="3-deployment-mit-docker-hub-images">3. Deployment mit Docker Hub Images<a class="headerlink" href="#3-deployment-mit-docker-hub-images" title="Permanent link">&para;</a></h3>
+<p>Wenn Images bereits auf Docker Hub verfügbar sind:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># .env Datei mit DOCKERHUB_USERNAME erstellen</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DOCKERHUB_USERNAME=your-username&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.env
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Production Compose verwenden</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.production.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h3 id="4-deployment-mit-ressourcen-optimierung">4. Deployment mit Ressourcen-Optimierung<a class="headerlink" href="#4-deployment-mit-ressourcen-optimierung" title="Permanent link">&para;</a></h3>
+<p>Für Server mit begrenzten Ressourcen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.optimized.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<hr />
+<h2 id="health-checks-und-monitoring">Health Checks und Monitoring<a class="headerlink" href="#health-checks-und-monitoring" title="Permanent link">&para;</a></h2>
+<h3 id="health-check-endpunkte">Health Check Endpunkte<a class="headerlink" href="#health-check-endpunkte" title="Permanent link">&para;</a></h3>
+<h4 id="clanscore-api_1">clanscore-api<a class="headerlink" href="#clanscore-api_1" title="Permanent link">&para;</a></h4>
+<p><strong>Endpoint</strong>: <code>http://localhost:3000/health</code></p>
+<p><strong>Methode</strong>: GET</p>
+<p><strong>Response</strong>: HTTP 200 OK (wenn gesund)</p>
+<p><strong>Docker Health Check</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;wget&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--quiet&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--tries=1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--spider&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:3000/health</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">exit</span><span class="nv"> </span><span class="s">1&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</code></pre></div></p>
+<h4 id="mongodb_2">mongodb<a class="headerlink" href="#mongodb_2" title="Permanent link">&para;</a></h4>
+<p><strong>Docker Health Check</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;mongosh&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--quiet&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--eval&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;db.adminCommand(&#39;ping&#39;).ok</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">exit(1)&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40s</span>
+</code></pre></div></p>
+<h3 id="health-check-status-prufen">Health Check Status prüfen<a class="headerlink" href="#health-check-status-prufen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Alle Container-Status</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>docker-compose<span class="w"> </span>ps
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Health Check Logs</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>docker<span class="w"> </span>inspect<span class="w"> </span>--format<span class="o">=</span><span class="s1">&#39;{{json .State.Health}}&#39;</span><span class="w"> </span>&lt;container-name&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Manueller Health Check</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>curl<span class="w"> </span>http://localhost:3000/health
+</code></pre></div>
+<h3 id="monitoring-befehle">Monitoring-Befehle<a class="headerlink" href="#monitoring-befehle" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Container-Status</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>docker-compose<span class="w"> </span>ps
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># Container-Logs</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="c1"># Ressourcen-Nutzung</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>docker<span class="w"> </span>stats
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1"># System-Ressourcen</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>htop
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>df<span class="w"> </span>-h
+</code></pre></div>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
+<h4 id="logs-anzeigen">Logs anzeigen<a class="headerlink" href="#logs-anzeigen" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Alle Services</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Einzelner Service</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clanscore-api
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>discord-bot
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>dashboard
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>mongodb
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="c1"># Letzte 100 Zeilen</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>--tail<span class="o">=</span><span class="m">100</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="c1"># Seit bestimmter Zeit</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>--since<span class="w"> </span>10m
+</code></pre></div>
+<h4 id="log-rotation">Log-Rotation<a class="headerlink" href="#log-rotation" title="Permanent link">&para;</a></h4>
+<p>Docker verwaltet Logs automatisch. Für manuelle Rotation:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Logs löschen (Container muss laufen)</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>--tail<span class="o">=</span><span class="m">0</span><span class="w"> </span>-f<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div>
+<p>Oder in <code>docker-compose.yml</code> konfigurieren:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">logging</span><span class="p">:</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;json-file&quot;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="nt">options</span><span class="p">:</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10m&quot;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="backup-strategien">Backup-Strategien<a class="headerlink" href="#backup-strategien" title="Permanent link">&para;</a></h2>
+<h3 id="mongodb-backup">MongoDB Backup<a class="headerlink" href="#mongodb-backup" title="Permanent link">&para;</a></h3>
+<h4 id="manuelles-backup">Manuelles Backup<a class="headerlink" href="#manuelles-backup" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Backup erstellen</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongodump<span class="w"> </span>--out<span class="w"> </span>/data/backup
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1"># Backup aus Container kopieren</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>docker<span class="w"> </span>cp<span class="w"> </span>clanscore-mongodb:/data/backup<span class="w"> </span>./backup-<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>
+</code></pre></div>
+<h4 id="backup-container">Backup-Container<a class="headerlink" href="#backup-container" title="Permanent link">&para;</a></h4>
+<p><strong>Dockerfile</strong>: <code>backup/Dockerfile</code></p>
+<p><strong>Zweck</strong>: Dedizierter Container für Backups</p>
+<p><strong>Verwendung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Backup-Skript ausführen</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span>--network<span class="w"> </span>clanscore-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">  </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/backups:/backups<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MONGO_HOST</span><span class="o">=</span>mongodb<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MONGO_PORT</span><span class="o">=</span><span class="m">27017</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MONGO_DB</span><span class="o">=</span>clanscore<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MONGO_USER</span><span class="o">=</span>admin<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MONGO_PASSWORD</span><span class="o">=</span>password<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">  </span>backup-image<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">  </span>mongodump<span class="w"> </span>--host<span class="o">=</span><span class="nv">$MONGO_HOST</span><span class="w"> </span>--port<span class="o">=</span><span class="nv">$MONGO_PORT</span><span class="w"> </span>--db<span class="o">=</span><span class="nv">$MONGO_DB</span><span class="w"> </span>--out<span class="o">=</span>/backups/<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>
+</code></pre></div></p>
+<h4 id="automatisches-backup">Automatisches Backup<a class="headerlink" href="#automatisches-backup" title="Permanent link">&para;</a></h4>
+<p><strong>Backup-Skripte</strong>:
+- <code>backup/backup.sh</code> (Linux/Mac)
+- <code>backup/backup.ps1</code> (Windows)</p>
+<p><strong>Cron-Job Beispiel</strong> (Linux):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Täglich um 2 Uhr morgens</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/clanscore<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./backup/backup.sh
+</code></pre></div></p>
+<h3 id="backup-wiederherstellung">Backup-Wiederherstellung<a class="headerlink" href="#backup-wiederherstellung" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Backup wiederherstellen</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongorestore<span class="w"> </span>/data/backup
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c1"># Oder von externem Backup</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>docker<span class="w"> </span>cp<span class="w"> </span>./backup-20240101<span class="w"> </span>clanscore-mongodb:/data/backup
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongorestore<span class="w"> </span>/data/backup
+</code></pre></div>
+<h3 id="backup-best-practices">Backup-Best Practices<a class="headerlink" href="#backup-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Regelmäßige Backups</strong>: Täglich oder wöchentlich</li>
+<li><strong>Offsite-Backups</strong>: Backups auf externem Server speichern</li>
+<li><strong>Backup-Tests</strong>: Regelmäßig Backups testen</li>
+<li><strong>Retention-Policy</strong>: Alte Backups nach X Tagen löschen</li>
+<li><strong>Verschlüsselung</strong>: Sensitive Backups verschlüsseln</li>
+</ol>
+<hr />
+<h2 id="sicherheit">Sicherheit<a class="headerlink" href="#sicherheit" title="Permanent link">&para;</a></h2>
+<h3 id="container-sicherheit">Container-Sicherheit<a class="headerlink" href="#container-sicherheit" title="Permanent link">&para;</a></h3>
+<h4 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Non-Root User</strong>: Services laufen als non-root User (Node.js Alpine Images)</li>
+<li><strong>Read-Only Filesystems</strong>: Optional für Production</li>
+<li><strong>Resource Limits</strong>: Verhindert DoS-Angriffe</li>
+<li><strong>Network Isolation</strong>: Services nur im Docker-Netzwerk erreichbar</li>
+</ol>
+<h4 id="security-scanning">Security Scanning<a class="headerlink" href="#security-scanning" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># Docker Images scannen (mit Docker Scout oder Trivy)</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>docker<span class="w"> </span>scout<span class="w"> </span>cves<span class="w"> </span>clanscore-api:latest
+</code></pre></div>
+<h3 id="secrets-sicherheit">Secrets-Sicherheit<a class="headerlink" href="#secrets-sicherheit" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Nie in Git</strong>: <code>.env</code> Dateien niemals committen</li>
+<li><strong>GitHub Secrets</strong>: Für Production verwenden</li>
+<li><strong>Rotation</strong>: Secrets regelmäßig rotieren</li>
+<li><strong>Zugriffskontrolle</strong>: Nur autorisierte Personen haben Zugriff</li>
+</ol>
+<h3 id="netzwerk-sicherheit">Netzwerk-Sicherheit<a class="headerlink" href="#netzwerk-sicherheit" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Firewall</strong>: Nur notwendige Ports öffnen</li>
+<li><strong>API-Isolation</strong>: API nur über Dashboard-Proxy erreichbar</li>
+<li><strong>MongoDB</strong>: Optional nur intern erreichbar</li>
+<li><strong>HTTPS</strong>: SSL/TLS für Production (Let's Encrypt)</li>
+</ol>
+<h3 id="authentifizierung">Authentifizierung<a class="headerlink" href="#authentifizierung" title="Permanent link">&para;</a></h3>
+<h4 id="api-authentifizierung">API-Authentifizierung<a class="headerlink" href="#api-authentifizierung" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>JWT Tokens</strong>: Für Dashboard-Benutzer</li>
+<li><strong>API Keys</strong>: Für Service-to-Service Kommunikation</li>
+<li><strong>Webhook Secrets</strong>: Für Webhook-Authentifizierung</li>
+</ul>
+<h4 id="mongodb-authentifizierung">MongoDB-Authentifizierung<a class="headerlink" href="#mongodb-authentifizierung" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Root Credentials</strong>: Starke Passwörter verwenden</li>
+<li><strong>Database Users</strong>: Separate User für verschiedene Services (optional)</li>
+</ul>
+<h3 id="updates-und-patches">Updates und Patches<a class="headerlink" href="#updates-und-patches" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Regelmäßige Updates</strong>: Docker Images regelmäßig aktualisieren</li>
+<li><strong>Security Patches</strong>: Sofortige Installation von Security Patches</li>
+<li><strong>Dependency Updates</strong>: npm Dependencies regelmäßig updaten</li>
+<li><strong>Base Images</strong>: Aktuelle Base Images verwenden</li>
+</ol>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="haufige-probleme">Häufige Probleme<a class="headerlink" href="#haufige-probleme" title="Permanent link">&para;</a></h3>
+<h4 id="1-container-startet-nicht">1. Container startet nicht<a class="headerlink" href="#1-container-startet-nicht" title="Permanent link">&para;</a></h4>
+<p><strong>Symptome</strong>:
+- Container im Status "Exited" oder "Restarting"
+- Logs zeigen Fehler</p>
+<p><strong>Lösung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Logs prüfen</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>&lt;service-name&gt;
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="c1"># Container-Status prüfen</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>docker-compose<span class="w"> </span>ps
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="c1"># Container neu starten</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>&lt;service-name&gt;
+</code></pre></div></p>
+<h4 id="2-mongodb-verbindungsfehler">2. MongoDB-Verbindungsfehler<a class="headerlink" href="#2-mongodb-verbindungsfehler" title="Permanent link">&para;</a></h4>
+<p><strong>Symptome</strong>:
+- API kann nicht mit MongoDB verbinden
+- Fehler: "MongoNetworkError" oder "Authentication failed"</p>
+<p><strong>Lösung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># MongoDB-Status prüfen</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>docker-compose<span class="w"> </span>ps<span class="w"> </span>mongodb
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="c1"># MongoDB-Logs prüfen</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>mongodb
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="c1"># Credentials prüfen</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>docker-compose<span class="w"> </span>config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>MONGO
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="c1"># MongoDB manuell testen</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongosh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$MONGO_INITDB_ROOT_USERNAME</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$MONGO_INITDB_ROOT_PASSWORD</span>
+</code></pre></div></p>
+<h4 id="3-api-nicht-erreichbar">3. API nicht erreichbar<a class="headerlink" href="#3-api-nicht-erreichbar" title="Permanent link">&para;</a></h4>
+<p><strong>Symptome</strong>:
+- Dashboard kann API nicht erreichen
+- CORS-Fehler im Browser</p>
+<p><strong>Lösung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1"># API-Status prüfen</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>docker-compose<span class="w"> </span>ps<span class="w"> </span>clanscore-api
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="c1"># API-Logs prüfen</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>clanscore-api
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="c1"># Health Check testen</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>curl<span class="w"> </span>http://localhost:3000/health
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="c1"># CORS-Origin prüfen</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>docker-compose<span class="w"> </span>config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>CORS_ORIGIN
+</code></pre></div></p>
+<h4 id="4-discord-bot-verbindet-nicht">4. Discord Bot verbindet nicht<a class="headerlink" href="#4-discord-bot-verbindet-nicht" title="Permanent link">&para;</a></h4>
+<p><strong>Symptome</strong>:
+- Bot antwortet nicht auf Commands
+- Fehler: "Invalid token" oder "Missing intents"</p>
+<p><strong>Lösung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Bot-Logs prüfen</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>discord-bot
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c1"># Token prüfen (nur erste/last Zeichen)</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>docker-compose<span class="w"> </span>config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>DISCORD_TOKEN
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="c1"># Bot neu starten</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>discord-bot
+</code></pre></div></p>
+<h4 id="5-dashboard-zeigt-fehler">5. Dashboard zeigt Fehler<a class="headerlink" href="#5-dashboard-zeigt-fehler" title="Permanent link">&para;</a></h4>
+<p><strong>Symptome</strong>:
+- Dashboard lädt nicht
+- API-Calls schlagen fehl</p>
+<p><strong>Lösung</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1"># Dashboard-Logs prüfen</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>dashboard
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="c1"># Nginx-Status prüfen</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>dashboard<span class="w"> </span>nginx<span class="w"> </span>-t
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="c1"># API-URL prüfen (im Build)</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>docker<span class="w"> </span>inspect<span class="w"> </span>clanscore-dashboard<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>CLANSCORE_API_URL
+</code></pre></div></p>
+<h3 id="debug-befehle">Debug-Befehle<a class="headerlink" href="#debug-befehle" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Container-Shell öffnen</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>&lt;service-name&gt;<span class="w"> </span>sh
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="c1"># Container-Environment prüfen</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>&lt;service-name&gt;<span class="w"> </span>env
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="c1"># Netzwerk-Verbindung testen</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>&lt;service-name&gt;<span class="w"> </span>ping<span class="w"> </span>&lt;other-service&gt;
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="c1"># Port-Verfügbarkeit prüfen</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>&lt;service-name&gt;<span class="w"> </span>wget<span class="w"> </span>-O-<span class="w"> </span>http://other-service:port
+</code></pre></div>
+<h3 id="log-analyse">Log-Analyse<a class="headerlink" href="#log-analyse" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># Fehler in Logs suchen</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>error
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="c1"># Warnungen in Logs suchen</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>warn
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="c1"># Letzte 50 Zeilen mit Fehlern</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>--tail<span class="o">=</span><span class="m">50</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>error
+</code></pre></div>
+<h3 id="performance-probleme">Performance-Probleme<a class="headerlink" href="#performance-probleme" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># Ressourcen-Nutzung prüfen</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>docker<span class="w"> </span>stats
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="c1"># Container-Logs auf Performance-Issues prüfen</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;slow\|timeout\|memory&quot;</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="c1"># MongoDB-Performance prüfen</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongosh<span class="w"> </span>--eval<span class="w"> </span><span class="s2">&quot;db.serverStatus()&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="anhang">Anhang<a class="headerlink" href="#anhang" title="Permanent link">&para;</a></h2>
+<h3 id="nutzliche-befehle">Nützliche Befehle<a class="headerlink" href="#nutzliche-befehle" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># Alle Services stoppen</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>docker-compose<span class="w"> </span>down
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="c1"># Services stoppen und Volumes löschen</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>docker-compose<span class="w"> </span>down<span class="w"> </span>-v
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="c1"># Services neu bauen (ohne Cache)</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>docker-compose<span class="w"> </span>build<span class="w"> </span>--no-cache
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="c1"># Alte Images aufräumen</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="c1"># Docker-System-Info</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a>docker<span class="w"> </span>system<span class="w"> </span>df
+<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a>docker<span class="w"> </span>system<span class="w"> </span>info
+<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a>
+<a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a><span class="c1"># Container-Statistiken</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a>docker<span class="w"> </span>stats
+<a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a>
+<a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="c1"># Netzwerk-Info</span>
+<a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>clanscore-network
+<a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a>
+<a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a><span class="c1"># Volume-Info</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a>docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>clanscore_mongo_data
+</code></pre></div>
+<h3 id="referenzen">Referenzen<a class="headerlink" href="#referenzen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.docker.com/compose/">Docker Compose Dokumentation</a></li>
+<li><a href="https://docs.docker.com/develop/dev-best-practices/">Docker Best Practices</a></li>
+<li><a href="https://hub.docker.com/_/mongo">MongoDB Docker Image</a></li>
+<li><a href="https://hub.docker.com/_/node">Node.js Docker Image</a></li>
+<li><a href="https://hub.docker.com/_/nginx">Nginx Docker Image</a></li>
+</ul>
+<h3 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h3>
+<p>Bei Problemen:
+1. Prüfen Sie die Logs: <code>docker-compose logs -f</code>
+2. Prüfen Sie diese Dokumentation
+3. Prüfen Sie die <a href="#troubleshooting">Troubleshooting-Sektion</a>
+4. Erstellen Sie ein Issue im <a href="https://github.com/ClansCore/clanscore/issues">GitHub Repository</a></p>
+<hr />
+<p><strong>Dokumentations-Version</strong>: 1.0<br />
+<strong>Letzte Aktualisierung</strong>: 2024-01-XX<br />
+<strong>Verfasser</strong>: ClansCore Development Team</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 23:14:03 UTC">December 17, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 23:14:03 UTC">December 17, 2025</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
