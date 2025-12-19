@@ -13,6 +13,8 @@
         <link rel="canonical" href="https://clanscore.github.io/clanscore-doc-pub/logging/logging-dokumentation/">
       
       
+        <link rel="prev" href="../../bot/manual/">
+      
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Logging-Dokumentation - ClansCore Doku</title>
+        <title>Logging - ClansCore Doku</title>
       
     
     
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Logging-Dokumentation
+              Logging
             
           </span>
         </div>
@@ -345,6 +347,27 @@
     
   
   Discord Bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Logging
 
       </a>
     </li>
@@ -795,6 +818,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../configuration/development/architektur-detail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architektur-Detail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
         
   
@@ -831,6 +882,34 @@
     
   
     Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
   
 
     
@@ -1178,6 +1257,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../deployment/deployment-stand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment-Stand
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../deployment/quickstart-server/" class="md-nav__link">
         
   
@@ -1433,6 +1540,828 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logging
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diese-dokumentation-beschreibt-das-gesamte-logging-system-im-clanscore-projekt-mit-besonderem-fokus-auf-den-bot-log-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diese Dokumentation beschreibt das gesamte Logging-System im ClansCore-Projekt, mit besonderem Fokus auf den bot-log Channel.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#der-bot-log-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Der bot-log Channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Der bot-log Channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zweck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zweck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-mechanismen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging-Mechanismen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging-Mechanismen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-discord-embed-nachrichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Discord Embed-Nachrichten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-embed-struktur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel-Embed-Struktur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verwendung-des-bot-log-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung des bot-log Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verwendung des bot-log Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rollenanderungen-dashboard-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rollenänderungen (Dashboard → Discord)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rollenaktualisierungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Rollenaktualisierungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-user-synchronisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. User-Synchronisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rollen-synchronisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rollen-Synchronisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-spenden-protokollierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Spenden-Protokollierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aufgaben-erstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Aufgaben-Erstellung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ranglisten-erstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ranglisten-Erstellung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-kalender-synchronisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Kalender-Synchronisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-kalender-verknupfung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Kalender-Verknüpfung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard-Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard-Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubersicht_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architektur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geloggte-dashboard-aktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geloggte Dashboard-Aktionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geloggte Dashboard-Aktionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rollenanderungen-an-benutzern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rollenänderungen an Benutzern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rollenaktualisierungen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Rollenaktualisierungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nicht-geloggte-dashboard-aktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nicht geloggte Dashboard-Aktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benutzer-feedback-im-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benutzer-Feedback im Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console-logging-im-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console-Logging im Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zusammenfassung-dashboard-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusammenfassung Dashboard-Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empfehlungen-fur-zukunftige-entwicklung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfehlungen für zukünftige Entwicklung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Console-Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Console-Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord-Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clanscore-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClansCore-API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-und-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error-Handling und Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error-Handling und Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error-Handling-System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-typen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error-Typen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerbehandlung-im-discord-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerbehandlung im Discord-Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerbehandlung-in-der-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerbehandlung in der API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-service-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification-Service Error-Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-basiertes-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-basiertes Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook-basiertes Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhook-endpunkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-Endpunkte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-authentifizierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-Authentifizierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-aufrufe-aus-der-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook-Aufrufe aus der API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfiguration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umgebungsvariablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umgebungsvariablen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel-Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker-Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ephemeral-messages-direkte-benutzerinformationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ephemeral Messages - Direkte Benutzerinformationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ephemeral Messages - Direkte Benutzerinformationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#was-sind-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was sind Ephemeral Messages?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-im-clanscore-projekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung im ClansCore-Projekt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#befehle-mit-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Befehle mit Ephemeral Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlermeldungen-als-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlermeldungen als Ephemeral Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorteile-von-ephemeral-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorteile von Ephemeral Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachrichten-in-anderen-bot-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nachrichten in anderen Bot-Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nachrichten in anderen Bot-Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-channel-aufgaben-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Channel: aufgaben (TASKS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-channel-events-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Channel: events (EVENTS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-channel-rangliste-leaderboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Channel: rangliste (LEADERBOARDS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-channel-bot-bewerbungen-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Channel: bot-bewerbungen (APPLICATIONS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-channel-bot-belohnungen-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Channel: bot-belohnungen (REWARDS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-channel-bot-aufgaben-completed_tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Channel: bot-aufgaben (COMPLETED_TASKS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht-channel-zuordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht: Channel-Zuordnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusammenfassung
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1460,10 +2389,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#inhaltsverzeichnis" class="md-nav__link">
+  <a href="#diese-dokumentation-beschreibt-das-gesamte-logging-system-im-clanscore-projekt-mit-besonderem-fokus-auf-den-bot-log-channel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Inhaltsverzeichnis
+        Diese Dokumentation beschreibt das gesamte Logging-System im ClansCore-Projekt, mit besonderem Fokus auf den bot-log Channel.
       
     </span>
   </a>
@@ -2228,22 +3157,7 @@
 
 
 <h1 id="logging-dokumentation">Logging-Dokumentation<a class="headerlink" href="#logging-dokumentation" title="Permanent link">&para;</a></h1>
-<p>Diese Dokumentation beschreibt das gesamte Logging-System im ClansCore-Projekt, mit besonderem Fokus auf den <strong>bot-log</strong> Channel.</p>
-<h2 id="inhaltsverzeichnis">Inhaltsverzeichnis<a class="headerlink" href="#inhaltsverzeichnis" title="Permanent link">&para;</a></h2>
-<ol>
-<li><a href="#übersicht">Übersicht</a></li>
-<li><a href="#der-bot-log-channel">Der bot-log Channel</a></li>
-<li><a href="#logging-mechanismen">Logging-Mechanismen</a></li>
-<li><a href="#verwendung-des-bot-log-channels">Verwendung des bot-log Channels</a></li>
-<li><a href="#ephemeral-messages---direkte-benutzerinformationen">Ephemeral Messages - Direkte Benutzerinformationen</a></li>
-<li><a href="#nachrichten-in-anderen-bot-channels">Nachrichten in anderen Bot-Channels</a></li>
-<li><a href="#dashboard-logging">Dashboard-Logging</a></li>
-<li><a href="#console-logging">Console-Logging</a></li>
-<li><a href="#error-handling-und-logging">Error-Handling und Logging</a></li>
-<li><a href="#webhook-basiertes-logging">Webhook-basiertes Logging</a></li>
-<li><a href="#konfiguration">Konfiguration</a></li>
-</ol>
-<hr />
+<h2 id="diese-dokumentation-beschreibt-das-gesamte-logging-system-im-clanscore-projekt-mit-besonderem-fokus-auf-den-bot-log-channel">Diese Dokumentation beschreibt das gesamte Logging-System im ClansCore-Projekt, mit besonderem Fokus auf den <strong>bot-log</strong> Channel.<a class="headerlink" href="#diese-dokumentation-beschreibt-das-gesamte-logging-system-im-clanscore-projekt-mit-besonderem-fokus-auf-den-bot-log-channel" title="Permanent link">&para;</a></h2>
 <h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
 <p>Das ClansCore-Projekt verwendet mehrere Logging-Mechanismen:</p>
 <ol>
@@ -2974,7 +3888,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 14, 2025 23:44:11 UTC">December 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 23:14:03 UTC">December 17, 2025</span>
   </span>
 
     
