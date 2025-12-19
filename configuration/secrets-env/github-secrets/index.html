@@ -684,6 +684,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#historische-dokumentation-nicht-aktiv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historische Dokumentation (nicht aktiv)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wo-secrets-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1094,34 +1105,6 @@
     
   
     Architektur
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
   
 
     
@@ -1893,6 +1876,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#historische-dokumentation-nicht-aktiv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historische Dokumentation (nicht aktiv)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wo-secrets-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2151,7 +2145,11 @@
 
 
 <h1 id="github-secrets">🔐 GitHub Secrets<a class="headerlink" href="#github-secrets" title="Permanent link">&para;</a></h1>
-<p>Diese Anleitung listet alle GitHub Secrets auf, die für das automatische Deployment konfiguriert werden müssen.</p>
+<p>⚠️ <strong>Hinweis:</strong> Diese Dokumentation ist für automatisiertes Deployment via GitHub Actions gedacht. Da das automatische Deployment aktuell nicht aktiv genutzt wird, verwende stattdessen eine <code>.env</code> Datei auf dem Server.</p>
+<p>Siehe <a href="../../../deployment/deployment-stand/">Umgebungsvariablen Dokumentation</a> für die aktuelle Konfiguration mit <code>.env</code> Dateien.</p>
+<hr />
+<h2 id="historische-dokumentation-nicht-aktiv">Historische Dokumentation (nicht aktiv)<a class="headerlink" href="#historische-dokumentation-nicht-aktiv" title="Permanent link">&para;</a></h2>
+<p>Diese Anleitung listet alle GitHub Secrets auf, die für das automatische Deployment konfiguriert werden müssten (falls aktiviert).</p>
 <hr />
 <h2 id="wo-secrets-hinzufugen">Wo Secrets hinzufügen?<a class="headerlink" href="#wo-secrets-hinzufugen" title="Permanent link">&para;</a></h2>
 <ol>
@@ -2516,49 +2514,49 @@
 <h3 id="sicherheit">🔒 Sicherheit<a class="headerlink" href="#sicherheit" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Niemals</strong> Secrets im Code committen</li>
-<li>Verwenden Sie <strong>starke, eindeutige Passwörter</strong></li>
-<li><strong>Rotieren Sie Secrets regelmässig</strong></li>
-<li><strong>Beschränken Sie Zugriff</strong> auf Secrets (Repository Settings)</li>
+<li>Verwende <strong>starke, eindeutige Passwörter</strong></li>
+<li><strong>Rotiere Secrets regelmässig</strong></li>
+<li><strong>Beschränke Zugriff</strong> auf Secrets (Repository Settings)</li>
 </ul>
 <h3 id="secret-rotation">🔄 Secret-Rotation<a class="headerlink" href="#secret-rotation" title="Permanent link">&para;</a></h3>
-<p>Wenn Sie ein Secret ändern müssen:</p>
+<p>Wenn du ein Secret ändern musst:</p>
 <ol>
-<li>Gehen Sie zu Settings → Secrets</li>
-<li>Klicken Sie auf das Secret</li>
-<li>Klicken Sie auf "Update"</li>
+<li>Gehe zu Settings → Secrets</li>
+<li>Klicke auf das Secret</li>
+<li>Klicke auf "Update"</li>
 <li>Neuen Wert eingeben</li>
 <li>Workflow erneut ausführen</li>
 </ol>
 <h3 id="testing">🧪 Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
 <p>Nach dem Hinzufügen aller Secrets:</p>
 <ol>
-<li>Gehen Sie zu <strong>Actions</strong></li>
-<li>Wählen Sie <strong>Deploy to Server</strong></li>
-<li>Klicken Sie auf <strong>Run workflow</strong></li>
-<li>Prüfen Sie die Logs auf Fehler</li>
+<li>Gehe zu <strong>Actions</strong></li>
+<li>Wähle <strong>Deploy to Server</strong></li>
+<li>Klicke auf <strong>Run workflow</strong></li>
+<li>Prüfe die Logs auf Fehler</li>
 </ol>
 <h3 id="haufige-fehler">❌ Häufige Fehler<a class="headerlink" href="#haufige-fehler" title="Permanent link">&para;</a></h3>
 <p><strong>"Permission denied (publickey)"</strong></p>
 <ul>
-<li>Prüfen Sie <code>SERVER_SSH_KEY</code> (muss kompletter privater Key sein)</li>
-<li>Prüfen Sie, ob öffentlicher Key auf Server installiert ist</li>
+<li>Prüfe <code>SERVER_SSH_KEY</code> (muss kompletter privater Key sein)</li>
+<li>Prüfe, ob öffentlicher Key auf Server installiert ist</li>
 </ul>
 <p><strong>"Connection refused"</strong></p>
 <ul>
-<li>Prüfen Sie <code>SERVER_HOST</code> und <code>SERVER_SSH_PORT</code></li>
-<li>Prüfen Sie Firewall-Einstellungen</li>
+<li>Prüfe <code>SERVER_HOST</code> und <code>SERVER_SSH_PORT</code></li>
+<li>Prüfe Firewall-Einstellungen</li>
 </ul>
 <p><strong>"Missing environment variables"</strong></p>
 <ul>
-<li>Prüfen Sie, ob alle erforderlichen Secrets hinzugefügt wurden</li>
-<li>Prüfen Sie die Schreibweise der Secret-Namen</li>
+<li>Prüfe, ob alle erforderlichen Secrets hinzugefügt wurden</li>
+<li>Prüfe die Schreibweise der Secret-Namen</li>
 </ul>
 <hr />
 <h2 id="hilfe">Hilfe<a class="headerlink" href="#hilfe" title="Permanent link">&para;</a></h2>
 <p>Bei Problemen:</p>
 <ol>
-<li>Prüfen Sie die Workflow-Logs in GitHub Actions</li>
-<li>Prüfen Sie die Server-Logs: <code>docker-compose logs</code></li>
+<li>Prüfe die Workflow-Logs in GitHub Actions</li>
+<li>Prüfe die Server-Logs: <code>docker-compose logs</code></li>
 <li>Siehe <a href="../../../deployment/guide/">Deployment Guide</a> für Troubleshooting</li>
 </ol>
 <hr />
@@ -2584,7 +2582,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:51:55 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     

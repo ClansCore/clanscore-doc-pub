@@ -818,34 +818,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
         
   
@@ -3377,7 +3349,7 @@
 <p>Die folgenden Dashboard-Aktionen werden <strong>NICHT</strong> im bot-log Channel protokolliert:</p>
 <ul>
 <li>❌ <strong>Benutzer erstellen</strong> (<code>POST /api/user</code>) - Keine Notification</li>
-<li>❌ <strong>Benutzer aktualisieren</strong> (<code>PATCH /api/user/:personId</code>) - Keine Notification (außer Rollenänderungen)</li>
+<li>❌ <strong>Benutzer aktualisieren</strong> (<code>PATCH /api/user/:personId</code>) - Keine Notification (ausser Rollenänderungen)</li>
 <li>❌ <strong>Benutzer löschen</strong> (<code>DELETE /api/user/:personId</code>) - Keine Notification</li>
 <li>❌ <strong>Rolle erstellen</strong> (<code>POST /api/role</code>) - Keine Notification</li>
 <li>❌ <strong>Rolle löschen</strong> (<code>DELETE /api/role/:roleId</code>) - Keine Notification</li>
@@ -3398,7 +3370,7 @@
 <p><strong>Technische Details:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">snackBar</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="s1">&#39;Ihr Passwort wurde erfolgreich geändert.&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="s1">&#39;Schließen&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="s1">&#39;Schliessen&#39;</span><span class="p">,</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="kt">3000</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">);</span>
 </code></pre></div></p>
@@ -3451,7 +3423,7 @@
 <td><strong>Benutzer aktualisieren</strong></td>
 <td>❌ Nein</td>
 <td>-</td>
-<td>Keine Notification (außer Rollen)</td>
+<td>Keine Notification (ausser Rollen)</td>
 </tr>
 <tr>
 <td><strong>Benutzer löschen</strong></td>
@@ -3647,7 +3619,7 @@
 <hr />
 <h2 id="ephemeral-messages-direkte-benutzerinformationen">Ephemeral Messages - Direkte Benutzerinformationen<a class="headerlink" href="#ephemeral-messages-direkte-benutzerinformationen" title="Permanent link">&para;</a></h2>
 <h3 id="was-sind-ephemeral-messages">Was sind Ephemeral Messages?<a class="headerlink" href="#was-sind-ephemeral-messages" title="Permanent link">&para;</a></h3>
-<p><strong>Ephemeral Messages</strong> sind private Nachrichten, die nur für den ausführenden Benutzer sichtbar sind. Sie werden direkt als Antwort auf Discord-Befehle gesendet und verschwinden nicht automatisch, bleiben aber für andere Server-Mitglieder unsichtbar.</p>
+<p><strong>Ephemeral Messages</strong> sind private Nachrichten, die nur für den ausführenden Benutzer sichtbar sind. Diese werden direkt als Antwort auf Discord-Befehle gesendet und verschwinden nicht automatisch, bleiben aber für andere Server-Mitglieder unsichtbar.</p>
 <h3 id="verwendung-im-clanscore-projekt">Verwendung im ClansCore-Projekt<a class="headerlink" href="#verwendung-im-clanscore-projekt" title="Permanent link">&para;</a></h3>
 <p>Fast alle Discord-Befehle verwenden Ephemeral Messages, um Benutzer direkt zu informieren:</p>
 <p><strong>Technische Implementierung:</strong>
@@ -3719,7 +3691,7 @@
 <h3 id="2-channel-events-events">2. Channel: <code>events</code> (EVENTS)<a class="headerlink" href="#2-channel-events-events" title="Permanent link">&para;</a></h3>
 <p><strong>Zweck:</strong> Event-Übersicht und Event-Benachrichtigungen</p>
 <p><strong>Nachrichten:</strong>
-- ✅ <strong>Event-Übersicht</strong>: Automatische Übersicht der nächsten 5 Events (wird regelmäßig aktualisiert)
+- ✅ <strong>Event-Übersicht</strong>: Automatische Übersicht der nächsten 5 Events (wird regelmässig aktualisiert)
 - ✅ <strong>Event-Benachrichtigungen</strong>: Benachrichtigungen für anstehende Events mit:
   - Event-Name
   - Datum und Uhrzeit
@@ -3774,7 +3746,7 @@
 <h3 id="6-channel-bot-aufgaben-completed_tasks">6. Channel: <code>bot-aufgaben</code> (COMPLETED_TASKS)<a class="headerlink" href="#6-channel-bot-aufgaben-completed_tasks" title="Permanent link">&para;</a></h3>
 <p><strong>Zweck:</strong> Vorstands-Bereich für erledigte Aufgaben</p>
 <p><strong>Nachrichten:</strong>
-- ✅ <strong>Erledigte Aufgaben</strong>: Wenn ein Benutzer eine Aufgabe mit <code>/task-complete</code> abschließt, erscheint hier ein Embed mit:
+- ✅ <strong>Erledigte Aufgaben</strong>: Wenn ein Benutzer eine Aufgabe mit <code>/task-complete</code> abschliesst, erscheint hier ein Embed mit:
   - Aufgabenname
   - Benutzer, der die Aufgabe erledigt hat
   - Punkte
@@ -3888,7 +3860,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 23:14:03 UTC">December 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     

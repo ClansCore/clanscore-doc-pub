@@ -820,34 +820,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
         
   
@@ -1400,17 +1372,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#setup-ssh-deploymentsh-setup-ssh-deploymentps1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        setup-ssh-deployment.sh / setup-ssh-deployment.ps1
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1421,17 +1382,6 @@
     <span class="md-ellipsis">
       
         Manuelles Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatisches-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatisches Deployment
       
     </span>
   </a>
@@ -1740,17 +1690,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#setup-ssh-deploymentsh-setup-ssh-deploymentps1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        setup-ssh-deployment.sh / setup-ssh-deployment.ps1
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1761,17 +1700,6 @@
     <span class="md-ellipsis">
       
         Manuelles Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatisches-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatisches Deployment
       
     </span>
   </a>
@@ -1809,27 +1737,23 @@
   
 
 
-<h1 id="deployment-skripte">!!! 🚀 Deployment-Skripte<a class="headerlink" href="#deployment-skripte" title="Permanent link">&para;</a></h1>
-<p>Dieses Projekt enthält automatisierte Deployment-Skripte für schnelles und einfaches Deployment.</p>
+<h1 id="deployment-skripte">🚀 Deployment-Skripte<a class="headerlink" href="#deployment-skripte" title="Permanent link">&para;</a></h1>
+<p>Dieses Projekt enthält Deployment-Skripte für schnelles und einfaches Deployment.</p>
+<hr />
 <h2 id="verfugbare-skripte">Verfügbare Skripte<a class="headerlink" href="#verfugbare-skripte" title="Permanent link">&para;</a></h2>
 <h3 id="deploysh-deployps1"><code>deploy.sh</code> / <code>deploy.ps1</code><a class="headerlink" href="#deploysh-deployps1" title="Permanent link">&para;</a></h3>
-<p><strong>Zweck:</strong> Automatisiertes Deployment-Script<br />
+<p><strong>Zweck:</strong> Deployment-Script für manuelles Deployment<br />
 <strong>Verwendung:</strong> <code>./deploy.sh</code> (Linux/Mac) oder <code>.\deploy.ps1</code> (Windows)  </p>
 <p><strong>Funktion:</strong>
-- Baut alle Services
+- Prüft ob <code>.env</code> existiert
+- Prüft ob Docker installiert ist
+- Stoppt laufende Services
+- Baut alle Images
 - Startet Services
 - Zeigt Status und Logs</p>
-<p><strong>Wann verwenden:</strong> Für schnelles, manuelles Deployment</p>
-<h3 id="setup-ssh-deploymentsh-setup-ssh-deploymentps1"><code>setup-ssh-deployment.sh</code> / <code>setup-ssh-deployment.ps1</code><a class="headerlink" href="#setup-ssh-deploymentsh-setup-ssh-deploymentps1" title="Permanent link">&para;</a></h3>
-<p><strong>Zweck:</strong> SSH-Key Setup für GitHub Actions<br />
-<strong>Verwendung:</strong> <code>./setup-ssh-deployment.sh</code> (Linux/Mac) oder <code>.\setup-ssh-deployment.ps1</code> (Windows)  </p>
-<p><strong>Funktion:</strong>
-- Erstellt SSH-Key
-- Zeigt Anweisungen für GitHub Secrets
-- Testet SSH-Verbindung</p>
-<p><strong>Wann verwenden:</strong> Beim ersten Einrichten von SSH-basiertem Deployment</p>
+<hr />
 <h2 id="manuelles-deployment">Manuelles Deployment<a class="headerlink" href="#manuelles-deployment" title="Permanent link">&para;</a></h2>
-<p>Falls Sie die Skripte nicht verwenden möchten, können Sie auch manuell deployen:</p>
+<p>Falls du die Skripte nicht verwenden möchtest, kannst du auch direkt mit Docker Compose deployen:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Alle Services bauen und starten</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -1839,33 +1763,10 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Logs anzeigen</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
 </code></pre></div>
-<h2 id="automatisches-deployment">Automatisches Deployment<a class="headerlink" href="#automatisches-deployment" title="Permanent link">&para;</a></h2>
-<p>Für automatisches Deployment via GitHub Actions:</p>
-<ol>
-<li>
-<p><strong>SSH-Key Setup:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Linux/Mac</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./setup-ssh-deployment.sh
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Windows PowerShell</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>.<span class="se">\s</span>etup-ssh-deployment.ps1
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>GitHub Secrets konfigurieren:</strong></p>
-</li>
-<li>
-<p>Siehe <a href="../../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a></p>
-</li>
-<li>
-<p><strong>Workflow ausführen:</strong></p>
-</li>
-<li>GitHub → Actions → Deploy to Server → Run workflow</li>
-</ol>
+<hr />
 <h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../guide/">Deployment Guide</a> - Vollständige Anleitung</li>
-<li><a href="../../configuration/secrets-env/github-secrets/">GitHub Secrets</a> - Secrets konfigurieren</li>
 <li><a href="../quickstart-server/">Server-spezifische Anleitung</a> - Für srbsci-11.ost.ch</li>
 </ul>
 
@@ -1890,7 +1791,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 00:44:15 UTC">December 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     

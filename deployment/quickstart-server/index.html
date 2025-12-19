@@ -820,34 +820,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
         
   
@@ -1350,15 +1322,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schnellstart-anleitung-fur-ihren-server" class="md-nav__link">
+  <a href="#schnellstart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schnellstart-Anleitung für Ihren Server
+        Schnellstart
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Schnellstart-Anleitung für Ihren Server">
+    <nav class="md-nav" aria-label="Schnellstart">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1451,17 +1423,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#github-actions-setup-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Actions Setup (Optional)
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1834,15 +1795,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schnellstart-anleitung-fur-ihren-server" class="md-nav__link">
+  <a href="#schnellstart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schnellstart-Anleitung für Ihren Server
+        Schnellstart
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Schnellstart-Anleitung für Ihren Server">
+    <nav class="md-nav" aria-label="Schnellstart">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1939,17 +1900,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-actions-setup-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Actions Setup (Optional)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#wichtige-befehle" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2041,8 +1991,10 @@
   
 
 
-<h1 id="quick-start-fur-srbsci-11ostch">!!! ⚡ Quick Start für srbsci-11.ost.ch<a class="headerlink" href="#quick-start-fur-srbsci-11ostch" title="Permanent link">&para;</a></h1>
-<h2 id="schnellstart-anleitung-fur-ihren-server">Schnellstart-Anleitung für Ihren Server<a class="headerlink" href="#schnellstart-anleitung-fur-ihren-server" title="Permanent link">&para;</a></h2>
+<h1 id="quick-start-fur-srbsci-11ostch">⚡ Quick Start für srbsci-11.ost.ch<a class="headerlink" href="#quick-start-fur-srbsci-11ostch" title="Permanent link">&para;</a></h1>
+<p>Schnellstart-Anleitung für Ihren Server.</p>
+<hr />
+<h2 id="schnellstart">Schnellstart<a class="headerlink" href="#schnellstart" title="Permanent link">&para;</a></h2>
 <h3 id="1-ssh-verbindung-testen">1. SSH-Verbindung testen<a class="headerlink" href="#1-ssh-verbindung-testen" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>&lt;benutzername&gt;@srbsci-11.ost.ch
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># ODER</span>
@@ -2067,7 +2019,7 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Öffentlichen Key anzeigen und zu GitHub hinzufügen</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Gehen Sie zu: https://github.com/settings/keys</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Gehe zu: https://github.com/settings/keys</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># Mit SSH klonen</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">cd</span><span class="w"> </span>~
@@ -2083,24 +2035,15 @@
 </code></pre></div></p>
 <p>Siehe <a href="../../configuration/ssh-setup/">SSH Setup</a> für detaillierte Anleitung.</p>
 <h3 id="5-umgebungs-variablen-konfigurieren">5. Umgebungs-Variablen konfigurieren<a class="headerlink" href="#5-umgebungs-variablen-konfigurieren" title="Permanent link">&para;</a></h3>
-<p><strong>Für Production:</strong> GitHub Secrets verwenden (keine <code>.env</code> auf dem Server nötig!)</p>
-<ol>
-<li>Gehen Sie zu: Repository → Settings → Secrets and variables → Actions</li>
-<li>Fügen Sie alle Secrets hinzu (siehe <a href="../../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a>)</li>
-<li>Der GitHub Actions Workflow erstellt automatisch die <code>.env</code> Datei beim Deployment</li>
-</ol>
-<p><strong>Für manuelles Deployment (ohne GitHub Actions):</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Nur falls Sie manuell deployen (nicht empfohlen)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cp<span class="w"> </span>.env.server-example<span class="w"> </span>.env
+<p>Erstelle eine <code>.env</code> Datei auf dem Server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Auf dem Server</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>nano<span class="w"> </span>.env<span class="w">  </span><span class="c1"># Alle Werte anpassen</span>
-</code></pre></div></p>
-<p><strong>Wichtig:</strong> Für Production sollten Sie GitHub Secrets verwenden, nicht manuelle <code>.env</code> Dateien!</p>
+</code></pre></div>
+<p><strong>Wichtig:</strong> Die <code>.env</code> Datei enthält sensible Daten und sollte niemals ins Git Repository committet werden!</p>
 <h3 id="6-services-starten">6. Services starten<a class="headerlink" href="#6-services-starten" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Standard (für Server mit ausreichend Ressourcen)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Services starten</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># ODER optimiert (für Server mit begrenzten Ressourcen - empfohlen)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.optimized.yml<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
 </code></pre></div>
 <h3 id="7-status-prufen">7. Status prüfen<a class="headerlink" href="#7-status-prufen" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Services prüfen</span>
@@ -2118,81 +2061,54 @@
 <li><strong>API</strong>: http://<server_ip>:3000/api</li>
 <li><strong>Health Check</strong>: http://<server_ip>:3000/health</li>
 </ul>
-<h2 id="github-actions-setup-optional">GitHub Actions Setup (Optional)<a class="headerlink" href="#github-actions-setup-optional" title="Permanent link">&para;</a></h2>
-<p>Für automatisches Deployment:</p>
-<ol>
-<li>
-<p><strong>SSH-Key erstellen</strong> (lokal):
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./setup-ssh-deployment.sh
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># ODER</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>.<span class="se">\s</span>etup-ssh-deployment.ps1
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>SSH-Key auf Server installieren</strong>:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Öffentlichen Key auf Server kopieren</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/github_actions_deploy.pub<span class="w"> </span>&lt;benutzername&gt;@srbsci-11.ost.ch
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>GitHub Secrets konfigurieren</strong>:</p>
-</li>
-<li><code>SERVER_HOST=srbsci-11.ost.ch</code></li>
-<li><code>SERVER_USER=&lt;Ihr SSH-Benutzername&gt;</code></li>
-<li><code>SERVER_SSH_KEY=&lt;Privater SSH-Key&gt;</code></li>
-<li>
-<p>Alle anderen Secrets aus <code>.env.server-example</code></p>
-</li>
-<li>
-<p><strong>Workflow testen</strong>:</p>
-</li>
-<li>GitHub → Actions → Deploy to Server → Run workflow</li>
-</ol>
+<hr />
 <h2 id="wichtige-befehle">Wichtige Befehle<a class="headerlink" href="#wichtige-befehle" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Services neu starten</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker-compose<span class="w"> </span>restart
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Einzelnen Service neu starten</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>clanscore-api
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Services stoppen</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>docker-compose<span class="w"> </span>down
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1"># Services stoppen und Volumes löschen (⚠️ Achtung: Datenverlust!)</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>docker-compose<span class="w"> </span>down<span class="w"> </span>-v
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># Logs eines Services</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clanscore-api
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c1"># In Container einsteigen</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>clanscore-api<span class="w"> </span>sh
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="c1"># System-Ressourcen prüfen</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>docker<span class="w"> </span>stats
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>htop
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>df<span class="w"> </span>-h
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Services neu starten</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>docker-compose<span class="w"> </span>restart
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Einzelnen Service neu starten</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>clanscore-api
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># Services stoppen</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>docker-compose<span class="w"> </span>down
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Services stoppen und Volumes löschen (⚠️ Achtung: Datenverlust!)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>docker-compose<span class="w"> </span>down<span class="w"> </span>-v
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1"># Logs eines Services</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clanscore-api
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="c1"># In Container einsteigen</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>clanscore-api<span class="w"> </span>sh
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="c1"># System-Ressourcen prüfen</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>docker<span class="w"> </span>stats
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>htop
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>df<span class="w"> </span>-h
 </code></pre></div>
+<hr />
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="port-bereits-belegt">Port bereits belegt<a class="headerlink" href="#port-bereits-belegt" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Prüfen welche Ports belegt sind</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>sudo<span class="w"> </span>netstat<span class="w"> </span>-tulpn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>LISTEN
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Service auf anderem Port starten (in docker-compose.yml anpassen)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Prüfen welche Ports belegt sind</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>netstat<span class="w"> </span>-tulpn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>LISTEN
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Service auf anderem Port starten (in docker-compose.yml anpassen)</span>
 </code></pre></div>
 <h3 id="zu-wenig-speicher">Zu wenig Speicher<a class="headerlink" href="#zu-wenig-speicher" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Docker aufräumen</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w"> </span>--volumes
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Alte Images löschen</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Docker aufräumen</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w"> </span>--volumes
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Alte Images löschen</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
 </code></pre></div>
 <h3 id="mongodb-startet-nicht">MongoDB startet nicht<a class="headerlink" href="#mongodb-startet-nicht" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># MongoDB Logs prüfen</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>mongodb
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># MongoDB Container neu starten</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>mongodb
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># MongoDB Logs prüfen</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>mongodb
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># MongoDB Container neu starten</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>mongodb
 </code></pre></div>
+<hr />
 <h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✅ Reverse Proxy mit Nginx einrichten (siehe <a href="../guide/">Deployment Guide</a>)</li>
@@ -2223,7 +2139,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 00:44:15 UTC">December 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     

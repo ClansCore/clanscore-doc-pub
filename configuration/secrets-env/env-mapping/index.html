@@ -911,17 +911,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#githubworkflowsdeployyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        .github/workflows/deploy.yml
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1066,34 +1055,6 @@
     
   
     Architektur
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
   
 
     
@@ -2036,17 +1997,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#githubworkflowsdeployyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        .github/workflows/deploy.yml
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2095,7 +2045,7 @@
 
 
 <h1 id="umgebungs-variablen-mapping">📋 Umgebungs-Variablen Mapping<a class="headerlink" href="#umgebungs-variablen-mapping" title="Permanent link">&para;</a></h1>
-<p>Diese Datei zeigt, welche Umgebungs-Variablen wo verwendet werden und wie sie aus <code>.env</code> oder GitHub Secrets geladen werden.</p>
+<p>Diese Datei zeigt, welche Umgebungs-Variablen wo verwendet werden und wie sie aus <code>.env</code> Dateien geladen werden.</p>
 <h2 id="variablen-ubersicht">Variablen-Übersicht<a class="headerlink" href="#variablen-ubersicht" title="Permanent link">&para;</a></h2>
 <h3 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h3>
 <table>
@@ -2110,17 +2060,17 @@
 <tr>
 <td><code>MONGO_INITDB_ROOT_USERNAME</code></td>
 <td><code>docker-compose.yml</code>, <code>db.init.ts</code></td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>MONGO_INITDB_ROOT_PASSWORD</code></td>
 <td><code>docker-compose.yml</code>, <code>db.init.ts</code></td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>MONGO_DB</code></td>
 <td><code>docker-compose.yml</code>, <code>db.init.ts</code></td>
-<td><code>.env</code> / GitHub Secrets (Default: <code>clanscore</code>)</td>
+<td><code>.env</code> (Default: <code>clanscore</code>)</td>
 </tr>
 <tr>
 <td><code>MONGO_HOST</code></td>
@@ -2147,27 +2097,27 @@
 <tr>
 <td><code>DISCORD_TOKEN</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>DISCORD_CLIENT_ID</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>DISCORD_GUILD_ID</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>DISCORD_SERVER_PORT</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets (Default: <code>3001</code>)</td>
+<td><code>.env</code> (Default: <code>3001</code>)</td>
 </tr>
 <tr>
 <td><code>DISCORD_BOT_WEBHOOK_URL</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 </tbody>
 </table>
@@ -2184,7 +2134,7 @@
 <tr>
 <td><code>WEBHOOK_SHARED_SECRET</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 </tbody>
 </table>
@@ -2201,17 +2151,17 @@
 <tr>
 <td><code>GOOGLE_CALENDAR_CLIENT_ID</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>GOOGLE_CALENDAR_CLIENT_SECRET</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>GOOGLE_CALENDAR_REDIRECT_URI</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API &amp; Bot)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 </tbody>
 </table>
@@ -2228,22 +2178,22 @@
 <tr>
 <td><code>CLANSCORE_API_URL</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (Bot), <code>apiClient.ts</code></td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>CLANSCORE_API_KEY</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (Bot), <code>apiClient.ts</code></td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>JWT_SECRET</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API), <code>jwt.ts</code></td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 <tr>
 <td><code>CORS_ORIGIN</code></td>
 <td><code>docker-compose.yml</code>, <code>config.ts</code> (API), <code>server.ts</code></td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 </tbody>
 </table>
@@ -2258,9 +2208,9 @@
 </thead>
 <tbody>
 <tr>
-<td><code>DASHBOARD_API_URL</code></td>
+<td><code>CLANSCORE_API_URL</code></td>
 <td><code>docker-compose.yml</code>, <code>Dockerfile</code> (Build-Arg)</td>
-<td><code>.env</code> / GitHub Secrets</td>
+<td><code>.env</code></td>
 </tr>
 </tbody>
 </table>
@@ -2302,19 +2252,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">BASE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CLANSCORE_API_URL</span><span class="o">!</span><span class="p">;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CLANSCORE_API_KEY</span><span class="p">;</span>
 </code></pre></div></p>
-<h3 id="githubworkflowsdeployyml"><code>.github/workflows/deploy.yml</code><a class="headerlink" href="#githubworkflowsdeployyml" title="Permanent link">&para;</a></h3>
-<p>Erstellt <code>.env</code> Datei aus GitHub Secrets:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create .env file from secrets</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="no">cat &gt; .env &lt;&lt; EOF</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="no">VARIABLE=${{ secrets.VARIABLE }}</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="no">EOF</span>
-</code></pre></div></p>
 <h2 id="lade-reihenfolge">Lade-Reihenfolge<a class="headerlink" href="#lade-reihenfolge" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Lokale Entwicklung</strong>: <code>.env</code> Datei wird von <code>dotenv</code> geladen</li>
 <li><strong>Docker Compose</strong>: Variablen aus <code>.env</code> oder Umgebungs-Variablen</li>
-<li><strong>GitHub Actions</strong>: Erstellt <code>.env</code> aus GitHub Secrets</li>
 <li><strong>Docker Container</strong>: Erhält Variablen als Umgebungs-Variablen von Docker Compose</li>
 </ol>
 <h2 id="fehlende-variablen">Fehlende Variablen<a class="headerlink" href="#fehlende-variablen" title="Permanent link">&para;</a></h2>
@@ -2345,7 +2286,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2025 20:43:40 UTC">December 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     

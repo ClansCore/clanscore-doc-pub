@@ -546,34 +546,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Konfiguration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#production-github-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production (GitHub Secrets)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lokale-entwicklung-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lokale Entwicklung (.env)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -645,23 +617,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Für Production-Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#automatisches-deployment-via-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatisches Deployment via SSH
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1014,34 +969,6 @@
     
   
     Architektur
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
   
 
     
@@ -1841,34 +1768,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Konfiguration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#production-github-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production (GitHub Secrets)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lokale-entwicklung-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lokale Entwicklung (.env)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1941,23 +1840,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Für Production-Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#automatisches-deployment-via-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatisches Deployment via SSH
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -2014,20 +1896,13 @@
 <hr />
 <h2 id="anleitung">Anleitung<a class="headerlink" href="#anleitung" title="Permanent link">&para;</a></h2>
 <h3 id="1-konfiguration">1. Konfiguration<a class="headerlink" href="#1-konfiguration" title="Permanent link">&para;</a></h3>
-<p><strong>Für Production:</strong> GitHub Secrets verwenden (siehe <a href="../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a>)<br />
-<strong>Für lokale Entwicklung:</strong> <code>.env</code> Datei verwenden</p>
-<h4 id="production-github-secrets">Production (GitHub Secrets)<a class="headerlink" href="#production-github-secrets" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Gehen Sie zu: Repository → Settings → Secrets and variables → Actions</li>
-<li>Füge alle Secrets hinzu (siehe <a href="../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a>)</li>
-<li>Der Workflow erstellt automatisch die <code>.env</code> Datei auf dem Server</li>
-</ol>
-<h4 id="lokale-entwicklung-env">Lokale Entwicklung (.env)<a class="headerlink" href="#lokale-entwicklung-env" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Nur für lokale Entwicklung!</span>
+<p>Erstelle eine <code>.env</code> Datei auf dem Server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Auf dem Server</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>nano<span class="w"> </span>.env<span class="w">  </span><span class="c1"># Alle Werte anpassen</span>
 </code></pre></div>
-<p><strong>Wichtig:</strong> <code>.env</code> Dateien sind nur für lokale Entwicklung. Für Production verwenden GitHub Secrets!</p>
+<p><strong>Wichtig:</strong> Die <code>.env</code> Datei enthält sensible Daten und sollte niemals ins Git Repository committet werden!</p>
+<p>Siehe <a href="../deployment/deployment-stand/#umgebungsvariablen-und-secrets">Umgebungsvariablen Dokumentation</a> für die vollständige Vorlage.</p>
 <h3 id="2-deployment">2. Deployment<a class="headerlink" href="#2-deployment" title="Permanent link">&para;</a></h3>
 <p><strong>Linux/Mac:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./deploy.sh
@@ -2065,22 +1940,7 @@
 <ul>
 <li><a href="../deployment/guide/">Deployment Guide</a> - Vollständige Anleitung</li>
 <li><a href="../deployment/quickstart-server/">Server-spezifische Anleitung</a> - Für srbsci-11.ost.ch</li>
-<li><a href="../configuration/secrets-env/github-secrets/">GitHub Secrets</a> - Secrets konfigurieren</li>
 </ul>
-<h4 id="automatisches-deployment-via-ssh">Automatisches Deployment via SSH<a class="headerlink" href="#automatisches-deployment-via-ssh" title="Permanent link">&para;</a></h4>
-<p>Falls du nur SSH-Zugriff auf deinem Server hast, kannst du trotzdem automatisches Deployment einrichten!</p>
-<p><strong>Für Benutzer mit Passwort-Auth:</strong></p>
-<ul>
-<li>Siehe <a href="../configuration/ssh-setup/">SSH Setup</a> für Setup-Anleitung</li>
-<li>Verwende <code>SERVER_SSH_PASSWORD</code> in GitHub Secrets</li>
-</ul>
-<p><strong>Schnellstart (SSH-Key):</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Linux/Mac</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>./setup-ssh-deployment.sh
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Windows PowerShell</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>.<span class="se">\s</span>etup-ssh-deployment.ps1
-</code></pre></div></p>
 <hr />
 <h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
 <p>Siehe <a href="../deployment/guide/">Deployment Guide</a> für:</p>
@@ -2114,7 +1974,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 00:44:15 UTC">December 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:28:00 UTC">December 19, 2025</span>
   </span>
 
     

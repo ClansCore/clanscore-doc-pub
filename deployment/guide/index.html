@@ -820,34 +820,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/development/architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../configuration/development/api-endpoints/" class="md-nav__link">
         
   
@@ -1319,30 +1291,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Umgebungs-Variablen konfigurieren">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#github-secrets-konfigurieren-production" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Secrets konfigurieren (Production)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-github-actions-workflow-konfigurieren" class="md-nav__link">
+  <a href="#4-services-starten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. GitHub Actions Workflow konfigurieren
+        4. Services starten
       
     </span>
   </a>
@@ -1350,21 +1305,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-services-starten" class="md-nav__link">
+  <a href="#5-services-verifizieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Services starten
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-services-verifizieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Services verifizieren
+        5. Services verifizieren
       
     </span>
   </a>
@@ -1468,34 +1412,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Updates deployen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mit-github-actions-empfohlen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mit GitHub Actions (Empfohlen)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manuell-nur-fur-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manuell (nur für Tests)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2071,30 +1987,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Umgebungs-Variablen konfigurieren">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#github-secrets-konfigurieren-production" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub Secrets konfigurieren (Production)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-github-actions-workflow-konfigurieren" class="md-nav__link">
+  <a href="#4-services-starten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. GitHub Actions Workflow konfigurieren
+        4. Services starten
       
     </span>
   </a>
@@ -2102,21 +2001,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-services-starten" class="md-nav__link">
+  <a href="#5-services-verifizieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Services starten
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-services-verifizieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Services verifizieren
+        5. Services verifizieren
       
     </span>
   </a>
@@ -2220,34 +2108,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Updates deployen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mit-github-actions-empfohlen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mit GitHub Actions (Empfohlen)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manuell-nur-fur-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manuell (nur für Tests)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2409,8 +2269,9 @@
   
 
 
-<h1 id="deployment-guide-clanscore">!!! Deployment Guide - ClansCore<a class="headerlink" href="#deployment-guide-clanscore" title="Permanent link">&para;</a></h1>
-<p>Dieser Guide erklärt, wie Sie die drei Anwendungen (ClansCore-api, dashboard, discord-bot) auf einem virtuellen Server deployen.</p>
+<h1 id="deployment-guide-clanscore">Deployment Guide - ClansCore<a class="headerlink" href="#deployment-guide-clanscore" title="Permanent link">&para;</a></h1>
+<p>Dieser Guide erklärt, wie du die drei Anwendungen (ClansCore-api, dashboard, discord-bot) auf einem virtuellen Server deployen kannst.</p>
+<hr />
 <h2 id="voraussetzungen">Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Virtueller Server mit:</li>
@@ -2418,10 +2279,8 @@
 <li>Docker Compose (Version 2.0 oder höher)</li>
 <li>Mindestens 2GB RAM</li>
 <li>Mindestens 10GB freier Speicherplatz</li>
-<li>GitHub Repository mit aktivierten Actions</li>
-<li>GitHub Secrets konfiguriert (siehe <a href="../../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a>)</li>
 </ul>
-<p><strong>Wichtig:</strong> Für Production verwenden wir <strong>GitHub Secrets</strong>, nicht <code>.env</code> Dateien auf dem Server!</p>
+<hr />
 <h2 id="schnellstart">Schnellstart<a class="headerlink" href="#schnellstart" title="Permanent link">&para;</a></h2>
 <h3 id="1-server-vorbereiten">1. Server vorbereiten<a class="headerlink" href="#1-server-vorbereiten" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Docker installieren (Ubuntu/Debian)</span>
@@ -2443,7 +2302,7 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>clanscore
 </code></pre></div></p>
 <p><strong>Option B: Per SCP vom lokalen Rechner</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Auf Ihrem lokalen Rechner</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Auf deinem lokalen Rechner</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>clanscore
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
@@ -2452,135 +2311,106 @@
 </code></pre></div></p>
 <p>Siehe <a href="../../configuration/ssh-setup/">SSH Setup</a> für Authentifizierungs-Optionen.</p>
 <h3 id="3-umgebungs-variablen-konfigurieren">3. Umgebungs-Variablen konfigurieren<a class="headerlink" href="#3-umgebungs-variablen-konfigurieren" title="Permanent link">&para;</a></h3>
-<p><strong>Für Production:</strong> Verwenden Sie GitHub Secrets (siehe unten)<br />
-<strong>Für lokale Entwicklung:</strong> Verwenden Sie <code>.env</code> Dateien (siehe "Lokale Entwicklung")</p>
-<h4 id="github-secrets-konfigurieren-production">GitHub Secrets konfigurieren (Production)<a class="headerlink" href="#github-secrets-konfigurieren-production" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Gehen Sie zu Ihrem GitHub Repository</li>
-<li><strong>Settings</strong> → <strong>Secrets and variables</strong> → <strong>Actions</strong></li>
-<li>Fügen Sie alle erforderlichen Secrets hinzu (siehe <a href="../../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a>)</li>
-</ol>
-<p><strong>Erforderliche Secrets:</strong>
-- <code>MONGO_INITDB_ROOT_USERNAME</code> / <code>MONGO_INITDB_ROOT_PASSWORD</code>: MongoDB Credentials
-- <code>DISCORD_TOKEN</code> / <code>DISCORD_CLIENT_ID</code> / <code>DISCORD_GUILD_ID</code>: Discord Bot Konfiguration
-- <code>WEBHOOK_SHARED_SECRET</code>: Geheimer Schlüssel für Webhooks
-- <code>GOOGLE_CALENDAR_CLIENT_ID</code> / <code>GOOGLE_CALENDAR_CLIENT_SECRET</code> / <code>GOOGLE_CALENDAR_REDIRECT_URI</code>: Google Calendar OAuth
-- <code>JWT_SECRET</code>: Geheimer Schlüssel für JWT-Tokens
-- <code>CLANSCORE_API_URL</code> / <code>CLANSCORE_API_KEY</code>: API Konfiguration
-- <code>DASHBOARD_API_URL</code> / <code>CORS_ORIGIN</code>: Dashboard Konfiguration
-- <code>SERVER_HOST</code> / <code>SERVER_USER</code> / <code>SERVER_SSH_KEY</code> oder <code>SERVER_SSH_PASSWORD</code>: Server-Verbindung</p>
-<p><strong>Vollständige Liste:</strong> Siehe <a href="../../configuration/secrets-env/github-secrets/">GitHub Secrets Guide</a></p>
-<p><strong>Hinweis:</strong> Der GitHub Actions Workflow erstellt automatisch eine <code>.env</code> Datei aus den Secrets beim Deployment. Sie müssen keine <code>.env</code> Datei manuell auf dem Server erstellen.</p>
-<h3 id="4-github-actions-workflow-konfigurieren">4. GitHub Actions Workflow konfigurieren<a class="headerlink" href="#4-github-actions-workflow-konfigurieren" title="Permanent link">&para;</a></h3>
-<p>Der Workflow <code>.github/workflows/deploy.yml</code> verwendet automatisch GitHub Secrets und erstellt die <code>.env</code> Datei auf dem Server.</p>
-<p><strong>Keine manuelle <code>.env</code> Datei auf dem Server nötig!</strong></p>
-<p>Die Variablen werden automatisch aus GitHub Secrets geladen:
-- Dashboard API URL: <code>DASHBOARD_API_URL</code> Secret
-- CORS Origin: <code>CORS_ORIGIN</code> Secret
-- Alle anderen Variablen: Entsprechende GitHub Secrets</p>
-<p>Siehe Abschnitt "Automatisches Deployment via SSH" in diesem Dokument für Details zum automatischen Deployment.</p>
-<h3 id="6-services-starten">6. Services starten<a class="headerlink" href="#6-services-starten" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Alle Services bauen und starten</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Logs anzeigen</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Status prüfen</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>docker-compose<span class="w"> </span>ps
+<p>Erstelle eine <code>.env</code> Datei auf dem Server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Auf dem Server</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>nano<span class="w"> </span>.env<span class="w">  </span><span class="c1"># Alle Werte anpassen</span>
 </code></pre></div>
-<h3 id="7-services-verifizieren">7. Services verifizieren<a class="headerlink" href="#7-services-verifizieren" title="Permanent link">&para;</a></h3>
+<p><strong>Wichtig:</strong> Die <code>.env</code> Datei enthält sensible Daten und sollte niemals ins Git Repository committet werden!</p>
+<h3 id="4-services-starten">4. Services starten<a class="headerlink" href="#4-services-starten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Alle Services bauen und starten</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Logs anzeigen</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Status prüfen</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>docker-compose<span class="w"> </span>ps
+</code></pre></div>
+<h3 id="5-services-verifizieren">5. Services verifizieren<a class="headerlink" href="#5-services-verifizieren" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>API</strong>: <code>http://your-server-ip:3000/api</code></li>
 <li><strong>Dashboard</strong>: <code>http://your-server-ip</code></li>
 <li><strong>Discord Bot</strong>: Läuft im Hintergrund</li>
 </ul>
+<hr />
 <h2 id="erweiterte-konfiguration">Erweiterte Konfiguration<a class="headerlink" href="#erweiterte-konfiguration" title="Permanent link">&para;</a></h2>
 <h3 id="reverse-proxy-mit-nginx-empfohlen-fur-production">Reverse Proxy mit Nginx (Empfohlen für Production)<a class="headerlink" href="#reverse-proxy-mit-nginx-empfohlen-fur-production" title="Permanent link">&para;</a></h3>
-<p>Für Production sollten Sie einen Reverse Proxy verwenden:</p>
+<p>Für Production solltest du einen Reverse Proxy verwenden:</p>
 <ol>
 <li>
 <p><strong>Nginx auf dem Server installieren:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nginx
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nginx
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>Nginx-Konfiguration erstellen</strong> (<code>/etc/nginx/sites-available/clanscore</code>):</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">your-domain.com</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="c1"># Dashboard</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://localhost:80</span><span class="p">;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="c1"># API</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/api</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://localhost:3000</span><span class="p">;</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="kn">proxy_http_version</span><span class="w"> </span><span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Upgrade</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">&#39;upgrade&#39;</span><span class="p">;</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="kn">proxy_cache_bypass</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">your-domain.com</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="c1"># Dashboard</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://localhost:80</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="c1"># API</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/api</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://localhost:3000</span><span class="p">;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="kn">proxy_http_version</span><span class="w"> </span><span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Upgrade</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">&#39;upgrade&#39;</span><span class="p">;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">        </span><span class="kn">proxy_cache_bypass</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="p">}</span>
 </code></pre></div>
 <ol>
 <li><strong>Konfiguration aktivieren:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/nginx/sites-available/clanscore<span class="w"> </span>/etc/nginx/sites-enabled/
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/nginx/sites-available/clanscore<span class="w"> </span>/etc/nginx/sites-enabled/
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
 </code></pre></div></li>
 </ol>
 <h3 id="ssltls-mit-lets-encrypt">SSL/TLS mit Let's Encrypt<a class="headerlink" href="#ssltls-mit-lets-encrypt" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-nginx
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx<span class="w"> </span>-d<span class="w"> </span>your-domain.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>certbot<span class="w"> </span>python3-certbot-nginx
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>certbot<span class="w"> </span>--nginx<span class="w"> </span>-d<span class="w"> </span>your-domain.com
 </code></pre></div>
 <h3 id="firewall-konfigurieren">Firewall konfigurieren<a class="headerlink" href="#firewall-konfigurieren" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># UFW Firewall</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp<span class="w">    </span><span class="c1"># SSH</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp<span class="w">    </span><span class="c1"># HTTP</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp<span class="w">   </span><span class="c1"># HTTPS</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># UFW Firewall</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp<span class="w">    </span><span class="c1"># SSH</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp<span class="w">    </span><span class="c1"># HTTP</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp<span class="w">   </span><span class="c1"># HTTPS</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
 </code></pre></div>
 <h2 id="wartung">Wartung<a class="headerlink" href="#wartung" title="Permanent link">&para;</a></h2>
 <h3 id="logs-anzeigen">Logs anzeigen<a class="headerlink" href="#logs-anzeigen" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Alle Services</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Einzelner Service</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clanscore-api
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>discord-bot
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>dashboard
-</code></pre></div>
-<h3 id="services-neu-starten">Services neu starten<a class="headerlink" href="#services-neu-starten" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Alle Services</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker-compose<span class="w"> </span>restart
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Einzelner Service</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>clanscore-api
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clanscore-api
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>discord-bot
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>dashboard
+</code></pre></div>
+<h3 id="services-neu-starten">Services neu starten<a class="headerlink" href="#services-neu-starten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Alle Services</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>docker-compose<span class="w"> </span>restart
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Einzelner Service</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>docker-compose<span class="w"> </span>restart<span class="w"> </span>clanscore-api
 </code></pre></div>
 <h3 id="updates-deployen">Updates deployen<a class="headerlink" href="#updates-deployen" title="Permanent link">&para;</a></h3>
-<h4 id="mit-github-actions-empfohlen">Mit GitHub Actions (Empfohlen)<a class="headerlink" href="#mit-github-actions-empfohlen" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Code aktualisieren</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>pull
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># GitHub Actions deployt automatisch</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># Prüfen Sie: Actions → Deploy to Server</span>
-</code></pre></div>
-<h4 id="manuell-nur-fur-tests">Manuell (nur für Tests)<a class="headerlink" href="#manuell-nur-fur-tests" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Code aktualisieren</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>pull
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
@@ -2590,7 +2420,6 @@
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Alte Images aufräumen</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a
 </code></pre></div>
-<p><strong>Hinweis:</strong> Bei automatischem Deployment mit GitHub Actions wird die <code>.env</code> Datei automatisch aus Secrets erstellt. Keine manuelle <code>.env</code> Datei nötig!</p>
 <h3 id="datenbank-backup">Datenbank-Backup<a class="headerlink" href="#datenbank-backup" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Backup erstellen</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mongodb<span class="w"> </span>mongodump<span class="w"> </span>--out<span class="w"> </span>/data/backup
@@ -2620,25 +2449,25 @@
 </ol>
 <h3 id="mongodb-verbindungsfehler">MongoDB-Verbindungsfehler<a class="headerlink" href="#mongodb-verbindungsfehler" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Prüfen Sie, ob MongoDB läuft: <code>docker-compose ps mongodb</code></li>
-<li>Prüfen Sie die Umgebungs-Variablen für MongoDB</li>
-<li>Prüfen Sie die Netzwerk-Konfiguration</li>
+<li>Prüfe, ob MongoDB läuft: <code>docker-compose ps mongodb</code></li>
+<li>Prüfe die Umgebungs-Variablen für MongoDB</li>
+<li>Prüfe die Netzwerk-Konfiguration</li>
 </ul>
 <h3 id="discord-bot-verbindet-nicht">Discord Bot verbindet nicht<a class="headerlink" href="#discord-bot-verbindet-nicht" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Prüfen Sie den <code>DISCORD_TOKEN</code></li>
-<li>Prüfen Sie die Logs: <code>docker-compose logs discord-bot</code></li>
-<li>Stellen Sie sicher, dass der Bot die richtigen Intents hat</li>
+<li>Prüfe den <code>DISCORD_TOKEN</code></li>
+<li>Prüfe die Logs: <code>docker-compose logs discord-bot</code></li>
+<li>Stelle sicher, dass der Bot die richtigen Intents hat</li>
 </ul>
 <h3 id="dashboard-kann-api-nicht-erreichen">Dashboard kann API nicht erreichen<a class="headerlink" href="#dashboard-kann-api-nicht-erreichen" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Prüfen Sie die <code>apiUrl</code> in der Environment-Datei</li>
-<li>Prüfen Sie die CORS-Konfiguration in der API</li>
-<li>Prüfen Sie die Netzwerk-Konnektivität zwischen Containern</li>
+<li>Prüfe die <code>apiUrl</code> in der Environment-Datei</li>
+<li>Prüfe die CORS-Konfiguration in der API</li>
+<li>Prüfe die Netzwerk-Konnektivität zwischen Containern</li>
 </ul>
 <h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h2>
 <h3 id="health-checks">Health Checks<a class="headerlink" href="#health-checks" title="Permanent link">&para;</a></h3>
-<p>Die Services haben Health Checks konfiguriert. Prüfen Sie den Status:</p>
+<p>Die Services haben Health Checks konfiguriert. Prüfe den Status:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker-compose<span class="w"> </span>ps
 </code></pre></div>
 <h3 id="ressourcen-monitoring">Ressourcen-Monitoring<a class="headerlink" href="#ressourcen-monitoring" title="Permanent link">&para;</a></h3>
@@ -2652,16 +2481,16 @@
 <h2 id="sicherheit">Sicherheit<a class="headerlink" href="#sicherheit" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Environment-Variablen</strong>: Niemals <code>.env</code> in Git committen</li>
-<li><strong>Passwörter</strong>: Verwenden Sie starke, eindeutige Passwörter</li>
-<li><strong>Firewall</strong>: Beschränken Sie den Zugriff auf notwendige Ports</li>
-<li><strong>Updates</strong>: Halten Sie Docker und das System aktuell</li>
+<li><strong>Passwörter</strong>: Verwende starke, eindeutige Passwörter</li>
+<li><strong>Firewall</strong>: Beschränke den Zugriff auf notwendige Ports</li>
+<li><strong>Updates</strong>: Halte Docker und das System aktuell</li>
 <li><strong>Backups</strong>: Regelmässige Backups der Datenbank</li>
 </ul>
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <p>Bei Problemen:
-1. Prüfen Sie die Logs
-2. Prüfen Sie die Dokumentation
-3. Erstellen Sie ein Issue im Repository</p>
+1. Prüfe die Logs
+2. Prüfe die Dokumentation
+3. Erstelle ein Issue im Repository</p>
 
 
 
@@ -2684,7 +2513,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 00:44:15 UTC">December 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     

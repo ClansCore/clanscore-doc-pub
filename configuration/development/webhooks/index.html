@@ -829,34 +829,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../architektur-detail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architektur-Detail
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../api-endpoints/" class="md-nav__link">
         
   
@@ -4015,7 +3987,7 @@
 </table>
 <h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
 <h4 id="1-secret-generieren">1. Secret generieren<a class="headerlink" href="#1-secret-generieren" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Generieren Sie einen sicheren Secret (mindestens 32 Zeichen)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Generiere einen sicheren Secret (mindestens 32 Zeichen)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>openssl<span class="w"> </span>rand<span class="w"> </span>-hex<span class="w"> </span><span class="m">32</span>
 </code></pre></div>
 <p><strong>Beispiel-Output:</strong>
@@ -4700,7 +4672,7 @@
 <a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="c1"># Logs beobachten</span>
 <a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>discord-bot
 <a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>
-<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a><span class="c1"># Webhook testen (von außerhalb des Containers)</span>
+<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a><span class="c1"># Webhook testen (von ausserhalb des Containers)</span>
 <a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:3001/api/notifications/user-status<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-51-10" name="__codelineno-51-10" href="#__codelineno-51-10"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;x-webhook-token: &lt;WEBHOOK_SHARED_SECRET&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
@@ -4762,7 +4734,7 @@
 <li>✅ <strong>Mindestens 32 Zeichen</strong> (empfohlen: 64 Zeichen)</li>
 <li>✅ <strong>Zufällig generiert</strong> (z.B. <code>openssl rand -hex 32</code>)</li>
 <li>✅ <strong>Nicht in Git committen</strong> (nur in <code>.env</code> oder Secrets)</li>
-<li>✅ <strong>Regelmäßig rotieren</strong> (bei Verdacht auf Kompromittierung)</li>
+<li>✅ <strong>Regelmässig rotieren</strong> (bei Verdacht auf Kompromittierung)</li>
 </ul>
 <h4 id="2-https-in-production">2. HTTPS in Production<a class="headerlink" href="#2-https-in-production" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a># Production
@@ -4810,10 +4782,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Error: connect ECONNREFUSED 127.0.0.1:3001
 </code></pre></div></p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie, ob der Discord Bot läuft: <code>docker-compose ps discord-bot</code>
-2. ✅ Prüfen Sie <code>DISCORD_BOT_WEBHOOK_URL</code> in der API-Konfiguration
-3. ✅ Prüfen Sie die Netzwerk-Konnektivität (Docker Network)
-4. ✅ Prüfen Sie die Firewall-Regeln</p>
+1. ✅ Prüfe, ob der Discord Bot läuft: <code>docker-compose ps discord-bot</code>
+2. ✅ Prüfe <code>DISCORD_BOT_WEBHOOK_URL</code> in der API-Konfiguration
+3. ✅ Prüfe die Netzwerk-Konnektivität (Docker Network)
+4. ✅ Prüfe die Firewall-Regeln</p>
 <p><strong>Docker Network prüfen:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>clanscore_default
 </code></pre></div></p>
@@ -4824,10 +4796,10 @@
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie, ob <code>WEBHOOK_SHARED_SECRET</code> in <strong>beiden</strong> Services identisch ist
-2. ✅ Prüfen Sie den <code>x-webhook-token</code> Header im Request
-3. ✅ Prüfen Sie, ob der Secret in der <code>.env</code> Datei korrekt gesetzt ist
-4. ✅ Prüfen Sie, ob keine Leerzeichen oder Sonderzeichen im Secret sind</p>
+1. ✅ Prüfe, ob <code>WEBHOOK_SHARED_SECRET</code> in <strong>beiden</strong> Services identisch ist
+2. ✅ Prüfe den <code>x-webhook-token</code> Header im Request
+3. ✅ Prüfe, ob der Secret in der <code>.env</code> Datei korrekt gesetzt ist
+4. ✅ Prüfe, ob keine Leerzeichen oder Sonderzeichen im Secret sind</p>
 <p><strong>Secret vergleichen:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="c1"># In clanscore-api</span>
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$WEBHOOK_SHARED_SECRET</span>
@@ -4839,10 +4811,10 @@
 <p><strong>Symptom:</strong>
 - Webhook-Requests werden gesendet, aber keine Antwort</p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie die Logs: <code>docker-compose logs discord-bot</code>
-2. ✅ Prüfen Sie die Firewall-Regeln
-3. ✅ Prüfen Sie die Docker-Netzwerk-Konfiguration
-4. ✅ Prüfen Sie, ob der Webhook-Server läuft: <code>curl http://localhost:3001/health</code></p>
+1. ✅ Prüfe die Logs: <code>docker-compose logs discord-bot</code>
+2. ✅ Prüfe die Firewall-Regeln
+3. ✅ Prüfe die Docker-Netzwerk-Konfiguration
+4. ✅ Prüfe, ob der Webhook-Server läuft: <code>curl http://localhost:3001/health</code></p>
 <p><strong>Logs prüfen:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1"># Discord Bot Logs</span>
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>discord-bot
@@ -4857,9 +4829,9 @@
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie <code>DISCORD_GUILD_ID</code> in der Bot-Konfiguration
-2. ✅ Prüfen Sie, ob der Bot Mitglied des Discord-Servers ist
-3. ✅ Prüfen Sie, ob die Guild-ID korrekt ist</p>
+1. ✅ Prüfe <code>DISCORD_GUILD_ID</code> in der Bot-Konfiguration
+2. ✅ Prüfe, ob der Bot Mitglied des Discord-Servers ist
+3. ✅ Prüfe, ob die Guild-ID korrekt ist</p>
 <h3 id="member-not-found">"Member not found"<a class="headerlink" href="#member-not-found" title="Permanent link">&para;</a></h3>
 <p><strong>Symptom:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="p">{</span>
@@ -4867,9 +4839,9 @@
 <a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie, ob die <code>discordId</code> korrekt ist
-2. ✅ Prüfen Sie, ob der Benutzer Mitglied des Discord-Servers ist
-3. ✅ Prüfen Sie, ob der Bot die Berechtigung hat, Mitglieder zu sehen</p>
+1. ✅ Prüfe, ob die <code>discordId</code> korrekt ist
+2. ✅ Prüfe, ob der Benutzer Mitglied des Discord-Servers ist
+3. ✅ Prüfe, ob der Bot die Berechtigung hat, Mitglieder zu sehen</p>
 <h3 id="role-not-found">"Role not found"<a class="headerlink" href="#role-not-found" title="Permanent link">&para;</a></h3>
 <p><strong>Symptom:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="p">{</span>
@@ -4877,16 +4849,16 @@
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie, ob die Rolle im Discord-Server existiert
-2. ✅ Prüfen Sie, ob der Rollenname <strong>exakt</strong> übereinstimmt (Groß-/Kleinschreibung beachten)
-3. ✅ Prüfen Sie, ob der Bot die Berechtigung hat, Rollen zu sehen</p>
+1. ✅ Prüfe, ob die Rolle im Discord-Server existiert
+2. ✅ Prüfe, ob der Rollenname <strong>exakt</strong> übereinstimmt (Gross-/Kleinschreibung beachten)
+3. ✅ Prüfe, ob der Bot die Berechtigung hat, Rollen zu sehen</p>
 <h3 id="dms-werden-nicht-gesendet">DMs werden nicht gesendet<a class="headerlink" href="#dms-werden-nicht-gesendet" title="Permanent link">&para;</a></h3>
 <p><strong>Symptom:</strong>
 - Webhook ist erfolgreich, aber Benutzer erhält keine DM</p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie, ob der Benutzer DMs von Server-Mitgliedern erlaubt hat
-2. ✅ Prüfen Sie die Bot-Logs für <code>MessageNotSend</code> Fehler
-3. ✅ Prüfen Sie, ob der Bot die Berechtigung hat, DMs zu senden</p>
+1. ✅ Prüfe, ob der Benutzer DMs von Server-Mitgliedern erlaubt hat
+2. ✅ Prüfe die Bot-Logs für <code>MessageNotSend</code> Fehler
+3. ✅ Prüfe, ob der Bot die Berechtigung hat, DMs zu senden</p>
 <p><strong>Hinweis:</strong> DMs können nicht gesendet werden, wenn:
 - Der Benutzer DMs deaktiviert hat
 - Der Benutzer den Bot blockiert hat
@@ -4904,9 +4876,9 @@
 <a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a><span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Lösung:</strong>
-1. ✅ Prüfen Sie den Request Body gegen das Schema
-2. ✅ Prüfen Sie, ob alle erforderlichen Felder vorhanden sind
-3. ✅ Prüfen Sie die Datentypen (z.B. <code>discordId</code> muss String sein)</p>
+1. ✅ Prüfe den Request Body gegen das Schema
+2. ✅ Prüfe, ob alle erforderlichen Felder vorhanden sind
+3. ✅ Prüfe die Datentypen (z.B. <code>discordId</code> muss String sein)</p>
 <hr />
 <h2 id="code-beispiele-aus-dem-projekt">Code-Beispiele aus dem Projekt<a class="headerlink" href="#code-beispiele-aus-dem-projekt" title="Permanent link">&para;</a></h2>
 <h3 id="gekapselter-versand-uber-discordadapter">Gekapselter Versand über DiscordAdapter<a class="headerlink" href="#gekapselter-versand-uber-discordadapter" title="Permanent link">&para;</a></h3>
@@ -5169,7 +5141,7 @@
 <a id="__codelineno-69-15" name="__codelineno-69-15" href="#__codelineno-69-15"></a><span class="w">    </span><span class="c1">// ... Ergebnis-Präsentation für Discord ...</span>
 <a id="__codelineno-69-16" name="__codelineno-69-16" href="#__codelineno-69-16"></a><span class="p">}</span>
 </code></pre></div>
-<p><strong>Wichtig:</strong> Beide Varianten (manuell und automatisch) greifen auf <code>performSyncUsers()</code> zurück, wodurch <strong>redundanter Code vermieden</strong> und <strong>konsistentes Verhalten</strong> sichergestellt wird. Synchronisiert werden ausschließlich Benutzer mit den Rollen "Mitglied" und "Vorstand".</p>
+<p><strong>Wichtig:</strong> Beide Varianten (manuell und automatisch) greifen auf <code>performSyncUsers()</code> zurück, wodurch <strong>redundanter Code vermieden</strong> und <strong>konsistentes Verhalten</strong> sichergestellt wird. Synchronisiert werden ausschliesslich Benutzer mit den Rollen "Mitglied" und "Vorstand".</p>
 <hr />
 <h2 id="weitere-informationen">Weitere Informationen<a class="headerlink" href="#weitere-informationen" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5211,7 +5183,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2025 23:14:03 UTC">December 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 15:26:07 UTC">December 19, 2025</span>
   </span>
 
     
